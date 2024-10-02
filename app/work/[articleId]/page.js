@@ -12,12 +12,12 @@ export async function generateMetadata({ params }) {
   return getSEOTags({
     title: article.title,
     description: article.description,
-    canonicalUrlRelative: `/blog/${article.slug}`,
+    canonicalUrlRelative: `/work/${article.slug}`,
     extraTags: {
       openGraph: {
         title: article.title,
         description: article.description,
-        url: `/blog/${article.slug}`,
+        url: `/work/${article.slug}`,
         images: [
           {
             url: article.image.urlRelative,
@@ -57,7 +57,7 @@ export default async function Article({ params }) {
             "@type": "Article",
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://${config.domainName}/blog/${article.slug}`,
+              "@id": `https://${config.domainName}/work/${article.slug}`,
             },
             name: article.title,
             headline: article.title,
@@ -143,7 +143,7 @@ export default async function Article({ params }) {
                     <div className="" key={article.slug}>
                       <p className="mb-0.5">
                         <Link
-                          href={`/blog/${article.slug}`}
+                          href={`/work/${article.slug}`}
                           className="link link-hover hover:link-primary font-medium"
                           title={article.title}
                           rel="bookmark"

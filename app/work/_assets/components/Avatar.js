@@ -5,7 +5,7 @@ import Image from "next/image";
 const Avatar = ({ article }) => {
   return (
     <Link
-      href={`/blog/author/${article.author.slug}`}
+      href={`/work/author/${article.author.slug}`}
       title={`Posts by ${article.author.name}`}
       className="inline-flex items-center gap-2 group"
       rel="author"

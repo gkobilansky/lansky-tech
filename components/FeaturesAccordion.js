@@ -12,7 +12,7 @@ import Image from "next/image";
 // - alt: The alt text of the image (if type is 'image')
 const features = [
   {
-    title: "Emails",
+    title: "Web apps",
     description:
       "Send transactional emails, setup your DNS to avoid spam folder (DKIM, DMARC, SPF in subdomain), and listen to webhook to receive & forward emails",
     type: "video",
@@ -35,7 +35,7 @@ const features = [
     ),
   },
   {
-    title: "Payments",
+    title: "Ecommerce & Payments",
     description:
       "Create checkout sessions, handle webhooks to update user's account (subscriptions, one-time payments...) and tips to setup your account & reduce chargebacks",
     type: "image",
@@ -59,7 +59,7 @@ const features = [
     ),
   },
   {
-    title: "Authentication",
+    title: "Online video",
     description:
       "Magic links setup, login with Google walkthrough, save user in MongoDB/Supabase, private/protected pages & API calls",
     svg: (
@@ -80,7 +80,7 @@ const features = [
     ),
   },
   {
-    title: "Style",
+    title: "Marketing sites",
     description:
       "Components, animations & sections (like this features section), 20+ themes with daisyUI, automatic dark mode",
     svg: (
@@ -196,9 +196,9 @@ const FeaturesAccordion = () => {
     >
       <div className="px-8">
         <h2 className="font-extrabold text-4xl lg:text-6xl tracking-tight mb-12 md:mb-24">
-          All you need to ship your startup fast
+          We help you find a "good enough" solution &
           <span className="bg-neutral text-neutral-content px-2 md:px-4 ml-1 md:ml-1.5 leading-relaxed whitespace-nowrap">
-            and get profitable
+            build a lean, profitable product
           </span>
         </h2>
         <div className=" flex flex-col md:flex-row gap-12 md:gap-24">

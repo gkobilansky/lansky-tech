@@ -10,8 +10,8 @@ import config from "@/config";
 
 const links = [
   {
-    href: "/#pricing",
-    label: "Pricing",
+    href: "/work",
+    label: "Our Work",
   },
   {
     href: "/#testimonials",

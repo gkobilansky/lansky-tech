@@ -1,18 +1,18 @@
 import Image from "next/image";
-import marcImg from "@/app/blog/_assets/images/authors/marc.png";
-import introducingSupabaseImg from "@/public/blog/introducing-supabase/header.png";
+import marcImg from "@/app/work/_assets/images/authors/marc.png";
+import introducingSupabaseImg from "@/public/work/introducing-supabase/header.png";
 
 // ==================================================================================================================================================================
 // BLOG CATEGORIES 🏷️
 // ==================================================================================================================================================================
 
-// These slugs are used to generate pages in the /blog/category/[categoryI].js. It's a way to group articles by category.
+// These slugs are used to generate pages in the /work/category/[categoryI].js. It's a way to group articles by category.
 const categorySlugs = {
   feature: "feature",
   tutorial: "tutorial",
 };
 
-// All the blog categories data display in the /blog/category/[categoryI].js pages.
+// All the blog categories data display in the /work/category/[categoryI].js pages.
 export const categories = [
   {
     // The slug to use in the URL, from the categorySlugs object above.
@@ -93,23 +93,23 @@ const socialIcons = {
   },
 };
 
-// These slugs are used to generate pages in the /blog/author/[authorId].js. It's a way to show all articles from an author.
+// These slugs are used to generate pages in the /work/author/[authorId].js. It's a way to show all articles from an author.
 const authorSlugs = {
-  marc: "marc",
+  gene: "Gene",
 };
 
-// All the blog authors data display in the /blog/author/[authorId].js pages.
+// All the blog authors data display in the /work/author/[authorId].js pages.
 export const authors = [
   {
     // The slug to use in the URL, from the authorSlugs object above.
-    slug: authorSlugs.marc,
+    slug: authorSlugs.gene,
     // The name to display in the author's bio. Up to 60 characters.
-    name: "Marc Lou",
+    name: "Gene Kobilansky",
     // The job to display in the author's bio. Up to 60 characters.
-    job: "Maker of ByeDispute",
+    job: "Founder of Lancekey Advisors",
     // The description of the author to display in the author's bio. Up to 160 characters.
     description:
-      "Marc is a developer and an entrepreneur. He's built 20 startups in the last 3 years. 6 were profitable and 3 were acquired. He's currently building ByeDispute, the #1 Stripe Chargebacks Protection tool.",
+      "Gene is a developer and an entrepreneur.",
     // The avatar of the author to display in the author's bio and avatar badge. It's better to use a local image, but you can also use an external image (https://...)
     avatar: marcImg,
     // A list of social links to display in the author's bio.
@@ -117,17 +117,17 @@ export const authors = [
       {
         name: socialIcons.twitter.name,
         icon: socialIcons.twitter.svg,
-        url: "https://twitter.com/marc_louvion",
+        url: "https://twitter.com/",
       },
       {
         name: socialIcons.linkedin.name,
         icon: socialIcons.linkedin.svg,
-        url: "https://www.linkedin.com/in/marclouvion/",
+        url: "https://www.linkedin.com/in/genekobilansky/",
       },
       {
         name: socialIcons.github.name,
         icon: socialIcons.github.svg,
-        url: "https://github.com/Marc-Lou-Org/ship-fast",
+        url: "https://github.com/gkobilansky",
       },
     ],
   },
@@ -150,13 +150,13 @@ const styles = {
     "text-sm font-mono bg-base-300 px-1 py-0.5 rounded-box select-all",
 };
 
-// All the blog articles data display in the /blog/[articleId].js pages.
+// All the blog articles data display in the /work/[articleId].js pages.
 export const articles = [
   {
     // The unique slug to use in the URL. It's also used to generate the canonical URL.
-    slug: "introducing-supabase",
+    slug: "building-temptations",
     // The title to display in the article page (h1). Less than 60 characters. It's also used to generate the meta title.
-    title: "Introducing Supabase to ShipFast",
+    title: "Building a fun and engaging custom site on the amazon.com platform for Temptations cat treats",
     // The description of the article to display in the article page. Up to 160 characters. It's also used to generate the meta description.
     description:
       "Supabase is an open-source Firebase alternative. It's a great tool for building a backend for your app. It's now integrated with ShipFast!",
@@ -165,14 +165,14 @@ export const articles = [
       categories.find((category) => category.slug === categorySlugs.feature),
     ],
     // The author of the article. It's used to generate a link to the author's bio page.
-    author: authors.find((author) => author.slug === authorSlugs.marc),
+    author: authors.find((author) => author.slug === authorSlugs.gene),
     // The date of the article. It's used to generate the meta date.
     publishedAt: "2023-11-20",
     image: {
       // The image to display in <CardArticle /> components.
       src: introducingSupabaseImg,
       // The relative URL of the same image to use in the Open Graph meta tags & the Schema Markup JSON-LD.
-      urlRelative: "/blog/introducing-supabase/header.jpg",
+      urlRelative: "/work/introducing-supabase/header.jpg",
       alt: "Supabase and ShipFast logo combined",
     },
     // The actual content of the article that will be shown under the <h1> title in the article page.

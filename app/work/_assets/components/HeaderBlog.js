@@ -12,13 +12,13 @@ import ButtonSignin from "@/components/ButtonSignin";
 
 const links = [
   {
-    href: "/blog/",
+    href: "/work/",
     label: "All Posts",
   },
 ];
 
 const cta = (
-  <ButtonSignin text="Prevent disputes" extraStyle="btn-primary md:btn-sm" />
+  <ButtonSignin text="Book a call" extraStyle="btn-primary md:btn-sm" />
 );
 
 const ButtonPopoverCategories = () => {
@@ -62,7 +62,7 @@ const ButtonPopoverCategories = () => {
                       <div key={category.slug} onClick={() => close()}>
                         <Link
                           className="block text-left p-3 -m-1 cursor-pointer hover:bg-base-200 rounded-box duration-200"
-                          href={`/blog/category/${category.slug}`}
+                          href={`/work/category/${category.slug}`}
                         >
                           <div className="">
                             <p className="font-medium mb-0.5">
@@ -123,7 +123,7 @@ const ButtonAccordionCategories = () => {
           {categories.map((category) => (
             <li key={category.slug}>
               <Link
-                href={`/blog/category/${category.slug}`}
+                href={`/work/category/${category.slug}`}
                 className="text-base-content/80 hover:text-base-content duration-100 link link-hover"
               >
                 {category?.titleShort || category.title}

@@ -4,7 +4,7 @@ import Link from "next/link";
 const Category = ({ category, extraStyle }) => {
   return (
     <Link
-      href={`/blog/category/${category.slug}`}
+      href={`/work/category/${category.slug}`}
       className={`badge badge-sm md:badge-md hover:badge-primary ${
         extraStyle ? extraStyle : ""
       }`}

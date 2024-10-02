@@ -1,6 +1,7 @@
 import Image from "next/image";
 import TestimonialsAvatars from "./TestimonialsAvatars";
 import config from "@/config";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -22,15 +23,16 @@ const Hero = () => {
         </a>
 
         <h1 className="font-extrabold text-4xl lg:text-6xl tracking-tight md:-mb-4">
-          Ship your startup in days, not weeks
+          Web dev to help you grow.
         </h1>
         <p className="text-lg opacity-80 leading-relaxed">
-          The NextJS boilerplate with all you need to build your SaaS, AI tool,
-          or any other web app. From idea to production in 5 minutes.
+          Apps, ecommerce and marketing sites.
         </p>
-        <button className="btn btn-primary btn-wide">
-          Get {config.appName}
-        </button>
+        <Link href="https://calendly.com/gene-lancekey/30min" passHref>
+          <button className="btn btn-primary btn-wide" >
+            Get in touch
+          </button>
+        </Link>
 
         <TestimonialsAvatars priority={true} />
       </div>

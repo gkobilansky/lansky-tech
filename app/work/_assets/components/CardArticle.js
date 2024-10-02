@@ -16,7 +16,7 @@ const CardArticle = ({
     <article className="card bg-base-200 rounded-box overflow-hidden">
       {article.image?.src && (
         <Link
-          href={`/blog/${article.slug}`}
+          href={`/work/${article.slug}`}
           className="link link-hover hover:link-primary"
           title={article.title}
           rel="bookmark"
@@ -47,7 +47,7 @@ const CardArticle = ({
         {/* TITLE WITH RIGHT TAG */}
         <TitleTag className="mb-1 text-xl md:text-2xl font-bold">
           <Link
-            href={`/blog/${article.slug}`}
+            href={`/work/${article.slug}`}
             className="link link-hover hover:link-primary"
             title={article.title}
             rel="bookmark"
