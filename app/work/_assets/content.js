@@ -1,6 +1,6 @@
 import Image from "next/image";
-import marcImg from "@/app/work/_assets/images/authors/marc.png";
-import introducingSupabaseImg from "@/public/work/introducing-supabase/header.png";
+import geneImg from "@/app/work/_assets/images/authors/gene.jpeg";
+import introducingTemptations from "@/public/work/temptations/temptations-banner.jpeg";
 
 // ==================================================================================================================================================================
 // BLOG CATEGORIES 🏷️
@@ -18,23 +18,14 @@ export const categories = [
     // The slug to use in the URL, from the categorySlugs object above.
     slug: categorySlugs.feature,
     // The title to display the category title (h1), the category badge, the category filter, and more. Less than 60 characters.
-    title: "New Features",
+    title: "Recent Works",
     // A short version of the title above, display in small components like badges. 1 or 2 words
-    titleShort: "Features",
+    titleShort: "Work",
     // The description of the category to display in the category page. Up to 160 characters.
     description:
-      "Here are the latest features we've added to ShipFast. I'm constantly improving our product to help you ship faster.",
+      "Here are some of the recent projects I've worked on.",
     // A short version of the description above, only displayed in the <Header /> on mobile. Up to 60 characters.
-    descriptionShort: "Latest features added to ShipFast.",
-  },
-  {
-    slug: categorySlugs.tutorial,
-    title: "How Tos & Tutorials",
-    titleShort: "Tutorials",
-    description:
-      "Learn how to use ShipFast with these step-by-step tutorials. I'll show you how to ship faster and save time.",
-    descriptionShort:
-      "Learn how to use ShipFast with these step-by-step tutorials.",
+    descriptionShort: "Recent projects.",
   },
 ];
 
@@ -54,7 +45,7 @@ const socialIcons = {
         y="0px"
         viewBox="0 0 1668.56 1221.19"
         className="w-9 h-9"
-        // Using a dark theme? ->  className="w-9 h-9 fill-white"
+      // Using a dark theme? ->  className="w-9 h-9 fill-white"
       >
         <g id="layer1" transform="translate(52.390088,-25.058597)">
           <path
@@ -111,14 +102,9 @@ export const authors = [
     description:
       "Gene is a developer and an entrepreneur.",
     // The avatar of the author to display in the author's bio and avatar badge. It's better to use a local image, but you can also use an external image (https://...)
-    avatar: marcImg,
+    avatar: geneImg,
     // A list of social links to display in the author's bio.
     socials: [
-      {
-        name: socialIcons.twitter.name,
-        icon: socialIcons.twitter.svg,
-        url: "https://twitter.com/",
-      },
       {
         name: socialIcons.linkedin.name,
         icon: socialIcons.linkedin.svg,
@@ -156,10 +142,10 @@ export const articles = [
     // The unique slug to use in the URL. It's also used to generate the canonical URL.
     slug: "building-temptations",
     // The title to display in the article page (h1). Less than 60 characters. It's also used to generate the meta title.
-    title: "Building a fun and engaging custom site on the amazon.com platform for Temptations cat treats",
+    title: "Interactive Amazon Store Experience for Temptation’s Cat Treats",
     // The description of the article to display in the article page. Up to 160 characters. It's also used to generate the meta description.
     description:
-      "Supabase is an open-source Firebase alternative. It's a great tool for building a backend for your app. It's now integrated with ShipFast!",
+      "Temptation’s Cat Treats is a popular pet food brand that specializes in cat treats. Their mission is to engage cat owners and offer tasty, fun treats for their feline companions. For this project, the goal was to create an engaging, playful mini ad site within their Amazon Store to boost user interaction and product awareness.",
     // An array of categories of the article. It's used to generate the category badges, the category filter, and more.
     categories: [
       categories.find((category) => category.slug === categorySlugs.feature),
@@ -167,20 +153,20 @@ export const articles = [
     // The author of the article. It's used to generate a link to the author's bio page.
     author: authors.find((author) => author.slug === authorSlugs.gene),
     // The date of the article. It's used to generate the meta date.
-    publishedAt: "2023-11-20",
+    publishedAt: "2024-10-02",
     image: {
       // The image to display in <CardArticle /> components.
-      src: introducingSupabaseImg,
+      src: introducingTemptations,
       // The relative URL of the same image to use in the Open Graph meta tags & the Schema Markup JSON-LD.
-      urlRelative: "/work/introducing-supabase/header.jpg",
-      alt: "Supabase and ShipFast logo combined",
+      urlRelative: "/work/temptations/temptations-banner.jpeg",
+      alt: "Temptations cat treats",
     },
     // The actual content of the article that will be shown under the <h1> title in the article page.
     content: (
       <>
         <Image
-          src={introducingSupabaseImg}
-          alt="Supabase and ShipFast logo combined"
+          src={introducingTemptations}
+          alt="Temptations cat treats"
           width={700}
           height={500}
           priority={true}
@@ -188,56 +174,81 @@ export const articles = [
           placeholder="blur"
         />
         <section>
-          <h2 className={styles.h2}>Introduction</h2>
-          <p className={styles.p}>
-            Supabase is an open-source Firebase alternative. It&apos;s a great
-            tool for building a backend for your app. It&apos;s now integrated
-            with ShipFast!
+          <h2 className={styles.h2}>Project Objective</h2>
+          <p className={styles.p}>The client requested a React-powered mini site that would enhance their existing Amazon Store presence by including:
+            <ul className={styles.ul}>
+              <li className={styles.li}>A cat personality quiz to recommend the best treat flavors based on a cat's behavior and preferences.</li>
+              <li className={styles.li}>Live integration with a cat-themed game show, Lickables Live, which aired on Amazon TV.</li>
+              <li className={styles.li}>A design that matched the playful and cutesy aesthetic of the Temptation's brand, complete with bright, animated visuals to appeal to cat owners.</li>
+            </ul>
           </p>
         </section>
 
         <section>
-          <h3 className={styles.h3}>1. Create a supabase account</h3>
+          <h3 className={styles.h3}>Project Highlights</h3>
           <p className={styles.p}>
-            First, go to{" "}
-            <a href="https://supabase.com/" className="link link-primary">
-              Supabase
-            </a>{" "}
-            and create an account. It&apos;s free for up to 10,000 rows per
-            table.
-            <br />
-            Then create a new project and a new table. You can use the following
-            SQL schema:
+            <ol className={styles.ul}>
+              <li className={styles.li}>
+                <strong>Cat Personality Quiz:</strong>
+                <ul className={styles.ul}>
+                  <li className={styles.li}>The quiz, titled "Purrr-éé Quiz," was designed with a bright yellow background and dotted pattern, reflecting a fun, upbeat tone.</li>
+                  <li className={styles.li}>The quiz consisted of three multiple-choice questions aimed at determining a cat's personality and eating habits. For example, questions like, "When you serve your cat food, the first thing they do is…", with humorous answers like, "Scarf the whole bowl down" or "Take one look at the food and nonchalantly walk away."</li>
+                  <li className={styles.li}>Based on the quiz results, the user was given a recommendation, such as "Your cat is an Immersive Eater!", along with specific Temptation's product suggestions (e.g., Temptation's Creamy Puree with Chicken and Salmon).</li>
+                </ul>
+              </li>
+              <li className={styles.li}>
+                <strong>Lickables Live Integration:</strong>
+                <ul className={styles.ul}>
+                  <li className={styles.li}>Users could watch Lickables Live, a quirky game show featuring cat judges trying out different Creamy Purrr-éé flavors. The live broadcast was promoted prominently on the site and linked directly to Amazon Live for real-time viewing.</li>
+                  <li className={styles.li}>The integration created a seamless experience where users could engage with the brand in real time, driving higher engagement.</li>
+                </ul>
+              </li>
+              <li className={styles.li}>
+                <strong>Cutesy Design and Interactive Features:</strong>
+                <ul className={styles.ul}>
+                  <li className={styles.li}>The visual design was heavily branded with bright yellow, playful fonts, and cartoon-like icons. Screenshots show cats enjoying the Temptations treats, enhancing the appeal to cat lovers.</li>
+                  <li className={styles.li}>Animations were used throughout to reinforce the brand's cheerful, friendly vibe, particularly in the quiz and product showcase sections.</li>
+                </ul>
+              </li>
+              <li className={styles.li}>
+                <strong>Shopping and CTA:</strong>
+                <ul className={styles.ul}>
+                  <li className={styles.li}>After completing the quiz, users could instantly add suggested products to their carts via clear "Add to Cart" buttons, boosting conversion rates.</li>
+                  <li className={styles.li}>The site featured a direct call to action: "Shop Creamy Purrr-éé," offering easy access to Temptation's Creamy Puree products, complete with reviews and pricing.</li>
+                </ul>
+              </li>
+            </ol>
           </p>
-
-          <pre className={styles.code}>
-            <code>
-              {`CREATE TABLE public.users (
-  id bigint NOT NULL DEFAULT nextval('users_id_seq'::regclass),
-  email text NOT NULL,
-  password text NOT NULL,
-  created_at timestamp with time zone NOT NULL DEFAULT now(),
-  updated_at timestamp with time zone NOT NULL DEFAULT now(),
-  CONSTRAINT users_pkey PRIMARY KEY (id)
-);`}
-            </code>
-          </pre>
         </section>
 
         <section>
-          <h3 className={styles.h3}>2. Add your credentials to ShipFast</h3>
-          <p className={styles.p}>
-            Copy the <span className={styles.codeInline}>API URL</span> and{" "}
-            <span className={styles.codeInline}>API Key</span> from your
-            Supabase project settings and add them to your ShipFast project
-            settings. Add these files to your project:
-          </p>
-
+          <h3 className={styles.h3}>Challenges and Solutions</h3>
           <ul className={styles.ul}>
-            <li className={styles.li}>.env.local</li>
-            <li className={styles.li}>.env.production</li>
+            <li className={styles.li}><strong>Amazon Store Restrictions:</strong> Building a complex, interactive React-powered experience within the confines of Amazon's platform was challenging. Careful attention was given to optimizing for performance and responsiveness while adhering to Amazon's guidelines.</li>
+            <li className={styles.li}><strong>Real-Time Integration:</strong> Incorporating live TV content required backend coordination to ensure a smooth experience between the mini site and Amazon Live. By leveraging APIs and integrating the broadcast effectively, this hurdle was overcome.</li>
           </ul>
         </section>
+
+        <section>
+          <h3 className={styles.h3}>Results</h3>
+          <p className={styles.p}>
+            The final product successfully enhanced user interaction on the Temptation's Amazon Store and increased product engagement:
+          </p>
+          <ul className={styles.ul}>
+            <li className={styles.li}><strong>Higher Engagement:</strong> Users spent more time on the site interacting with the personality quiz and watching Lickables Live.</li>
+            <li className={styles.li}><strong>Increased Conversions:</strong> The personalized quiz and product suggestions led to targeted purchases, with direct product links making the shopping experience seamless.</li>
+            <li className={styles.li}><strong>Brand Awareness:</strong> By integrating live content with the store experience, the brand created a memorable and interactive way to engage with cat owners.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 className={styles.h3}>Conclusion</h3>
+          <p className={styles.p}>
+            This project demonstrated how combining interactive, personalized content with live entertainment can elevate a brand's presence on e-commerce platforms like Amazon. The playful, cutesy design, quiz-driven personalization, and real-time integration with a live show created a unique and engaging shopping experience for both cats and their owners.
+          </p>
+        </section>
+
+
       </>
     ),
   },

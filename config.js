@@ -21,8 +21,8 @@ const config = {
         // REQUIRED — we use this to find the plan in the webhook (for instance if you want to update the user's credits based on the plan)
         priceId:
           process.env.NODE_ENV === "development"
-            ? "price_1Niyy5AxyNprDp7iZIqEyD2h"
-            : "price_456",
+            ? ""
+            : "",
         //  REQUIRED - Name of the plan, displayed on the pricing page
         name: "Starter",
         // A friendly description of the plan, displayed on the pricing page. Tip: explain why this plan and not others
@@ -33,7 +33,7 @@ const config = {
         priceAnchor: 99,
         features: [
           {
-            name: "NextJS boilerplate",
+            name: "First time consulting session",
           },
           { name: "User oauth" },
           { name: "Database" },
@@ -45,15 +45,15 @@ const config = {
         isFeatured: true,
         priceId:
           process.env.NODE_ENV === "development"
-            ? "price_1O5KtcAxyNprDp7iftKnrrpw"
-            : "price_456",
+            ? ""
+            : "",
         name: "Advanced",
         description: "You need more power",
-        price: 99,
-        priceAnchor: 149,
+        price: 149,
+        priceAnchor: 199,
         features: [
           {
-            name: "NextJS boilerplate",
+            name: "Hourly consulting sessions",
           },
           { name: "User oauth" },
           { name: "Database" },
