@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import checkoutImg from "@/public/gmb-checkout.png";
 import Image from "next/image";
 
 // The features array is a list of features that will be displayed in the accordion.
@@ -12,12 +13,16 @@ import Image from "next/image";
 // - alt: The alt text of the image (if type is 'image')
 const features = [
   {
-    title: "Web apps",
+    title: "Web Apps",
     description:
-      "Send transactional emails, setup your DNS to avoid spam folder (DKIM, DMARC, SPF in subdomain), and listen to webhook to receive & forward emails",
+      "State of the art performance, streaming video, transactional emails, integrated checkout and more on desktop and mobile",
     type: "video",
-    path: "https://d3m8mk7e1mf7xn.cloudfront.net/app/newsletter.webm",
-    format: "video/webm",
+    path: "/gmb-praxis.mp4",
+    format: "video/mp4",
+    size: {
+      width: 500,
+      height: 350,
+    },
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -37,9 +42,9 @@ const features = [
   {
     title: "Ecommerce & Payments",
     description:
-      "Create checkout sessions, handle webhooks to update user's account (subscriptions, one-time payments...) and tips to setup your account & reduce chargebacks",
+      "Create checkout sessions, handle users accounts (subscriptions, one-time payments...) and optimize conversions",
     type: "image",
-    path: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
+    path: checkoutImg,
     alt: "A computer",
     svg: (
       <svg
@@ -59,30 +64,16 @@ const features = [
     ),
   },
   {
-    title: "Online video",
+    title: "Marketing Sites",
     description:
-      "Magic links setup, login with Google walkthrough, save user in MongoDB/Supabase, private/protected pages & API calls",
-    svg: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-6 h-6"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: "Marketing sites",
-    description:
-      "Components, animations & sections (like this features section), 20+ themes with daisyUI, automatic dark mode",
+      "Build stunning landing pages, product showcases, and company websites. Our marketing sites are designed to convert visitors into customers, featuring responsive layouts, SEO optimization, and seamless integration with analytics tools.",
+    type: "video",
+    path: "/modelones-tryon.mp4",
+    format: "video/mp4",
+    size: {
+      height: 500,
+      width: 350,
+    },
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -147,14 +138,11 @@ const Item = ({ feature, isOpen, setFeatureSelected }) => {
 // A component to display the media (video or image) of the feature. If the type is not specified, it will display an empty div.
 // Video are set to autoplay for best UX.
 const Media = ({ feature }) => {
-  const { type, path, format, alt } = feature;
-  const style = "rounded-2xl aspect-square w-full sm:w-[26rem]";
-  const size = {
-    width: 500,
-    height: 500,
-  };
+  const { type, path, format, alt, size = { width: 500, height: 500 } } = feature;
+  const style = "rounded-2xl sm:w-[26rem]";
 
   if (type === "video") {
+    console.log(feature)
     return (
       <video
         className={style}
@@ -197,7 +185,7 @@ const FeaturesAccordion = () => {
       <div className="px-8">
         <h2 className="font-extrabold text-4xl lg:text-6xl tracking-tight mb-12 md:mb-24">
           We help you find a "good enough" solution &
-          <span className="bg-neutral text-neutral-content px-2 md:px-4 ml-1 md:ml-1.5 leading-relaxed whitespace-nowrap">
+          <span className="bg-neutral text-neutral-content px-2 md:px-4 ml-1 md:ml-1.5 leading-relaxed">
             build a lean, profitable product
           </span>
         </h2>

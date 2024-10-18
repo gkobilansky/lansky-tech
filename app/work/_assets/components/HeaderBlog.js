@@ -5,10 +5,10 @@ import { useSearchParams } from "next/navigation";
 import { Popover, Transition } from "@headlessui/react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/app/icon.png";
+import logo from "@/public/lancekey_symbol.png";
 import config from "@/config";
 import { categories } from "../content";
-import ButtonSignin from "@/components/ButtonSignin";
+import ButtonGradient from "@/components/ButtonGradient";
 
 const links = [
   {
@@ -18,7 +18,7 @@ const links = [
 ];
 
 const cta = (
-  <ButtonSignin text="Book a call" extraStyle="btn-primary md:btn-sm" />
+  <ButtonGradient title="👩🏻‍💻 Shoot me a note" extraStyle="btn-primary md:btn-sm" />
 );
 
 const ButtonPopoverCategories = () => {

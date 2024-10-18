@@ -1,7 +1,7 @@
 import Image from "next/image";
 import config from "@/config";
 
-const CTA = () => {
+const CTA = ({ openModal }) => {
   return (
     <section className="relative hero overflow-hidden min-h-screen">
       <Image
@@ -21,8 +21,8 @@ const CTA = () => {
             section...
           </p>
 
-          <button className="btn btn-primary btn-wide">
-            Get {config.appName}
+          <button className="btn btn-primary btn-wide btn-lg" onClick={openModal}>
+            Get in touch with {config.appName}
           </button>
         </div>
       </div>

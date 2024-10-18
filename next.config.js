@@ -1,13 +1,22 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  webpack: (config, { isServer }) => {
+    config.module.rules.push({
+      test: /\.(mp4|webm)$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          publicPath: '/_next/static/videos/',
+          outputPath: `${isServer ? '../' : ''}static/videos/`,
+        },
+      },
+    });
+
+    return config;
+  },
   images: {
-    domains: [
-      // NextJS <Image> component needs to whitelist domains for src={}
-      "lh3.googleusercontent.com",
-      "pbs.twimg.com",
-      "images.unsplash.com",
-      "logos-world.net",
-    ],
+    domains: ['images.unsplash.com'],
   },
 };
 

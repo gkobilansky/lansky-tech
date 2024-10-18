@@ -1,6 +1,9 @@
 import Image from "next/image";
 import geneImg from "@/app/work/_assets/images/authors/gene.jpeg";
 import introducingTemptations from "@/public/work/temptations/temptations-banner.jpeg";
+import catQuiz from "@/public/work/temptations/cat-quiz-2.jpeg";
+import lickablesLive from "@/public/work/temptations/lickables-live.jpeg";
+import productDisplay from "@/public/work/temptations/product-display.jpeg";
 
 // ==================================================================================================================================================================
 // BLOG CATEGORIES 🏷️
@@ -128,8 +131,8 @@ const styles = {
   h2: "text-2xl lg:text-4xl font-bold tracking-tight mb-4 text-base-content",
   h3: "text-xl lg:text-2xl font-bold tracking-tight mb-2 text-base-content",
   p: "text-base-content/90 leading-relaxed",
-  ul: "list-inside list-disc text-base-content/90 leading-relaxed",
-  li: "list-item",
+  ul: "list-inside list-disc text-base-content/90 leading-relaxed pl-4", // Added pl-4 for left padding
+  li: "list-item pl-2", // Added pl-2 for additional indent on list items
   // Altnernatively, you can use the library react-syntax-highlighter to display code snippets.
   code: "text-sm font-mono bg-neutral text-neutral-content p-6 rounded-box my-4 overflow-x-scroll select-all",
   codeInline:
@@ -170,85 +173,117 @@ export const articles = [
           width={700}
           height={500}
           priority={true}
-          className="rounded-box"
+          className="rounded-box mb-8"
           placeholder="blur"
         />
-        <section>
-          <h2 className={styles.h2}>Project Objective</h2>
-          <p className={styles.p}>The client requested a React-powered mini site that would enhance their existing Amazon Store presence by including:
+        <h3 className={styles.h3}>Objectives</h3>
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">  
+          <div>
+            <p className={styles.p}>
+              Temptation's Cat Treats wanted to create an engaging, playful mini ad site within their Amazon Store to boost user interaction and product awareness. The client requested a React-powered mini site that would enhance their existing Amazon Store presence by including:
+            </p>
             <ul className={styles.ul}>
-              <li className={styles.li}>A cat personality quiz to recommend the best treat flavors based on a cat's behavior and preferences.</li>
-              <li className={styles.li}>Live integration with a cat-themed game show, Lickables Live, which aired on Amazon TV.</li>
-              <li className={styles.li}>A design that matched the playful and cutesy aesthetic of the Temptation's brand, complete with bright, animated visuals to appeal to cat owners.</li>
+              <li className={styles.li}>A cat personality quiz</li>
+              <li className={styles.li}>Live integration with Lickables Live game show</li>
+              <li className={styles.li}>A design matching the playful Temptation's brand aesthetic</li>
             </ul>
-          </p>
+          </div>
+          <div className="flex items-center justify-center">
+            <Image
+              src={productDisplay.src}
+              alt="Temptations cat treats product display"
+              width={400}
+              height={400}
+              className="rounded-box"
+            />
+          </div>
+        </section>
+        <h2 className={styles.h3}>Highlights</h2>
+        <section className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="flex items-center justify-center">
+              <Image
+                src={catQuiz.src}
+                alt="Temptations cat personality quiz"
+                width={400}
+                height={300}
+                className="rounded-box"
+              />
+            </div>
+            <div>
+              <h4 className="text-xl font-semibold mb-2">Cat Personality Quiz</h4>
+              <p className={styles.p}>
+                The "Purrr-éé Quiz" featured a bright yellow background with fun, multiple-choice questions to determine a cat's personality and eating habits. Based on the results, users received product recommendations.
+              </p>
+            </div>
+          </div>
         </section>
 
+        <section className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-xl font-semibold mb-2">Lickables Live Integration</h4>
+              <p className={styles.p}>
+                Users could watch Lickables Live, a quirky game show featuring cat judges trying out different Creamy Purrr-éé flavors. The live broadcast was integrated seamlessly, driving higher engagement.
+              </p>
+            </div>
+            <div className="flex items-center justify-center order-2 md:order-1">
+              <Image
+                src={lickablesLive.src}
+                alt="Lickables Live game show"
+                width={400}
+                height={300}
+                className="rounded-box"
+              />
+            </div>
+          </div>
+        </section>
+        <h3 className={styles.h3}>Challenges and Solutions</h3>
+        <section className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-xl font-semibold mb-2">Amazon Store Restrictions</h4>
+              <p className={styles.p}>
+                Building a complex, interactive React-powered experience within Amazon's platform was challenging. We optimized for performance while adhering to Amazon's guidelines.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-xl font-semibold mb-2">Real-Time Integration</h4>
+              <p className={styles.p}>
+                Incorporating live TV content required backend coordination. We leveraged APIs to ensure a smooth experience between the mini site and Amazon Live.
+              </p>
+            </div>
+          </div>
+        </section>
+        <h3 className={styles.h3}>Results</h3>
+        <section className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-base-200 p-6 rounded-box">
+              <h4 className="text-xl font-semibold mb-2">Higher Engagement</h4>
+              <p className={styles.p}>
+                Users spent more time interacting with the personality quiz and watching Lickables Live.
+              </p>
+            </div>
+            <div className="bg-base-200 p-6 rounded-box">
+              <h4 className="text-xl font-semibold mb-2">Increased Conversions</h4>
+              <p className={styles.p}>
+                Personalized quiz and product suggestions led to targeted purchases.
+              </p>
+            </div>
+            <div className="bg-base-200 p-6 rounded-box">
+              <h4 className="text-xl font-semibold mb-2">Brand Awareness</h4>
+              <p className={styles.p}>
+                Integration of live content created a memorable way to engage with cat owners.
+              </p>
+            </div>
+          </div>
+        </section>
+        <h3 className={styles.h3}>Wrap Up</h3>
         <section>
-          <h3 className={styles.h3}>Project Highlights</h3>
           <p className={styles.p}>
-            <ol className={styles.ul}>
-              <li className={styles.li}>
-                <strong>Cat Personality Quiz:</strong>
-                <ul className={styles.ul}>
-                  <li className={styles.li}>The quiz, titled "Purrr-éé Quiz," was designed with a bright yellow background and dotted pattern, reflecting a fun, upbeat tone.</li>
-                  <li className={styles.li}>The quiz consisted of three multiple-choice questions aimed at determining a cat's personality and eating habits. For example, questions like, "When you serve your cat food, the first thing they do is…", with humorous answers like, "Scarf the whole bowl down" or "Take one look at the food and nonchalantly walk away."</li>
-                  <li className={styles.li}>Based on the quiz results, the user was given a recommendation, such as "Your cat is an Immersive Eater!", along with specific Temptation's product suggestions (e.g., Temptation's Creamy Puree with Chicken and Salmon).</li>
-                </ul>
-              </li>
-              <li className={styles.li}>
-                <strong>Lickables Live Integration:</strong>
-                <ul className={styles.ul}>
-                  <li className={styles.li}>Users could watch Lickables Live, a quirky game show featuring cat judges trying out different Creamy Purrr-éé flavors. The live broadcast was promoted prominently on the site and linked directly to Amazon Live for real-time viewing.</li>
-                  <li className={styles.li}>The integration created a seamless experience where users could engage with the brand in real time, driving higher engagement.</li>
-                </ul>
-              </li>
-              <li className={styles.li}>
-                <strong>Cutesy Design and Interactive Features:</strong>
-                <ul className={styles.ul}>
-                  <li className={styles.li}>The visual design was heavily branded with bright yellow, playful fonts, and cartoon-like icons. Screenshots show cats enjoying the Temptations treats, enhancing the appeal to cat lovers.</li>
-                  <li className={styles.li}>Animations were used throughout to reinforce the brand's cheerful, friendly vibe, particularly in the quiz and product showcase sections.</li>
-                </ul>
-              </li>
-              <li className={styles.li}>
-                <strong>Shopping and CTA:</strong>
-                <ul className={styles.ul}>
-                  <li className={styles.li}>After completing the quiz, users could instantly add suggested products to their carts via clear "Add to Cart" buttons, boosting conversion rates.</li>
-                  <li className={styles.li}>The site featured a direct call to action: "Shop Creamy Purrr-éé," offering easy access to Temptation's Creamy Puree products, complete with reviews and pricing.</li>
-                </ul>
-              </li>
-            </ol>
+            This project demonstrated how combining interactive, personalized content with live entertainment can elevate a brand's presence on e-commerce platforms like Amazon. The playful design, quiz-driven personalization, and real-time integration created a unique and engaging shopping experience for both cats and their owners.
           </p>
         </section>
-
-        <section>
-          <h3 className={styles.h3}>Challenges and Solutions</h3>
-          <ul className={styles.ul}>
-            <li className={styles.li}><strong>Amazon Store Restrictions:</strong> Building a complex, interactive React-powered experience within the confines of Amazon's platform was challenging. Careful attention was given to optimizing for performance and responsiveness while adhering to Amazon's guidelines.</li>
-            <li className={styles.li}><strong>Real-Time Integration:</strong> Incorporating live TV content required backend coordination to ensure a smooth experience between the mini site and Amazon Live. By leveraging APIs and integrating the broadcast effectively, this hurdle was overcome.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h3 className={styles.h3}>Results</h3>
-          <p className={styles.p}>
-            The final product successfully enhanced user interaction on the Temptation's Amazon Store and increased product engagement:
-          </p>
-          <ul className={styles.ul}>
-            <li className={styles.li}><strong>Higher Engagement:</strong> Users spent more time on the site interacting with the personality quiz and watching Lickables Live.</li>
-            <li className={styles.li}><strong>Increased Conversions:</strong> The personalized quiz and product suggestions led to targeted purchases, with direct product links making the shopping experience seamless.</li>
-            <li className={styles.li}><strong>Brand Awareness:</strong> By integrating live content with the store experience, the brand created a memorable and interactive way to engage with cat owners.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h3 className={styles.h3}>Conclusion</h3>
-          <p className={styles.p}>
-            This project demonstrated how combining interactive, personalized content with live entertainment can elevate a brand's presence on e-commerce platforms like Amazon. The playful, cutesy design, quiz-driven personalization, and real-time integration with a live show created a unique and engaging shopping experience for both cats and their owners.
-          </p>
-        </section>
-
-
       </>
     ),
   },

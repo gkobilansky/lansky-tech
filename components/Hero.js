@@ -28,11 +28,6 @@ const Hero = () => {
         <p className="text-lg opacity-80 leading-relaxed">
           Apps, ecommerce and marketing sites.
         </p>
-        <Link href="https://calendly.com/gene-lancekey/30min" passHref>
-          <button className="btn btn-primary btn-wide" >
-            Get in touch
-          </button>
-        </Link>
 
         <TestimonialsAvatars priority={true} />
       </div>
