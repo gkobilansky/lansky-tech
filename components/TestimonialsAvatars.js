@@ -63,7 +63,7 @@ const TestimonialsAvatars = ({ priority = false }) => {
         </div>
 
         <div className="text-base text-base-content/80">
-          <span className="font-semibold text-base-content">27</span> companies grew faster with Lancekey
+          <span className="font-semibold text-base-content">27</span> companies grew faster with Lancekey Advising
         </div>
       </div>
     </div>

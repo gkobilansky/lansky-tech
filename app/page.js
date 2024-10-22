@@ -3,6 +3,7 @@
 import { Suspense, useState } from 'react'
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Hello from "@/components/Hello";
 import Problem from "@/components/Problem";
 import FeaturesAccordion from "@/components/FeaturesAccordion";
 import Pricing from "@/components/Pricing";
@@ -31,7 +32,8 @@ export default function Home() {
         <Hero />
         <Problem />
         <FeaturesAccordion />
-        <Pricing />
+        <Hello />
+        <Pricing openModal={openModal} />
         <FAQ />
         <CTA openModal={openModal} />
         <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Trophy base -->
+  <rect x="35" y="75" width="30" height="10" fill="#8B4513" />
+  <rect x="30" y="70" width="40" height="5" fill="#8B4513" />
+  
+  <!-- Trophy cup -->
+  <ellipse cx="50" cy="40" rx="25" ry="20" fill="#FFD700" />
+  <rect x="40" y="40" width="20" height="30" fill="#FFD700" />
+
+  <!-- Trophy handles -->
+  <path d="M25,40 Q15,35 25,20" stroke="#FFD700" stroke-width="3" fill="none" />
+  <path d="M75,40 Q85,35 75,20" stroke="#FFD700" stroke-width="3" fill="none" />
+
+  <!-- Text -->
+  <text x="50" y="95" font-family="Arial" font-size="8" text-anchor="middle" fill="#000">Make Clients Happy</text>
+</svg>

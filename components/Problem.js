@@ -24,8 +24,8 @@ const Arrow = ({ extraStyle }) => {
 const Step = ({ emoji, text }) => {
   return (
     <div className="w-full md:w-48 flex flex-col gap-2 items-center justify-center">
-      <span className="text-4xl">{emoji}</span>
-      <h3 className="font-bold">{text}</h3>
+      <span className="text-5xl">{emoji}</span>
+      <h3 className="font-bold text-2xl">{text}</h3>
     </div>
   );
 };
@@ -51,11 +51,11 @@ const Problem = () => {
         </p>
 
         <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-6">
-          <Step emoji="💡" text="Idea to take business to next level" />
+          <Step emoji="💡" text="Beautiful new idea" />
 
           <Arrow extraStyle="max-md:-scale-x-100 md:-rotate-90" />
 
-          <Step emoji="👩🏻‍💻" text="Add tons of features" />
+          <Step emoji="👩🏻‍💻" text="Design tons of features" />
 
           <Arrow extraStyle="md:-scale-x-100 md:-rotate-90" />
 

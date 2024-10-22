@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef } from "react";
-import checkoutImg from "@/public/gmb-checkout.png";
 import Image from "next/image";
 
 // The features array is a list of features that will be displayed in the accordion.
@@ -20,8 +19,8 @@ const features = [
     path: "/gmb-praxis.mp4",
     format: "video/mp4",
     size: {
-      width: 500,
-      height: 350,
+      width: 800,
+      height: 600,
     },
     svg: (
       <svg
@@ -43,9 +42,13 @@ const features = [
     title: "Ecommerce & Payments",
     description:
       "Create checkout sessions, handle users accounts (subscriptions, one-time payments...) and optimize conversions",
-    type: "image",
-    path: checkoutImg,
-    alt: "A computer",
+    type: "video",
+    path: "/modelones-tryon.mp4",
+    format: "video/mp4",
+    size: {
+      width: 800,
+      height: 600,
+    },
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -68,11 +71,11 @@ const features = [
     description:
       "Build stunning landing pages, product showcases, and company websites. Our marketing sites are designed to convert visitors into customers, featuring responsive layouts, SEO optimization, and seamless integration with analytics tools.",
     type: "video",
-    path: "/modelones-tryon.mp4",
+    path: "/galaxy-wide.mp4",
     format: "video/mp4",
     size: {
-      height: 500,
-      width: 350,
+      height: 800,
+      width: 600,
     },
     svg: (
       <svg
@@ -139,10 +142,9 @@ const Item = ({ feature, isOpen, setFeatureSelected }) => {
 // Video are set to autoplay for best UX.
 const Media = ({ feature }) => {
   const { type, path, format, alt, size = { width: 500, height: 500 } } = feature;
-  const style = "rounded-2xl sm:w-[26rem]";
+  const style = "rounded-2xl max-h-[400px]";
 
   if (type === "video") {
-    console.log(feature)
     return (
       <video
         className={style}
@@ -151,8 +153,6 @@ const Media = ({ feature }) => {
         loop
         playsInline
         controls
-        width={size.width}
-        height={size.height}
       >
         <source src={path} type={format} />
       </video>
@@ -191,6 +191,9 @@ const FeaturesAccordion = () => {
         </h2>
         <div className=" flex flex-col md:flex-row gap-12 md:gap-24">
           <div className="grid grid-cols-1 items-stretch gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-20">
+          <div className="flex items-center justify-center">
+              <Media feature={features[featureSelected]} key={featureSelected} />
+            </div>
             <ul className="w-full">
               {features.map((feature, i) => (
                 <Item
@@ -202,8 +205,6 @@ const FeaturesAccordion = () => {
                 />
               ))}
             </ul>
-
-            <Media feature={features[featureSelected]} key={featureSelected} />
           </div>
         </div>
       </div>

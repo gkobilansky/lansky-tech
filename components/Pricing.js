@@ -1,16 +1,17 @@
 import config from "@/config";
 import ButtonCheckout from "./ButtonCheckout";
+import ButtonGradient from "./ButtonGradient";
 
 // <Pricing/> displays the pricing plans for your app
 // It's your Stripe config in config.js.stripe.plans[] that will be used to display the plans
 // <ButtonCheckout /> renders a button that will redirect the user to Stripe checkout called the /api/stripe/create-checkout API endpoint with the correct priceId
 
-const Pricing = () => {
+const Pricing = ({ openModal }) => {
   return (
-    <section className="bg-base-200 overflow-hidden" id="pricing">
+    <section className="bg-base-200 overflow-hidden" id="intro">
       <div className="py-24 px-8 max-w-5xl mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
-          <p className="font-medium text-primary mb-8">Options</p>
+          <p className="font-medium text-primary mb-8">Get in touch</p>
           <h2 className="font-bold text-3xl lg:text-5xl tracking-tight">
             Save hours of repetitive code and ship faster!
           </h2>
@@ -24,7 +25,7 @@ const Pricing = () => {
                   <span
                     className={`badge text-xs text-primary-content font-semibold border-0 bg-primary`}
                   >
-                    POPULAR
+                    Free & Clear
                   </span>
                 </div>
               )}
@@ -57,14 +58,6 @@ const Pricing = () => {
                       </p>
                     </div>
                   )}
-                  <p className={`text-5xl tracking-tight font-extrabold`}>
-                    ${plan.price}
-                  </p>
-                  <div className="flex flex-col justify-end mb-[4px]">
-                    <p className="text-xs text-base-content/60 uppercase font-semibold">
-                      USD
-                    </p>
-                  </div>
                 </div>
                 {plan.features && (
                   <ul className="space-y-2.5 leading-relaxed text-base flex-1">
@@ -88,11 +81,11 @@ const Pricing = () => {
                     ))}
                   </ul>
                 )}
-                <div className="space-y-2">
-                  <ButtonCheckout priceId={plan.priceId} />
+                <div className="space-y-2 flex flex-col items-center">
+                  <ButtonGradient className="mx-auto" title="👩🏻‍💻 Send me a note" onClick={openModal} />
 
                   <p className="flex items-center justify-center gap-2 text-sm text-center text-base-content/80 font-medium relative">
-                    Pay once. Access forever.
+                    No commitment.
                   </p>
                 </div>
               </div>

@@ -18,7 +18,7 @@ const links = [
 ];
 
 const cta = (
-  <ButtonGradient title="👩🏻‍💻 Shoot me a note" extraStyle="btn-primary md:btn-sm" />
+  <ButtonGradient title="👩🏻‍💻 Send me a note" extraStyle="btn-primary md:btn-sm" />
 );
 
 const ButtonPopoverCategories = () => {

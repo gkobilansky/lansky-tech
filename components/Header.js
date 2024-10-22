@@ -14,12 +14,12 @@ const links = [
     label: "Work",
   },
   {
-    href: "/#testimonials",
-    label: "Reviews",
+    href: "/#features",
+    label: "What we do",
   },
   {
-    href: "/#faq",
-    label: "FAQ",
+    href: "/#intro",
+    label: "Intro call",
   },
 ];
 
@@ -30,7 +30,7 @@ const Header = ({ openModal }) => {
   const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
 
-  const cta = <ButtonGradient title="👩🏻‍💻 Shoot me a note" extraStyle="btn-primary" onClick={openModal} />;
+  const cta = <ButtonGradient title="👩🏻‍💻 Send me a note" extraStyle="btn-primary" onClick={openModal} />;
 
   // setIsOpen(false) when the route changes (i.e: when the user clicks on a link on mobile)
   useEffect(() => {
