@@ -2,7 +2,7 @@ import themes from "daisyui/src/theming/themes";
 
 const config = {
   // REQUIRED
-  appName: "Lancekey Advising",
+  appName: "Lansky Advising",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
     "Web development to help you grow.",

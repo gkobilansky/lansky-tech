@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/lancekey_symbol.png";
+import logo from "@/public/lansky-logo.png";
 import ButtonGradient from "./ButtonGradient";
 import config from "@/config";
 
@@ -53,7 +53,7 @@ const Header = ({ openModal }) => {
             <Image
               src={logo}
               alt={`${config.appName} logo`}
-              className="w-14 h-14"
+              className="w-20 h-20 rounded-md"
               placeholder="blur"
               priority
               width={56}
