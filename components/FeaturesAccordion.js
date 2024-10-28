@@ -12,12 +12,16 @@ import Image from "next/image";
 // - alt: The alt text of the image (if type is 'image')
 const features = [
   {
-    title: "Emails",
+    title: "Web Apps",
     description:
-      "Send transactional emails, setup your DNS to avoid spam folder (DKIM, DMARC, SPF in subdomain), and listen to webhook to receive & forward emails",
+      "State of the art performance, streaming video, transactional emails, integrated checkout and more on desktop and mobile",
     type: "video",
-    path: "https://d3m8mk7e1mf7xn.cloudfront.net/app/newsletter.webm",
-    format: "video/webm",
+    path: "/gmb-praxis.mp4",
+    format: "video/mp4",
+    size: {
+      width: 800,
+      height: 600,
+    },
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -35,12 +39,16 @@ const features = [
     ),
   },
   {
-    title: "Payments",
+    title: "Ecommerce & Payments",
     description:
-      "Create checkout sessions, handle webhooks to update user's account (subscriptions, one-time payments...) and tips to setup your account & reduce chargebacks",
-    type: "image",
-    path: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
-    alt: "A computer",
+      "Create checkout sessions, handle users accounts (subscriptions, one-time payments...) and optimize conversions",
+    type: "video",
+    path: "/modelones-tryon.mp4",
+    format: "video/mp4",
+    size: {
+      width: 800,
+      height: 600,
+    },
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -59,30 +67,16 @@ const features = [
     ),
   },
   {
-    title: "Authentication",
+    title: "Marketing Sites",
     description:
-      "Magic links setup, login with Google walkthrough, save user in MongoDB/Supabase, private/protected pages & API calls",
-    svg: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-6 h-6"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: "Style",
-    description:
-      "Components, animations & sections (like this features section), 20+ themes with daisyUI, automatic dark mode",
+      "Build stunning landing pages, product showcases, and company websites. Our marketing sites are designed to convert visitors into customers, featuring responsive layouts, SEO optimization, and seamless integration with analytics tools.",
+    type: "video",
+    path: "/galaxy-wide.mp4",
+    format: "video/mp4",
+    size: {
+      height: 800,
+      width: 600,
+    },
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -147,12 +141,8 @@ const Item = ({ feature, isOpen, setFeatureSelected }) => {
 // A component to display the media (video or image) of the feature. If the type is not specified, it will display an empty div.
 // Video are set to autoplay for best UX.
 const Media = ({ feature }) => {
-  const { type, path, format, alt } = feature;
-  const style = "rounded-2xl aspect-square w-full sm:w-[26rem]";
-  const size = {
-    width: 500,
-    height: 500,
-  };
+  const { type, path, format, alt, size = { width: 500, height: 500 } } = feature;
+  const style = "rounded-2xl max-h-[400px]";
 
   if (type === "video") {
     return (
@@ -163,8 +153,6 @@ const Media = ({ feature }) => {
         loop
         playsInline
         controls
-        width={size.width}
-        height={size.height}
       >
         <source src={path} type={format} />
       </video>
@@ -196,13 +184,16 @@ const FeaturesAccordion = () => {
     >
       <div className="px-8">
         <h2 className="font-extrabold text-4xl lg:text-6xl tracking-tight mb-12 md:mb-24">
-          All you need to ship your startup fast
-          <span className="bg-neutral text-neutral-content px-2 md:px-4 ml-1 md:ml-1.5 leading-relaxed whitespace-nowrap">
-            and get profitable
+          We help you find a "good enough" solution &
+          <span className="bg-neutral text-neutral-content px-2 md:px-4 ml-1 md:ml-1.5 leading-relaxed">
+            build a lean, profitable product
           </span>
         </h2>
         <div className=" flex flex-col md:flex-row gap-12 md:gap-24">
           <div className="grid grid-cols-1 items-stretch gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-20">
+          <div className="flex items-center justify-center">
+              <Media feature={features[featureSelected]} key={featureSelected} />
+            </div>
             <ul className="w-full">
               {features.map((feature, i) => (
                 <Item
@@ -214,8 +205,6 @@ const FeaturesAccordion = () => {
                 />
               ))}
             </ul>
-
-            <Media feature={features[featureSelected]} key={featureSelected} />
           </div>
         </div>
       </div>

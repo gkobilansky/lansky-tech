@@ -14,9 +14,31 @@ progress::-webkit-progress-value {
 
 @layer base {
   .btn-gradient {
-    @apply !bg-gradient !bg-[length:300%_300%] hover:saturate-[1.2] shadow duration-100 !border-0 !border-transparent !bg-transparent animate-shimmer disabled:!bg-none disabled:!bg-gray-500/30  !text-white;
+    @apply !bg-gradient-to-r from-violet-500 to-fuchsia-500 !bg-[length:300%_300%] hover:saturate-[1.2] shadow duration-100 !border-0 !border-transparent !bg-transparent animate-shimmer disabled:!bg-none disabled:!bg-gray-500/30  !text-white;
   }
   .btn {
     @apply !capitalize;
   }
+}
+
+@keyframes slow-pan {
+  0% {
+    transform: scale(2) translate(20%, -20%);
+  }
+  25% {
+    transform: scale(1.75) translate(10%, -10%);
+  }
+  50% {
+    transform: scale(1.5) translate(0%, 0%);
+  }
+  75% {
+    transform: scale(1.75) translate(-10%, 10%);
+  }
+  100% {
+    transform: scale(2) translate(-20%, 20%);
+  }
+}
+
+.animate-slow-pan {
+  animation: slow-pan 60s ease-in-out infinite;
 }

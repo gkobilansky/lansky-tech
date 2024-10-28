@@ -4,32 +4,33 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import ButtonSignin from "./ButtonSignin";
-import logo from "@/app/icon.png";
+import logo from "@/public/lansky-logo.png";
+import ButtonGradient from "./ButtonGradient";
 import config from "@/config";
 
 const links = [
   {
-    href: "/#pricing",
-    label: "Pricing",
+    href: "/work",
+    label: "Work",
   },
   {
-    href: "/#testimonials",
-    label: "Reviews",
+    href: "/#features",
+    label: "What we do",
   },
   {
-    href: "/#faq",
-    label: "FAQ",
+    href: "/#intro",
+    label: "Intro call",
   },
 ];
 
-const cta = <ButtonSignin extraStyle="btn-primary" />;
 
 // A header with a logo on the left, links in the center (like Pricing, etc...), and a CTA (like Get Started or Login) on the right.
 // The header is responsive, and on mobile, the links are hidden behind a burger button.
-const Header = () => {
+const Header = ({ openModal }) => {
   const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
+
+  const cta = <ButtonGradient title="👩🏻‍💻 Send me a note" extraStyle="btn-primary" onClick={openModal} />;
 
   // setIsOpen(false) when the route changes (i.e: when the user clicks on a link on mobile)
   useEffect(() => {
@@ -52,11 +53,11 @@ const Header = () => {
             <Image
               src={logo}
               alt={`${config.appName} logo`}
-              className="w-8"
+              className="w-20 h-20 rounded-md"
               placeholder="blur"
-              priority={true}
-              width={32}
-              height={32}
+              priority
+              width={56}
+              height={56}
             />
             <span className="font-extrabold text-lg">{config.appName}</span>
           </Link>

@@ -1,5 +1,5 @@
 {
-  "name": "ship-fast-code",
+  "name": "lancekey-advising",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -36,6 +36,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "daisyui": "^4.10.1",
+    "file-loader": "^6.2.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3"
   }
