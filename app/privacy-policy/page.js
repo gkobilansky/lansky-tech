@@ -12,8 +12,8 @@ import config from "@/config";
 // You are an excellent lawyer.
 
 // I need your help to write a simple privacy policy for my website. Here is some context:
-// - Website: https://lancekey.com
-// - Name: Lancekey Advising
+// - Website: https://Lansky.tech
+// - Name: Lansky Tech
 // - Description: A JavaScript code boilerplate to help entrepreneurs launch their startups faster
 // - User data collected: name, email and payment information
 // - Non-personal data collection: web cookies
@@ -21,7 +21,7 @@ import config from "@/config";
 // - Data sharing: we do not share the data with any other parties
 // - Children's Privacy: we do not collect any data from children
 // - Updates to the Privacy Policy: users will be updated by email
-// - Contact information: hello@lancekey.com
+// - Contact information: hello@Lansky.tech
 
 // Please write a simple privacy policy for my site. Add the current date.  Do not add or explain your reasoning. Answer:
 

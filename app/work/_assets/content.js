@@ -100,7 +100,7 @@ export const authors = [
     // The name to display in the author's bio. Up to 60 characters.
     name: "Gene Kobilansky",
     // The job to display in the author's bio. Up to 60 characters.
-    job: "Founder of Lancekey Advisors",
+    job: "Founder of Lansky Tech",
     // The description of the author to display in the author's bio. Up to 160 characters.
     description:
       "Gene is a developer and an entrepreneur.",
