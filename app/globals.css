@@ -14,7 +14,7 @@ progress::-webkit-progress-value {
 
 @layer base {
   .btn-gradient {
-    @apply !bg-gradient-to-r from-violet-500 to-fuchsia-500 !bg-[length:300%_300%] hover:saturate-[1.2] shadow duration-100 !border-0 !border-transparent !bg-transparent animate-shimmer disabled:!bg-none disabled:!bg-gray-500/30  !text-white;
+    @apply !bg-gradient-to-r from-[#FFCC00] to-[#FFD633] !bg-[length:1400%_1400%] hover:saturate-[1.2] shadow duration-500 !border-0 !border-transparent !bg-transparent animate-shimmer disabled:!bg-none disabled:!bg-gray-500/30  !text-slate-900;
   }
   .btn {
     @apply !capitalize;
