@@ -14,31 +14,26 @@ progress::-webkit-progress-value {
 
 @layer base {
   .btn-gradient {
-    @apply !bg-gradient-to-r from-[#FFCC00] to-[#FFD633] !bg-[length:1400%_1400%] hover:saturate-[1.2] shadow duration-500 !border-0 !border-transparent !bg-transparent animate-shimmer disabled:!bg-none disabled:!bg-gray-500/30  !text-slate-900;
+    @apply !bg-gradient-to-r from-[#FFCC00] to-[#FFD633] !bg-[length:100%_100%] 
+    hover:saturate-[1.2] hover:scale-[1.02] shadow duration-300 !border-0 
+    !border-transparent !bg-transparent disabled:!bg-none 
+    disabled:!bg-gray-500/30 !text-slate-900 relative overflow-hidden 
+    transform transition-all active:scale-[0.98];
   }
+
+  .btn-gradient::after {
+    @apply content-[''] absolute w-[200%] h-[200%] left-[-50%] top-[-50%] bg-white/60 
+    scale-x-0 scale-y-0 rounded-sm origin-left transition-all 
+    duration-700 ease-out;
+  }
+
+  .btn-gradient:active::after {
+    @apply scale-x-100 scale-y-100 opacity-20;
+  }
+
   .btn {
     @apply !capitalize;
   }
 }
 
-@keyframes slow-pan {
-  0% {
-    transform: scale(2) translate(20%, -20%);
-  }
-  25% {
-    transform: scale(1.75) translate(10%, -10%);
-  }
-  50% {
-    transform: scale(1.5) translate(0%, 0%);
-  }
-  75% {
-    transform: scale(1.75) translate(-10%, 10%);
-  }
-  100% {
-    transform: scale(2) translate(-20%, 20%);
-  }
-}
 
-.animate-slow-pan {
-  animation: slow-pan 60s ease-in-out infinite;
-}
