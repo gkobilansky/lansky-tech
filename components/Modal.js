@@ -57,7 +57,7 @@ const Modal = ({ isModalOpen, setIsModalOpen }) => {
                   </button>
                 </div>
 
-                <section className="flex justify-center relative"><ButtonLead title="Say hi 👋🏻"/></section>
+                <section className="flex justify-center relative"><ButtonLead className="btn-gradient" title="Say hi 👋🏻" /></section>
               </Dialog.Panel>
             </Transition.Child>
           </div>

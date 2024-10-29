@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="lg:w-full">
         <video
           className="rounded-2xl"
-          src="/modelones-wide.mp4"
+          src="https://stream.mux.com/ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg.m3u8"
           autoPlay
           muted 
           loop

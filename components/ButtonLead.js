@@ -56,7 +56,7 @@ const ButtonLead = ({ extraStyle }) => {
       <textarea value={message} placeholder="Message" className="textarea textarea-bordered w-full placeholder:opacity-60" onChange={(e) => setMessage(e.target.value)} />
 
       <button
-        className="btn btn-primary btn-block"
+        className="btn btn-gradient btn-block"
         type="submit"
         disabled={isDisabled}
       >
