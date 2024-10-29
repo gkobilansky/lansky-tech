@@ -5,6 +5,8 @@ const Constellation = () => {
     const points = useRef([]);
     const mouse = useRef({ x: 0, y: 0 });
     const scrollPosition = useRef(0);
+    const connections = useRef([]);
+    const isTouch = useRef(false);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -39,14 +41,58 @@ const Constellation = () => {
         };
         createPoints();
 
-        // Handle mouse movement
+        // Update mouse handler to handle both mouse and touch
         const handleMouseMove = (e) => {
+            e.preventDefault();
             mouse.current = {
                 x: e.clientX,
                 y: e.clientY
             };
         };
-        canvas.addEventListener('mousemove', handleMouseMove);
+
+        // Add touch handlers
+        const handleTouchMove = (e) => {
+            e.preventDefault();
+            isTouch.current = true;
+            const touch = e.touches[0];
+            mouse.current = {
+                x: touch.clientX,
+                y: touch.clientY
+            };
+        };
+
+        const handleTouchStart = (e) => {
+            e.preventDefault();
+            isTouch.current = true;
+            const touch = e.touches[0];
+            mouse.current = {
+                x: touch.clientX,
+                y: touch.clientY
+            };
+        };
+
+        const handleTouchEnd = () => {
+            // Reset mouse position when touch ends
+            mouse.current = { x: 0, y: 0 };
+        };
+
+        // Add event listeners
+        window.addEventListener('mousemove', handleMouseMove);
+        canvas.addEventListener('touchmove', handleTouchMove, { passive: false });
+        canvas.addEventListener('touchstart', handleTouchStart, { passive: false });
+        canvas.addEventListener('touchend', handleTouchEnd);
+
+        // Add this function to create a new connection
+        const createConnection = (startPoint, endPoint) => {
+            return {
+                start: startPoint,
+                end: endPoint,
+                particles: [{
+                    progress: 0,
+                    speed: 0.02 + Math.random() * 0.03 // Random speed for variety
+                }]
+            };
+        };
 
         // Animation function
         const animate = () => {
@@ -56,6 +102,9 @@ const Constellation = () => {
             const zoomScale = 1 + (scrollPosition.current * 0.0001); // Adjust the 0.001 to control zoom speed
             const centerX = canvas.width / 2;
             const centerY = canvas.height / 2;
+            
+            // Reset connections array
+            connections.current = [];
             
             // Update and draw points
             points.current.forEach(point => {
@@ -81,25 +130,32 @@ const Constellation = () => {
                 ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
                 ctx.fill();
                 ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
-                ctx.lineWidth = 1 / zoomScale;
+                ctx.lineWidth = 1;
                 ctx.stroke();
 
-                // Connect points within range with styled connections
+                // Modify the point connection logic
                 points.current.forEach(otherPoint => {
-                    // Calculate scaled coordinates for other point
                     const otherDx = otherPoint.x - centerX;
                     const otherDy = otherPoint.y - centerY;
                     const otherScaledX = centerX + (otherDx * zoomScale);
                     const otherScaledY = centerY + (otherDy * zoomScale);
 
                     const distance = Math.hypot(scaledX - otherScaledX, scaledY - otherScaledY);
-                    if (distance < 150 * zoomScale) {  // Scale the connection range
+                    if (distance < 150 * zoomScale) {
+                        // Draw base connection line with lower opacity
                         ctx.beginPath();
                         ctx.moveTo(scaledX, scaledY);
                         ctx.lineTo(otherScaledX, otherScaledY);
-                        ctx.lineWidth = 0.5 / zoomScale;  // Scale line width
-                        ctx.strokeStyle = `rgba(255, 255, 255, ${0.8 - distance / (150 * zoomScale)})`;
+                        ctx.lineWidth = 0.5 / zoomScale;
+                        ctx.strokeStyle = `rgba(255, 255, 255, ${(0.2 - distance / (150 * zoomScale)) * 0.5})`;
                         ctx.stroke();
+
+                        // Create or update connection
+                        const connection = createConnection(
+                            { x: scaledX, y: scaledY },
+                            { x: otherScaledX, y: otherScaledY }
+                        );
+                        connections.current.push(connection);
                     }
                 });
 
@@ -115,6 +171,34 @@ const Constellation = () => {
                 }
             });
 
+            // // Draw particles along connections
+            // connections.current.forEach(connection => {
+            //     connection.particles.forEach((particle, index) => {
+            //         // Update particle position
+            //         particle.progress += particle.speed;
+                    
+            //         // Remove particle if it reached the end
+            //         if (particle.progress >= 100) {
+            //             // Create new particle if needed
+            //             if (Math.random() < 0.1) { // 10% chance to create new particle
+            //                 particle.progress = 0;
+            //             } else {
+            //                 connection.particles.splice(index, 1);
+            //             }
+            //             return;
+            //         }
+
+            //         // Draw particle
+            //         const x = connection.start.x + (connection.end.x - connection.start.x) * particle.progress;
+            //         const y = connection.start.y + (connection.end.y - connection.start.y) * particle.progress;
+                    
+            //         ctx.beginPath();
+            //         ctx.arc(x, y, 1.5 / zoomScale, 0, Math.PI * 2);
+            //         ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            //         ctx.fill();
+            //     });
+            // });
+
             requestAnimationFrame(animate);
         };
         animate();
@@ -123,7 +207,10 @@ const Constellation = () => {
         return () => {
             window.removeEventListener('resize', handleResize);
             window.removeEventListener('scroll', handleScroll);
-            canvas.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('mousemove', handleMouseMove);
+            canvas.removeEventListener('touchmove', handleTouchMove);
+            canvas.removeEventListener('touchstart', handleTouchStart);
+            canvas.removeEventListener('touchend', handleTouchEnd);
         };
     }, []);
 
@@ -135,7 +222,8 @@ const Constellation = () => {
                 top: 0,
                 left: 0,
                 background: 'transparent',
-                zIndex: -1
+                zIndex: -1,
+                touchAction: 'none'
             }}
         />
     );
