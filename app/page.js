@@ -1,6 +1,7 @@
 "use client";
 
 import { Suspense, useState } from 'react'
+import Constellation from '@/components/Constellation';
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Hello from "@/components/Hello";
@@ -29,6 +30,7 @@ export default function Home() {
         <Header openModal={openModal} />
       </Suspense>
       <main>
+      <Constellation />
         <Hero />
         <Problem />
         <FeaturesAccordion />
