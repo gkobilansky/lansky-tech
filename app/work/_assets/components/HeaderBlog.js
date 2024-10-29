@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { Popover, Transition } from "@headlessui/react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/lancekey_symbol.png";
+import logo from "@/public/lansky-logo.png";
 import config from "@/config";
 import { categories } from "../content";
 import ButtonGradient from "@/components/ButtonGradient";

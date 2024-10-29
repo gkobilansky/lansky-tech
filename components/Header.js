@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/lansky-logo.png";
+import logo from "@/public/lansky-logo.svg";
 import ButtonGradient from "./ButtonGradient";
 import config from "@/config";
 
@@ -38,7 +38,7 @@ const Header = ({ openModal }) => {
   }, [searchParams]);
 
   return (
-    <header className="bg-base-200">
+    <header className="fixed top-5 left-10 right-10 z-50 bg-base-200/80 backdrop-blur-lg rounded-xl">
       <nav
         className="container flex items-center justify-between px-8 py-4 mx-auto"
         aria-label="Global"
@@ -46,7 +46,7 @@ const Header = ({ openModal }) => {
         {/* Your logo/name on large screens */}
         <div className="flex lg:flex-1">
           <Link
-            className="flex items-center gap-2 shrink-0 "
+            className="flex items-center gap-3 shrink-0 "
             href="/"
             title={`${config.appName} hompage`}
           >
@@ -54,12 +54,11 @@ const Header = ({ openModal }) => {
               src={logo}
               alt={`${config.appName} logo`}
               className="w-20 h-20 rounded-md"
-              placeholder="blur"
               priority
               width={56}
               height={56}
             />
-            <span className="font-extrabold text-lg">{config.appName}</span>
+            <span className="hidden lg:inline font-extrabold brightness-150 contrast-150 text-3xl uppercase tracking-wide">{config.appName}</span>
           </Link>
         </div>
         {/* Burger button to open menu on mobile */}
@@ -108,7 +107,7 @@ const Header = ({ openModal }) => {
       {/* Mobile menu, show/hide based on menu state. */}
       <div className={`relative z-50 ${isOpen ? "" : "hidden"}`}>
         <div
-          className={`fixed inset-y-0 right-0 z-10 w-full px-8 py-4 overflow-y-auto bg-base-200 sm:max-w-sm sm:ring-1 sm:ring-neutral/10 transform origin-right transition ease-in-out duration-300`}
+          className={`fixed inset-y-0 right-0 z-10 w-full px-8 py-4 min-h-96 overflow-y-auto bg-base-200/80 backdrop-blur-lg sm:max-w-sm sm:ring-1 sm:ring-neutral/10 transform origin-right transition ease-in-out duration-300`}
         >
           {/* Your logo/name on small screens */}
           <div className="flex items-center justify-between">
@@ -121,7 +120,6 @@ const Header = ({ openModal }) => {
                 src={logo}
                 alt={`${config.appName} logo`}
                 className="w-8"
-                placeholder="blur"
                 priority={true}
                 width={32}
                 height={32}

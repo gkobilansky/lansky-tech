@@ -1,1 +1,1 @@
-# Lancekey Advising - Web dev for business growth
+# Lansky Tech - Web dev for business growth

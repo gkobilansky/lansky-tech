@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import config from "@/config";
-import logo from "@/public/lancekey_symbol.png";
+import logo from "@/public/lansky-logo.png";
 
 // Add the Footer to the bottom of your landing page and more.
 // The support link is connected to the config.js file. If there's no config.mailgun.supportEmail, the link won't be displayed.
