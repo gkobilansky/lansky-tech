@@ -46,7 +46,7 @@ const Constellation = () => {
                 y: e.clientY
             };
         };
-        canvas.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('mousemove', handleMouseMove);
 
         // Animation function
         const animate = () => {
