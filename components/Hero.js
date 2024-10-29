@@ -1,7 +1,7 @@
-import Image from "next/image";
 import TestimonialsAvatars from "./TestimonialsAvatars";
-import config from "@/config";
-import Link from "next/link";
+import MuxPlayer from "@mux/mux-player-react"; 
+import "@mux/mux-player/themes/minimal";
+
 
 const Hero = () => {
   return (
@@ -16,10 +16,12 @@ const Hero = () => {
 
         <TestimonialsAvatars priority={true} />
       </div>
-      <div className="lg:w-full">
-        <video
-          className="rounded-2xl"
-          src="https://stream.mux.com/ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg.m3u8"
+      <div className="lg:w-full rounded-3xl overflow-hidden border-4 border-white/10 [box-shadow:4px_-4px_24px_-2px_rgba(59,130,246,0.3)]">
+        <MuxPlayer
+          playbackId="ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg"
+          accentColor="#FFCC00"
+          theme="minimal"
+          style={{ aspectRatio: 4/3, borderRadius: 16 }}
           autoPlay
           muted 
           loop

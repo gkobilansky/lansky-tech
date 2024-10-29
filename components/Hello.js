@@ -13,14 +13,13 @@ const Hello = () => {
         <p className="text-lg leading-relaxed">
         👋 Gene Kobi<span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0066CC] to-[#FFCC00]">lansky</span>. I've been helping startups and businesses grow since 2007. In my 18 years of experience, I've seen enough projects fail— to learn what makes the special ones succeed. That's why I started Lansky Technology: to offer clients not just development expertise but a strategic partner who understands what drives sustainable growth.
         </p>
-        <p className="text-lg leading-relaxed">🇺🇦 On a personal note, The war in Ukraine has has hit close to home for me. I've been donating to the Ukrainian army and spreading the word - this devestating agression in Europe can not stand. If you want to help too, here's some links:
+        <p className="text-lg leading-relaxed">🇺🇦 On a personal note, The war in Ukraine has has hit close to home for me. I've been donating to the Ukrainian army and spreading the word - this devestating agression in Europe can not stand. If you want to help too, here's some links:</p>
           <ul className="list-disc list-inside">
             <li><a href="https://ukrainedefensefund.org/" className="underline" target="_blank" rel="noopener noreferrer">Ukrainian Defense Fund</a></li>
             <li><a href="https://www.comebackalive.in.ua/en" className="underline" target="_blank" rel="noopener noreferrer">Come Back Alive</a></li>
             <li><a href="https://savelife.in.ua/en" className="underline" target="_blank" rel="noopener noreferrer">Save Life</a></li>
             <li><a href="https://war.ukraine.ua/en" className="underline" target="_blank" rel="noopener noreferrer">War.Ukraine.ua</a></li>
           </ul>
-          </p>
       </div>
       <div className="lg:w-1/8">
         <Image
