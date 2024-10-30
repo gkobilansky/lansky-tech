@@ -53,7 +53,7 @@ const Header = ({ openModal }) => {
             <Image
               src={logo}
               alt={`${config.appName} logo`}
-              className="w-20 h-20 rounded-md"
+              className="w-8 h-8 lg:w-20 lg:h-20 rounded-md"
               priority
               width={56}
               height={56}
@@ -119,7 +119,7 @@ const Header = ({ openModal }) => {
               <Image
                 src={logo}
                 alt={`${config.appName} logo`}
-                className="w-8"
+                className="w-8 rounded-md"
                 priority={true}
                 width={32}
                 height={32}
