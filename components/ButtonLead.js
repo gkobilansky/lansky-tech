@@ -11,7 +11,6 @@ import apiClient from "@/libs/api";
 const ButtonLead = ({ extraStyle }) => {
   const inputRef = useRef(null);
   const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
@@ -21,14 +20,13 @@ const ButtonLead = ({ extraStyle }) => {
 
     setIsLoading(true);
     try {
-      await apiClient.post("/lead", { email, subject, message });
+      await apiClient.post("/lead", { email, message });
 
       toast.success("Thanks for reaching out!");
 
       // just remove the focus on the input
       inputRef.current.blur();
       setEmail("");
-      setSubject("");
       setMessage("");
       setIsDisabled(true);
     } catch (error) {
@@ -52,7 +50,6 @@ const ButtonLead = ({ extraStyle }) => {
         className="input input-bordered w-full placeholder:opacity-60"
         onChange={(e) => setEmail(e.target.value)}
       />
-      <input type="text" value={subject} placeholder="Subject" className="input input-bordered w-full placeholder:opacity-60" onChange={(e) => setSubject(e.target.value)} />
       <textarea value={message} placeholder="Message" className="textarea textarea-bordered w-full placeholder:opacity-60" onChange={(e) => setMessage(e.target.value)} />
 
       <button

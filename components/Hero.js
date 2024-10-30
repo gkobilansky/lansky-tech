@@ -16,9 +16,15 @@ const Hero = () => {
 
         <TestimonialsAvatars priority={true} />
       </div>
-      <div className="lg:w-full rounded-3xl overflow-hidden border-4 border-white/10 [box-shadow:4px_-4px_24px_-2px_rgba(59,130,246,0.3)]">
+      <div className="lg:w-full">
+        <div className="relative rounded-3xl overflow-hidden border-4 border-white/10 [box-shadow:4px_-4px_24px_-2px_rgba(59,130,246,0.3)]">
         <MuxPlayer
           playbackId="ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg"
+          metadata={{
+            video_id: "ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg",
+            video_title: "Lansky Tech Hero Video",
+            video_description: "Try-on feature that leads to checkout",
+          }}
           accentColor="#FFCC00"
           theme="minimal"
           style={{ aspectRatio: 4/3, borderRadius: 16 }}
@@ -27,6 +33,7 @@ const Hero = () => {
           loop
           playsInline
          />
+         </div>
       </div>
     </section>
   );
