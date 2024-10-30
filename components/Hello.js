@@ -40,10 +40,10 @@ const Hello = () => {
         👋 Gene Kobi<span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0066CC] to-[#FFCC00]">lansky</span>. I've been helping startups and businesses grow since 2007. In my 18 years of experience, I've seen enough projects fail— to learn what makes the special ones succeed. That's why I started Lansky Technology: to offer clients not just development expertise but a strategic partner who understands what drives sustainable growth.
         </p>
         <p className="text-lg leading-relaxed">
-          I started my career helping Wyndham Hotels rebuild their Learning Management System. After that, I helped McDonald's build a franchisee facing billing portal. Those early days helped me cut my teeth on helping clients generate savings, revenue and better reporting from their technology projects. I taught myself to code and built my own products after leaving the corporate world. I've been using that knowledge to help startups and businesses grow since 2012.
+          I started my career building a learning management system and a franchisee facing billing portal. In those early days, I cut my technology teeth on Oracle ERP implementations, MySQL reports, waterfall development, and on-site infrastructure projects. I taught myself to web development and to built my own products after leaving the corporate world.
         </p>
         <p className="text-lg leading-relaxed">
-          In the next section you'll be able to see some examples of our recent work.
+          It's this unique blend of experience that allows us to get to the meat of any issue for our clients - whether that's nailing down frictionless user flows, building scalable systems, or managing product strategy.
         </p>
         <p className="text-lg leading-relaxed">🇺🇦 On a personal note, The war in Ukraine has hit close to home for me. Every morning I check the news  I've been donating to the Ukrainian army and spreading the word - this devestating agression in Europe can not stand. If you want to help too, here's some links:</p>
           <ul className="list-disc list-inside">
