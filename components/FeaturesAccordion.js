@@ -2,7 +2,8 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
-
+import MuxPlayer from "@mux/mux-player-react";
+import "@mux/mux-player/themes/minimal";
 // The features array is a list of features that will be displayed in the accordion.
 // - title: The title of the feature
 // - description: The description of the feature (when clicked)
@@ -17,6 +18,7 @@ const features = [
       "State of the art performance, streaming video, transactional emails, integrated checkout and more on desktop and mobile",
     type: "video",
     path: "/gmb-praxis.mp4",
+    playbackId: "t4SpPCiyHKVEo2u4mg7jKNgAmPv5FclAW1U02V011Xx1g",
     format: "video/mp4",
     size: {
       width: 800,
@@ -44,6 +46,7 @@ const features = [
       "Create checkout sessions, handle users accounts (subscriptions, one-time payments...) and optimize conversions",
     type: "video",
     path: "/modelones-tryon.mp4",
+    playbackId: "1aP4rWU7i5i5iSiMNl02BBOF4NtXHoygFnK00h3Fn19ec",
     format: "video/mp4",
     size: {
       width: 800,
@@ -72,6 +75,7 @@ const features = [
       "Build stunning landing pages, product showcases, and company websites. Our marketing sites are designed to convert visitors into customers, featuring responsive layouts, SEO optimization, and seamless integration with analytics tools.",
     type: "video",
     path: "/galaxy-wide.mp4",
+    playbackId: "1aP4rWU7i5i5iSiMNl02BBOF4NtXHoygFnK00h3Fn19ec",
     format: "video/mp4",
     size: {
       height: 800,
@@ -141,21 +145,21 @@ const Item = ({ feature, isOpen, setFeatureSelected }) => {
 // A component to display the media (video or image) of the feature. If the type is not specified, it will display an empty div.
 // Video are set to autoplay for best UX.
 const Media = ({ feature }) => {
-  const { type, path, format, alt, size = { width: 500, height: 500 } } = feature;
-  const style = "rounded-2xl max-h-[400px]";
+  const { type, path, playbackId, alt, size = { width: 500, height: 500 } } = feature;
 
   if (type === "video") {
     return (
-      <video
-        className={style}
+      <MuxPlayer
+        playbackId={playbackId}
+        theme="minimal"
+        style={{aspectRatio: 4 / 3}}
         autoPlay
         muted
         loop
         playsInline
         controls
       >
-        <source src={path} type={format} />
-      </video>
+      </MuxPlayer>
     );
   } else if (type === "image") {
     return (
@@ -180,7 +184,7 @@ const FeaturesAccordion = () => {
   return (
     <section
       className="py-24 md:py-32 space-y-24 md:space-y-32 max-w-7xl mx-auto bg-base-100 bg-opacity-80"
-      id="features"
+      id="solutions"
     >
       <div className="px-8">
         <h2 className="font-extrabold text-4xl lg:text-6xl tracking-tight mb-12 md:mb-24">

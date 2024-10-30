@@ -23,7 +23,7 @@ const Pricing = ({ openModal }) => {
               {plan.isFeatured && (
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
                   <span
-                    className={`badge text-xs text-primary-content font-semibold border-0 bg-primary`}
+                    className={`badge text-xs text-primary-content font-semibold border-0 bg-[#0066CC]`}
                   >
                     Free & Clear
                   </span>
@@ -32,7 +32,7 @@ const Pricing = ({ openModal }) => {
 
               {plan.isFeatured && (
                 <div
-                  className={`absolute -inset-[1px] rounded-[9px] bg-primary z-10`}
+                  className={`absolute -inset-[1px] rounded-[9px] bg-[#0066CC] z-10`}
                 ></div>
               )}
 

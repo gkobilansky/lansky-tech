@@ -11,13 +11,13 @@ const Hero = () => {
           Web dev to <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0066CC] to-[#FFCC00]"> help you grow.</span>
         </h1>
         <p className="text-lg opacity-80 leading-relaxed">
-          Listen. Build. Test. Repeat. A simple process that's served me well with all our clients.
+          Listen. Build. Test. Repeat. A simple process with powerful results.
         </p>
 
         <TestimonialsAvatars priority={true} />
       </div>
       <div className="lg:w-full">
-        <div className="relative rounded-3xl overflow-hidden border-4 border-white/10 [box-shadow:4px_-4px_24px_-2px_rgba(59,130,246,0.3)]">
+        {/* <div className="relative rounded-3xl overflow-hidden border-4 border-white/10 [box-shadow:4px_-4px_24px_-2px_rgba(59,130,246,0.3)]"> */}
         <MuxPlayer
           playbackId="ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg"
           metadata={{
@@ -27,14 +27,14 @@ const Hero = () => {
           }}
           accentColor="#FFCC00"
           theme="minimal"
-          style={{ aspectRatio: 4/3, borderRadius: 16 }}
+          style={{ aspectRatio: 4/3}}
           autoPlay
           muted 
           loop
           playsInline
          />
          </div>
-      </div>
+      {/* </div> */}
     </section>
   );
 };

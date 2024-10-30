@@ -44,6 +44,12 @@ const Footer = () => {
               </div>
 
               <div className="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm">
+                <Link href="/#hello" className="link link-hover">
+                  Hello
+                </Link>
+                <Link href="/#work" className="link link-hover">
+                  Our Work
+                </Link>
                 {config.mailgun.supportEmail && (
                   <a
                     href={`mailto:${config.mailgun.supportEmail}`}
@@ -54,12 +60,6 @@ const Footer = () => {
                     Support
                   </a>
                 )}
-                <Link href="/#hello" className="link link-hover">
-                  Hello
-                </Link>
-                <Link href="/work" className="link link-hover">
-                  Our Work
-                </Link>
               </div>
             </div>
 

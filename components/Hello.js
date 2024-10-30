@@ -12,7 +12,7 @@ const Hello = () => {
           width={500}
           height={500}
         />
-        <div className="absolute bottom-[-250px] left-1/2 transform -translate-x-1/2">
+        <div className="hidden lg:block absolute bottom-[-350px] left-1/2 transform -translate-x-1/2">
           <div className="animate-bounce flex flex-col items-center text-primary">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 

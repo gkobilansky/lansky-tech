@@ -14,6 +14,7 @@ const ButtonLead = ({ extraStyle }) => {
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e?.preventDefault();
@@ -29,12 +30,22 @@ const ButtonLead = ({ extraStyle }) => {
       setEmail("");
       setMessage("");
       setIsDisabled(true);
+      setIsSuccess(true);
     } catch (error) {
       console.log(error);
     } finally {
       setIsLoading(false);
     }
   };
+
+  if (isSuccess) {
+    return (
+      <div className={`w-full max-w-xs text-center text-6xl ${extraStyle ? extraStyle : ""}`}>
+        👍
+      </div>
+    );
+  }
+
   return (
     <form
       className={`w-full max-w-xs space-y-3 ${extraStyle ? extraStyle : ""}`}
@@ -50,6 +61,7 @@ const ButtonLead = ({ extraStyle }) => {
         className="input input-bordered w-full placeholder:opacity-60"
         onChange={(e) => setEmail(e.target.value)}
       />
+      
       <textarea value={message} placeholder="Message" className="textarea textarea-bordered w-full placeholder:opacity-60" onChange={(e) => setMessage(e.target.value)} />
 
       <button

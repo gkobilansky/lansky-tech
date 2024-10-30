@@ -8,6 +8,7 @@ import Hello from "@/components/Hello";
 import Problem from "@/components/Problem";
 import FeaturesAccordion from "@/components/FeaturesAccordion";
 import Pricing from "@/components/Pricing";
+import Work from "@/components/Work";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Modal from "@/components/Modal";
@@ -29,12 +30,13 @@ export default function Home() {
       <Suspense>
         <Header openModal={openModal} />
       </Suspense>
-      <main>
       <Constellation />
+      <main>
         <Hero />
         <Problem />
         <FeaturesAccordion />
         <Hello />
+        <Work />
         <Pricing openModal={openModal} />
         <FAQ />
         <CTA openModal={openModal} />

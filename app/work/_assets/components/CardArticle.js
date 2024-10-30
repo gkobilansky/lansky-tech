@@ -13,11 +13,11 @@ const CardArticle = ({
   const TitleTag = tag;
 
   return (
-    <article className="card bg-base-200 rounded-box overflow-hidden">
+    <article className="card bg-base-200 rounded-box overflow-hidden hover:shadow-lg transition-all duration-200">
       {article.image?.src && (
         <Link
           href={`/work/${article.slug}`}
-          className="link link-hover hover:link-primary"
+          className="link link-hover"
           title={article.title}
           rel="bookmark"
         >
@@ -25,52 +25,37 @@ const CardArticle = ({
             <Image
               src={article.image.src}
               alt={article.image.alt}
-              width={600}
-              height={338}
+              width={800}
+              height={450}
               priority={isImagePriority}
               placeholder="blur"
-              className="aspect-video object-center object-cover hover:scale-[1.03] duration-200 ease-in-out"
+              className="aspect-[16/9] object-center object-cover hover:scale-[1.02] duration-200 ease-in-out"
             />
           </figure>
         </Link>
       )}
-      <div className="card-body">
-        {/* CATEGORIES */}
-        {showCategory && (
-          <div className="flex flex-wrap gap-2">
-            {article.categories.map((category) => (
-              <BadgeCategory category={category} key={category.slug} />
-            ))}
-          </div>
-        )}
-
+      <div className="card-body p-4">
         {/* TITLE WITH RIGHT TAG */}
-        <TitleTag className="mb-1 text-xl md:text-2xl font-bold">
+        <TitleTag className="text-xl font-bold mb-1">
           <Link
             href={`/work/${article.slug}`}
             className="link link-hover hover:link-primary"
             title={article.title}
-            rel="bookmark"
           >
             {article.title}
           </Link>
         </TitleTag>
 
-        <div className=" text-base-content/80 space-y-4">
-          {/* DESCRIPTION */}
-          <p className="">{article.description}</p>
-
-          {/* AUTHOR & DATE */}
-          <div className="flex items-center gap-4 text-sm">
-            <Avatar article={article} />
-
-            <span itemProp="datePublished">
-              {new Date(article.publishedAt).toLocaleDateString("en-US", {
-                month: "long",
-                day: "numeric",
-              })}
-            </span>
-          </div>
+        {/* Simplified meta info */}
+        <div className="flex items-center justify-between text-sm text-base-content/70">
+          {showCategory && article.categories[0] && (
+            <BadgeCategory category={article.categories[0]} />
+          )}
+          <span>
+            {new Date(article.publishedAt).toLocaleDateString("en-US", {
+              year: "numeric",
+            })}
+          </span>
         </div>
       </div>
     </article>
