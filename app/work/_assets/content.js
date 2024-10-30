@@ -4,6 +4,9 @@ import introducingTemptations from "@/public/work/temptations/temptations-banner
 import catQuiz from "@/public/work/temptations/cat-quiz-2.jpeg";
 import lickablesLive from "@/public/work/temptations/lickables-live.jpeg";
 import productDisplay from "@/public/work/temptations/product-display.jpeg";
+import samsungExperience from "@/public/work/samsung/samsung-galaxy.png";
+import goBig from "@/public/work/samsung/galaxy-go-big.png";
+import praxis from "@/public/work/praxis/elements_macbook_iphone.webp";
 
 // ==================================================================================================================================================================
 // BLOG CATEGORIES 🏷️
@@ -145,10 +148,10 @@ export const articles = [
     // The unique slug to use in the URL. It's also used to generate the canonical URL.
     slug: "building-temptations",
     // The title to display in the article page (h1). Less than 60 characters. It's also used to generate the meta title.
-    title: "Interactive Amazon Store Experience for Temptation’s Cat Treats",
+    title: "Interactive Amazon Store Experience for Temptation's Cat Treats",
     // The description of the article to display in the article page. Up to 160 characters. It's also used to generate the meta description.
     description:
-      "Temptation’s Cat Treats is a popular pet food brand that specializes in cat treats. Their mission is to engage cat owners and offer tasty, fun treats for their feline companions. For this project, the goal was to create an engaging, playful mini ad site within their Amazon Store to boost user interaction and product awareness.",
+      "Temptation's Cat Treats is a popular pet food brand that specializes in cat treats. Their mission is to engage cat owners and offer tasty, fun treats for their feline companions. For this project, the goal was to create an engaging, playful mini ad site within their Amazon Store to boost user interaction and product awareness.",
     // An array of categories of the article. It's used to generate the category badges, the category filter, and more.
     categories: [
       categories.find((category) => category.slug === categorySlugs.feature),
@@ -287,4 +290,290 @@ export const articles = [
       </>
     ),
   },
+  {
+    slug: "samsung-amazon-experience",
+    title: "Samsung x Amazon Store Interactive Experience",
+    description:
+      "A React-based interactive Amazon Store experience for Samsung's Galaxy lineup, integrating 360° views, immersive storytelling, and platform consistency across web and Amazon Fire.",
+    categories: [
+      categories.find((category) => category.slug === categorySlugs.feature),
+    ],
+    author: authors.find((author) => author.slug === authorSlugs.gene),
+    publishedAt: "2024-10-30",
+    image: {
+      src: samsungExperience,
+      urlRelative: "/work/samsung/samsung-banner.jpeg",
+      alt: "Samsung Galaxy S24 Ultra",
+    },
+    content: (
+      <>
+        <Image
+          src={samsungExperience}
+          alt="Samsung Galaxy S24 Ultra"
+          width={700}
+          height={500}
+          priority={true}
+          className="rounded-box mb-8"
+          placeholder="blur"
+        />
+        <h3 className={styles.h3}>Objectives</h3>
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">  
+          <div>
+            <p className={styles.p}>
+              Samsung wanted a sleek, interactive Amazon Store experience to highlight their Galaxy product lineup. The goal was to showcase the Galaxy S24 Ultra and other flagship products while engaging users through high-quality visuals and an immersive interface. The project included:
+            </p>
+            <ul className={styles.ul}>
+              <li className={styles.li}>A 360° product view using HTML canvas and Three.js</li>
+              <li className={styles.li}>An engaging, narrative-driven design to feature product highlights</li>
+              <li className={styles.li}>Consistency across Amazon's web store and Amazon Fire platforms</li>
+            </ul>
+          </div>
+          <div className="flex items-center justify-center">
+            <Image
+              src={goBig.src}
+              alt="Samsung Galaxy product display"
+              width={400}
+              height={400}
+              className="rounded-box"
+            />
+          </div>
+        </section>
+        <h2 className={styles.h3}>Highlights</h2>
+        <section className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-xl font-semibold mb-2">360° Product View</h4>
+              <p className={styles.p}>
+                A 360-degree product view, developed with HTML canvas and Three.js, allowed users to explore the Galaxy S24 Ultra from all angles, offering an immersive, hands-on feel for the device's design.
+              </p>
+            </div>
+            <div className="flex items-center justify-center">
+              <Image
+                src={goBig.src}
+                alt="360-degree view of Samsung Galaxy S24 Ultra"
+                width={400}
+                height={300}
+                className="rounded-box"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-xl font-semibold mb-2">Platform Consistency</h4>
+              <p className={styles.p}>
+                Created a cohesive design system compatible with both the Amazon Store and Amazon Fire, ensuring a seamless brand experience across platforms.
+              </p>
+            </div>
+            <div className="flex items-center justify-center order-2 md:order-1">
+              <Image
+                src={goBig.src}
+                alt="Samsung on Amazon Fire"
+                width={400}
+                height={300}
+                className="rounded-box"
+              />
+            </div>
+          </div>
+        </section>
+
+        <h3 className={styles.h3}>Challenges and Solutions</h3>
+        <section className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-xl font-semibold mb-2">Amazon Framework Adaptation</h4>
+              <p className={styles.p}>
+                Adapting Samsung's design within Amazon's in-house framework required balancing brand visuals with platform constraints. I optimized React components for smooth performance within Amazon's ecosystem.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-xl font-semibold mb-2">360° View Integration</h4>
+              <p className={styles.p}>
+                Implementing the 360° view was technically complex. Using Three.js with HTML canvas, I ensured the feature was performant and visually engaging, allowing users to inspect every product angle.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <h3 className={styles.h3}>Results</h3>
+        <section className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-base-200 p-6 rounded-box">
+              <h4 className="text-xl font-semibold mb-2">High Engagement</h4>
+              <p className={styles.p}>
+                Users engaged extensively with the interactive product views, leading to higher time-on-page and increased conversions.
+              </p>
+            </div>
+            <div className="bg-base-200 p-6 rounded-box">
+              <h4 className="text-xl font-semibold mb-2">Consistent Brand Presence</h4>
+              <p className={styles.p}>
+                Achieved a seamless Samsung experience across Amazon platforms, reinforcing brand identity.
+              </p>
+            </div>
+            <div className="bg-base-200 p-6 rounded-box">
+              <h4 className="text-xl font-semibold mb-2">Scalable Design</h4>
+              <p className={styles.p}>
+                Created reusable components, allowing for quick adaptation to future Samsung product pages on Amazon.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <h3 className={styles.h3}>Wrap Up</h3>
+        <section>
+          <p className={styles.p}>
+            This project highlighted how advanced interactive features like 360° views can elevate an e-commerce experience. By leveraging Three.js and an Amazon-friendly framework, I delivered an engaging, consistent experience that aligns Samsung’s brand with Amazon’s platform.
+          </p>
+        </section>
+      </>
+    ),
+  },
+  {
+    // The unique slug to use in the URL. It's also used to generate the canonical URL.
+    slug: "gmb-praxis-app",
+    // The title to display in the article page (h1). Less than 60 characters. It's also used to generate the meta title.
+    title: "GMB Praxis: Adaptive Fitness App for Physical Autonomy",
+    // The description of the article to display in the article page. Up to 160 characters. It's also used to generate the meta description.
+    description:
+      "GMB Praxis empowers users to improve strength, flexibility, and control with custom adaptive sessions, flexible durations, and seamless video streaming.",
+    // An array of categories of the article. It's used to generate the category badges, the category filter, and more.
+    categories: [
+      categories.find((category) => category.slug === categorySlugs.feature),
+    ],
+    // The author of the article. It's used to generate a link to the author's bio page.
+    author: authors.find((author) => author.slug === authorSlugs.gene),
+    // The date of the article. It's used to generate the meta date.
+    publishedAt: "2024-10-30",
+    image: {
+      // The image to display in <CardArticle /> components.
+      src: praxis,
+      // The relative URL of the same image to use in the Open Graph meta tags & the Schema Markup JSON-LD.
+      urlRelative: "/work/praxis/praxis.jpeg",
+      alt: "GMB Praxis web app interface",
+    },
+    // The actual content of the article that will be shown under the <h1> title in the article page.
+    content: (
+      <>
+        <Image
+          src={praxis}
+          alt="GMB Praxis web app interface"
+          width={700}
+          height={500}
+          priority={true}
+          className="rounded-box mb-8"
+          placeholder="blur"
+        />
+        <h3 className={styles.h3}>Objectives</h3>
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <p className={styles.p}>
+              GMB Praxis was designed to deliver a seamless, adaptive fitness experience. The goal was to provide users with customizable workout durations, high-quality video streaming, and real-time progress tracking. The project involved:
+            </p>
+            <ul className={styles.ul}>
+              <li className={styles.li}>Custom video controls for personalized sessions</li>
+              <li className={styles.li}>Dynamic scheduling and session adaptability</li>
+              <li className={styles.li}>Scalable architecture to support high traffic</li>
+            </ul>
+          </div>
+          <div className="flex items-center justify-center">
+            <Image
+              src={praxis}
+              alt="GMB Praxis session management"
+              width={400}
+              height={400}
+              className="rounded-box"
+            />
+          </div>
+        </section>
+        <h2 className={styles.h3}>Highlights</h2>
+        <section className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="flex items-center justify-center">
+              <Image
+                src={praxis}
+                alt="Custom video controls"
+                width={400}
+                height={300}
+                className="rounded-box"
+              />
+            </div>
+            <div>
+              <h4 className="text-xl font-semibold mb-2">Custom Video Controls</h4>
+              <p className={styles.p}>
+                Our custom video controls allow users to set session duration and adjust exercise intensity. This flexible design helps users tailor workouts to their schedules and fitness levels.
+              </p>
+            </div>
+          </div>
+        </section>
+  
+        <section className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-xl font-semibold mb-2">Adaptive Video Quality</h4>
+              <p className={styles.p}>
+                Using Mux for video streaming, the app automatically adjusts video quality based on the user's bandwidth, delivering uninterrupted sessions across all devices.
+              </p>
+            </div>
+            <div className="flex items-center justify-center order-2 md:order-1">
+              <Image
+                src={praxis}
+                alt="Adaptive video streaming with Mux"
+                width={400}
+                height={300}
+                className="rounded-box"
+              />
+            </div>
+          </div>
+        </section>
+        <h3 className={styles.h3}>Challenges and Solutions</h3>
+        <section className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-xl font-semibold mb-2">Scalability</h4>
+              <p className={styles.p}>
+                To handle high user traffic, I implemented a scalable backend using Nest.js and PostgreSQL, ensuring smooth data management and performance.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-xl font-semibold mb-2">User Interface Simplicity</h4>
+              <p className={styles.p}>
+                Balancing the complexity of adaptive controls with a simple interface was a priority. The solution involved minimalistic, intuitive designs that enhance user engagement without overwhelming them.
+              </p>
+            </div>
+          </div>
+        </section>
+        <h3 className={styles.h3}>Results</h3>
+        <section className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-base-200 p-6 rounded-box">
+              <h4 className="text-xl font-semibold mb-2">User Engagement</h4>
+              <p className={styles.p}>
+                Users have reported greater consistency and motivation, thanks to the adaptable session lengths and personalized controls.
+              </p>
+            </div>
+            <div className="bg-base-200 p-6 rounded-box">
+              <h4 className="text-xl font-semibold mb-2">Positive Feedback</h4>
+              <p className={styles.p}>
+                GMB Praxis users frequently praise the app's flexibility and seamless streaming, which contribute to a smooth training experience.
+              </p>
+            </div>
+            <div className="bg-base-200 p-6 rounded-box">
+              <h4 className="text-xl font-semibold mb-2">Scalable Design</h4>
+              <p className={styles.p}>
+                The backend architecture supports future growth, ensuring long-term stability and easy feature integration.
+              </p>
+            </div>
+          </div>
+        </section>
+        <h3 className={styles.h3}>Wrap Up</h3>
+        <section>
+          <p className={styles.p}>
+            Developing GMB Praxis was a rewarding experience that highlighted the importance of user-focused adaptive design in fitness applications. This project reflects my commitment to building scalable, flexible solutions tailored to user needs, aligning technology with GMB's mission to promote Physical Autonomy.
+          </p>
+        </section>
+      </>
+    ),
+  }
 ];
