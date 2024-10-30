@@ -1,13 +1,10 @@
 import { NextResponse } from "next/server";
-import connectMongo from "@/libs/mongoose";
-import Lead from "@/models/Lead";
+// env DISCORD_WEBHOOK_URL
 
-// This route is used to store the leads that are generated from the landing page.
-// The API call is initiated by <ButtonLead /> component
-// Duplicate emails just return 200 OK
+
+const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL; // Get this from Discord channel settings
+
 export async function POST(req) {
-  await connectMongo();
-
   const body = await req.json();
 
   if (!body.email) {
@@ -15,14 +12,16 @@ export async function POST(req) {
   }
 
   try {
-    const lead = await Lead.findOne({ email: body.email });
-
-    if (!lead) {
-      await Lead.create({ email: body.email });
-
-      // Here you can add your own logic
-      // For instance, sending a welcome email (use the the sendEmail helper function from /libs/mailgun)
-    }
+    // Send to Discord
+    await fetch(DISCORD_WEBHOOK_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        content: `🎉 New lead submitted: ${body.email} says: ${body.message}`
+      })
+    });
 
     return NextResponse.json({});
   } catch (e) {
