@@ -7,22 +7,13 @@ import { useRef, useState } from "react";
 
 const faqList = [
   {
-    question: "What do I get exactly?",
-    answer: <div className="space-y-2 leading-relaxed">Loreum Ipseum</div>,
-  },
-  {
-    question: "Can I get a refund?",
-    answer: (
-      <p>
-        Yes! You can request a refund within 7 days of your purchase. Reach out
-        by email.
-      </p>
-    ),
+    question: "Can you build an app that does X?",
+    answer: <div className="space-y-2 leading-relaxed">Anything can be built. Our goals is to find the leanest version of your product. That's the hardest part. </div>,
   },
   {
     question: "I have another question",
     answer: (
-      <div className="space-y-2 leading-relaxed">Cool, contact us by email</div>
+      <div className="space-y-2 leading-relaxed">Cool, contact us by email: 💌 <strong><a href="mailto:hi@lansky.tech" className="link link-accent">hi@lansky.tech</a></strong></div>
     ),
   },
 ];
