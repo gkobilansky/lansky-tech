@@ -146,6 +146,8 @@ const Item = ({ feature, isOpen, setFeatureSelected }) => {
 // Video are set to autoplay for best UX.
 const Media = ({ feature }) => {
   const { type, path, playbackId, alt, size = { width: 500, height: 500 } } = feature;
+  const style = "rounded-2xl max-h-[400px]";
+
 
   if (type === "video") {
     return (
