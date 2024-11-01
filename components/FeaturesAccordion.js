@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
-import MuxPlayer from "@mux/mux-player-react";
+import MuxPlayer from "@mux/mux-player-react/lazy";
 import "@mux/mux-player/themes/minimal";
 // The features array is a list of features that will be displayed in the accordion.
 // - title: The title of the feature
@@ -153,15 +153,16 @@ const Media = ({ feature }) => {
     return (
       <MuxPlayer
         playbackId={playbackId}
+        lazyLoad="viewport"
         theme="minimal"
-        style={{aspectRatio: 4 / 3}}
+        style={{ aspectRatio: 4/3, '--controls': 'none', display: 'block', borderRadius: '1rem', overflow: 'hidden' }}
+        thumbnailTime={0}
         autoPlay
         muted
         loop
         playsInline
-        controls
-      >
-      </MuxPlayer>
+        controls="none"
+      />
     );
   } else if (type === "image") {
     return (

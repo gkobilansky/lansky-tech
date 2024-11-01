@@ -7,7 +7,7 @@ const Hello = () => {
         <Image
           src="/gene-and-fam.jpeg"
           alt="Gene Kobilansky"
-          className="w-full"
+          className="w-full rounded-2xl"
           priority={true}
           width={500}
           height={500}
