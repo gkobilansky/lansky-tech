@@ -45,8 +45,8 @@ const features = [
     description:
       "Create checkout sessions, handle users accounts (subscriptions, one-time payments...) and optimize conversions",
     type: "video",
-    path: "/modelones-tryon.mp4",
-    playbackId: "1aP4rWU7i5i5iSiMNl02BBOF4NtXHoygFnK00h3Fn19ec",
+    path: "/praxis-checkout.mp4",
+    playbackId: "7R4yBGRAWOp1f5WFTGT01kTMmkmawmz8PkyNGgtGauFw",
     format: "video/mp4",
     size: {
       width: 800,

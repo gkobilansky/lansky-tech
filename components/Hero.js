@@ -18,7 +18,6 @@ const Hero = () => {
         <TestimonialsAvatars priority={true} />
       </div>
       <div className="lg:w-full">
-        {/* <div className="relative rounded-3xl overflow-hidden border-4 border-white/10 [box-shadow:4px_-4px_24px_-2px_rgba(59,130,246,0.3)]"> */}
         <MuxPlayer
           lazyLoad="viewport"
           playbackId="ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg"
@@ -38,7 +37,6 @@ const Hero = () => {
           controls="none"
          />
          </div>
-      {/* </div> */}
     </section>
   );
 };
