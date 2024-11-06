@@ -13,7 +13,7 @@ import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Modal from "@/components/Modal";
 import Footer from "@/components/Footer";
-
+import UkraineCallOut from "@/components/UkraineCallOut";
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -39,6 +39,7 @@ export default function Home() {
         <Work />
         <Pricing openModal={openModal} />
         <FAQ />
+        <UkraineCallOut />
         <CTA openModal={openModal} />
         <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       </main>
