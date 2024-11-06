@@ -57,39 +57,26 @@ const TOS = () => {
           className="leading-relaxed whitespace-pre-wrap"
           style={{ fontFamily: "sans-serif" }}
         >
-          {`Last Updated: September 26, 2023
+          {`Terms & Services
+Last updated: November 6, 2024
 
-Welcome to ShipFast!
+Welcome to Lansky Tech (the “Company”), a web technology company dedicated to helping entrepreneurs grow their startups. By using our website, https://lansky.tech (the “Site”), and purchasing our services, you agree to the following terms and conditions.
 
-These Terms of Service ("Terms") govern your use of the ShipFast website at https://shipfa.st ("Website") and the services provided by ShipFast. By using our Website and services, you agree to these Terms.
+1. Ownership and Usage Rights
+When purchasing a package from Lansky Tech, you receive downloadable code to create applications. This code is for your personal use, and you retain ownership rights. However, you may not resell, sublicense, or distribute this code in any form.
 
-1. Description of ShipFast
+2. Data Collection and Privacy
+We collect certain personal information, including your name, email, and payment information, to facilitate purchases and services. We also collect non-personal data through cookies to enhance your user experience. For more details on how we handle your data, please review our Privacy Policy at https://lansky.tech/privacy-policy.
 
-ShipFast is a platform that offers a JavaScript code boilerplate to assist entrepreneurs in launching their startups more efficiently.
+3. Updates to Terms
+We may update these Terms & Services periodically. If changes are made, we will notify you by email.
 
-2. Ownership and Usage Rights
+4. Governing Law
+These terms are governed by the laws of the United States. Any disputes arising from or relating to these Terms & Services shall be resolved under U.S. jurisdiction.
 
-When you purchase a package from ShipFast, you gain the right to download and use the code provided for creating applications. You own the code you create but do not have the right to resell it. We offer a full refund within 7 days of purchase, as specified in our refund policy.
+For any questions or further assistance, please contact us at hello@lansky.tech.
 
-3. User Data and Privacy
-
-We collect and store user data, including name, email, and payment information, as necessary to provide our services. For details on how we handle your data, please refer to our Privacy Policy at https://shipfa.st/privacy-policy.
-
-4. Non-Personal Data Collection
-
-We use web cookies to collect non-personal data for the purpose of improving our services and user experience.
-
-5. Governing Law
-
-These Terms are governed by the laws of France.
-
-6. Updates to the Terms
-
-We may update these Terms from time to time. Users will be notified of any changes via email.
-
-For any questions or concerns regarding these Terms of Service, please contact us at marc@shipfa.st.
-
-Thank you for using ShipFast!`}
+Thank you for choosing Lansky Tech!`}
         </pre>
       </div>
     </main>

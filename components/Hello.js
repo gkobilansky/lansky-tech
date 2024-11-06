@@ -60,6 +60,12 @@ const Hello = () => {
               </p>
             </div>
           </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-lg leading-relaxed">
+              Whether you're looking to modernize legacy systems, launch new digital products, or scale your existing platform, our blend of enterprise experience and startup agility positions us uniquely to help. We don't just build solutions—we partner with you to create lasting technological advantages that drive real business growth.
+            </p>
+          </div>
         </div>
       </section>
     </>

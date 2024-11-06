@@ -202,9 +202,9 @@ const FeaturesAccordion = () => {
           <p className="font-medium text-primary text-sm">Solutions</p>
         </div>
         <h2 className="font-extrabold text-4xl lg:text-6xl tracking-tight mb-12 md:mb-24">
-          We help you find a "good enough" solution &
+          We like to start small & iteratively<br/>
           <span className="bg-neutral text-neutral-content px-2 md:px-4 ml-1 md:ml-1.5 leading-relaxed">
-            build a lean, profitable product
+          build a lean, profitable product
           </span>
         </h2>
         <div className=" flex flex-col md:flex-row gap-12 md:gap-24">
