@@ -190,6 +190,17 @@ const FeaturesAccordion = () => {
       id="solutions"
     >
       <div className="px-8">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 mb-8">
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" 
+            fill="currentColor" 
+            className="w-4 h-4 text-primary"
+          >
+            <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clipRule="evenodd" />
+          </svg>
+          <p className="font-medium text-primary text-sm">Solutions</p>
+        </div>
         <h2 className="font-extrabold text-4xl lg:text-6xl tracking-tight mb-12 md:mb-24">
           We help you find a "good enough" solution &
           <span className="bg-neutral text-neutral-content px-2 md:px-4 ml-1 md:ml-1.5 leading-relaxed">
