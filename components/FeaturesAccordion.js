@@ -43,7 +43,7 @@ const features = [
   {
     title: "Ecommerce & Payments",
     description:
-      "Create checkout sessions, handle users accounts (subscriptions, one-time payments...) and optimize conversions",
+      "Create checkout sessions, handle users accounts (subscriptions, one-time payments...) and optimize conversions.",
     type: "video",
     path: "/praxis-checkout.mp4",
     playbackId: "7R4yBGRAWOp1f5WFTGT01kTMmkmawmz8PkyNGgtGauFw",
@@ -72,7 +72,7 @@ const features = [
   {
     title: "Marketing Sites",
     description:
-      "Build stunning landing pages, product showcases, and company websites. Our marketing sites are designed to convert visitors into customers, featuring responsive layouts, SEO optimization, and seamless integration with analytics tools.",
+      "Stunning landing pages, product showcases, and company websites. Our marketing sites convert visitors into customers.",
     type: "video",
     path: "/galaxy-wide.mp4",
     playbackId: "1aP4rWU7i5i5iSiMNl02BBOF4NtXHoygFnK00h3Fn19ec",
@@ -200,13 +200,16 @@ const FeaturesAccordion = () => {
             <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clipRule="evenodd" />
           </svg>
           <p className="font-medium text-primary text-sm">Solutions</p>
-        </div>
-        <h2 className="font-extrabold text-4xl lg:text-6xl tracking-tight mb-12 md:mb-24">
+        </div>    
+        <h2 className="font-extrabold text-4xl lg:text-6xl tracking-tight mb-4 md:mb-8">
           We like to start small & iteratively<br/>
           <span className="bg-neutral text-neutral-content px-2 md:px-4 ml-1 md:ml-1.5 leading-relaxed">
           build a lean, profitable product
           </span>
         </h2>
+        <p className="text-base-content/80 text-lg mb-12 md:mb-24">
+          We specialize in three core areas: building powerful web applications, implementing secure e-commerce solutions, and creating conversion-focused marketing sites.
+        </p>
         <div className=" flex flex-col md:flex-row gap-12 md:gap-24">
           <div className="grid grid-cols-1 items-stretch gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="flex items-center justify-center">

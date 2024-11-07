@@ -19,7 +19,7 @@ const Hello = () => {
             Hello. <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0066CC] to-[#FFCC00]">I'm Gene.</span>
           </h1>
           <p className="text-lg leading-relaxed">
-            👋 Gene Kobi<span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0066CC] to-[#FFCC00]">lansky</span>. Since 2007, I've been worked in different ways to businesses implement technology successfully. Over nearly two decades, I've been in the trenches of technology development, learning not just from projects that excel but also from those that missed the mark. This journey is what inspired me to start Lansky Technology—not just to offer expert development, but to be a strategic partner, one that genuinely understands the ingredients of sustainable growth.</p>
+            👋 Gene Kobi<span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0066CC] to-[#FFCC00]">lansky</span>. From online learning sysems to interactive nail-color pickers; over a career of nearly two decades, I've helped businesses implement technology successfully in many different ways. Two things I've learned: iterative improvements add up faster than you think, and can make a big difference, and collaboration is the true driver of business value. I started Lansky Technology with these learnings in mind — not just to offer expert development, but to be a trusted advisor.</p>
         </div>
       </section>
 
@@ -30,7 +30,7 @@ const Hello = () => {
               <div className="text-4xl">🏢</div>
               <h3 className="text-xl font-bold">Enterprise Foundations</h3>
               <p className="text-lg leading-relaxed">
-                My career began in enterprise environments, developing learning management systems, franchisee billing portals, and tackling Oracle ERP integrations.
+                My career began in enterprise environments, developing learning management systems, franchisee billing portals, and tackling Oracle ERP integrations. These experiences helped me develop a feel for aligning technology with business goals.
               </p>
             </div>
             
@@ -38,7 +38,7 @@ const Hello = () => {
               <div className="text-4xl">🚀</div>
               <h3 className="text-xl font-bold">Modern Solutions</h3>
               <p className="text-lg leading-relaxed">
-                Today, we create custom experiences for brands like Samsung and develop innovative eCommerce solutions driving 10x growth.
+                Today, we create custom experiences for top brands and growing startups. We setup innovative ecommerce and payment systems, driving growth. We build marketing sites optimized for your perfect customer's journey.   
               </p>
             </div>
           </div>
@@ -48,7 +48,7 @@ const Hello = () => {
               <div className="text-4xl">🤝</div>
               <h3 className="text-xl font-bold">Collaborative Approach</h3>
               <p className="text-lg leading-relaxed">
-                We work alongside clients to create tailored, high-impact solutions that streamline customer journeys and manage strategic roadmaps.
+                Let's work together to create tailored, high-impact experiences for your customers and users.
               </p>
             </div>
 
@@ -63,7 +63,7 @@ const Hello = () => {
 
           <div className="mt-8 text-center">
             <p className="text-lg leading-relaxed">
-              Whether you're looking to modernize legacy systems, launch new digital products, or scale your existing platform, our blend of enterprise experience and startup agility positions us uniquely to help. We don't just build solutions—we partner with you to create lasting technological advantages that drive real business growth.
+              Whether you're looking to launch a new digital product, market your brand, or improve your checkout experience, our blend of enterprise experience and startup agility positions us uniquely to help. We don't just build solutions — we partner with you to create lasting technological change that drives real business growth.
             </p>
           </div>
         </div>
