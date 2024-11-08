@@ -15,7 +15,7 @@ const features = [
   {
     title: "Web Apps",
     description:
-      "State of the art performance, streaming video, transactional emails, integrated checkout and more on desktop and mobile",
+      "High-performance, real-time web applications. Streaming video, auth, payments, and seamless UX across all devices",
     type: "video",
     path: "/gmb-praxis.mp4",
     playbackId: "t4SpPCiyHKVEo2u4mg7jKNgAmPv5FclAW1U02V011Xx1g",
@@ -43,10 +43,10 @@ const features = [
   {
     title: "Ecommerce & Payments",
     description:
-      "Create checkout sessions, handle users accounts (subscriptions, one-time payments...) and optimize conversions.",
+      "Customize and optimize your checkout experience. Handle subscriptions, partial payments, trial periods, upsells, downsells and more.",
     type: "video",
     path: "/praxis-checkout.mp4",
-    playbackId: "7R4yBGRAWOp1f5WFTGT01kTMmkmawmz8PkyNGgtGauFw",
+    playbackId: "II9mWO3uKi49PP00q700lNSaN8gjIAy81lIGohwUymDj00",
     format: "video/mp4",
     size: {
       width: 800,
@@ -72,7 +72,7 @@ const features = [
   {
     title: "Marketing Sites",
     description:
-      "Stunning landing pages, product showcases, and company websites. Our marketing sites convert visitors into customers.",
+      "Convert visitors into customers with fast-loading landing pages, immersive product showcases, and easy content management.",
     type: "video",
     path: "/galaxy-wide.mp4",
     playbackId: "1aP4rWU7i5i5iSiMNl02BBOF4NtXHoygFnK00h3Fn19ec",
