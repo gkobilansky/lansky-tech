@@ -19,7 +19,7 @@ const Hello = () => {
             Hello. <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0066CC] to-[#FFCC00]">I'm Gene.</span>
           </h1>
           <p className="text-lg leading-relaxed">
-            👋 Gene Kobi<span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0066CC] to-[#FFCC00]">lansky</span>. From online learning sysems to interactive nail-color pickers; over a career of nearly two decades, I've helped businesses implement technology successfully in many different ways. Two things I've learned: iterative improvements add up faster than you think, and can make a big difference, and collaboration is the true driver of business value. I started Lansky Technology with these learnings in mind — not just to offer expert development, but to be a trusted advisor.</p>
+            👋 Gene Kobi<span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0066CC] to-[#FFCC00]">lansky</span>. From online learning sysems to interactive nail-color pickers; over a career of nearly two decades, I've helped businesses implement technology successfully in many different ways. Two things I've learned: iterative improvements add up faster than you think, and collaboration is the true driver of business value. I started Lansky Technology with these learnings in mind — not just to offer expert development, but to be a trusted advisor.</p>
         </div>
       </section>
 
