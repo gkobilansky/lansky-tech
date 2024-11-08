@@ -1,5 +1,5 @@
 import TestimonialsAvatars from "./TestimonialsAvatars";
-import MuxPlayer from "@mux/mux-player-react/lazy"; 
+import MuxPlayer from "@mux/mux-player-react"; 
 import "@mux/mux-player/themes/minimal";
 
 
@@ -20,7 +20,6 @@ const Hero = () => {
       </div>
       <div className="lg:w-full">
         <MuxPlayer
-          lazyLoad="viewport"
           playbackId="ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg"
           metadata={{
             video_id: "ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg",
