@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import Image from "next/image";
 import MuxPlayer from "@mux/mux-player-react/lazy";
 import "@mux/mux-player/themes/minimal";
+import { motion } from "framer-motion";
 // The features array is a list of features that will be displayed in the accordion.
 // - title: The title of the feature
 // - description: The description of the feature (when clicked)
@@ -203,9 +204,21 @@ const FeaturesAccordion = () => {
         </div>    
         <h2 className="font-extrabold text-4xl lg:text-6xl tracking-tight mb-4 md:mb-8">
           We like to start small & iteratively<br/>
-          <span className="bg-neutral text-neutral-content px-2 md:px-4 ml-1 md:ml-1.5 leading-relaxed">
-          build a lean, profitable product
-          </span>
+          <motion.span 
+            initial={{ 
+              backgroundSize: "0% 100%",
+              backgroundImage: "linear-gradient(to left, hsl(var(--neutral)), hsl(var(--neutral)))",
+              backgroundRepeat: "no-repeat"
+            }}
+            whileInView={{ 
+              backgroundSize: "100% 100%" 
+            }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-neutral-content px-2 md:px-4 ml-1 md:ml-1.5 leading-relaxed"
+          >
+            build a lean, profitable product
+          </motion.span>
         </h2>
         <p className="text-base-content/80 text-lg mb-12 md:mb-24">
           We specialize in three core areas: building powerful web applications, implementing secure e-commerce solutions, and creating conversion-focused marketing sites.
