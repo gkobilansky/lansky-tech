@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ButtonGradient from "./ButtonGradient";
+import ButtonGradient from "../ui/ButtonGradient";
 
 const CTA = ({ openModal }) => {
   return (

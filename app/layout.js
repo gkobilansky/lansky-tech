@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import PlausibleProvider from "next-plausible";
 import { getSEOTags } from "@/libs/seo";
-import ClientLayout from "@/components/LayoutClient";
+import ClientLayout from "@/components/layout/LayoutClient";
 import config from "@/config";
 import "./globals.css";
 
@@ -24,10 +24,14 @@ export default function RootLayout({ children }) {
       {config.domainName && (
         <head>
           <PlausibleProvider domain={config.domainName} />
+          <link rel="manifest" href="/site.webmanifest" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <meta name="theme-color" content={config.colors.main} />
         </head>
       )}
       <body>
-        {/* ClientLayout contains all the client wrappers (Crisp chat support, toast messages, tooltips, etc.) */}
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

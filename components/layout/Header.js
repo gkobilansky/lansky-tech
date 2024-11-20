@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/lansky-logo.svg";
-import ButtonGradient from "./ButtonGradient";
+import ButtonGradient from "../ui/ButtonGradient";
 import config from "@/config";
 
 const links = [

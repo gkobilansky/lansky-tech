@@ -1,6 +1,6 @@
 import config from "@/config";
-import ButtonCheckout from "./ButtonCheckout";
-import ButtonGradient from "./ButtonGradient";
+import ButtonCheckout from "../ui/ButtonCheckout";
+import ButtonGradient from "../ui/ButtonGradient";
 
 // <Pricing/> displays the pricing plans for your app
 // It's your Stripe config in config.js.stripe.plans[] that will be used to display the plans
