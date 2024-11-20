@@ -1,19 +1,19 @@
 "use client";
 
 import { Suspense, useState } from 'react'
-import Constellation from '@/components/Constellation';
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Hello from "@/components/Hello";
-import Problem from "@/components/Problem";
-import FeaturesAccordion from "@/components/FeaturesAccordion";
-import Pricing from "@/components/Pricing";
-import Work from "@/components/Work";
-import FAQ from "@/components/FAQ";
-import CTA from "@/components/CTA";
-import Modal from "@/components/Modal";
-import Footer from "@/components/Footer";
-import UkraineCallOut from "@/components/UkraineCallOut";
+import Constellation from '@/components/ui/Constellation';
+import Header from "@/components/layout/Header";
+import Hero from "@/components/marketing/Hero";
+import Hello from "@/components/marketing/Hello";
+import Problem from "@/components/marketing/Problem";
+import FeaturesAccordion from "@/components/features/FeaturesAccordion";
+import Pricing from "@/components/marketing/Pricing";
+import Work from "@/components/marketing/Work";
+import FAQ from "@/components/marketing/FAQ";
+import CTA from "@/components/marketing/CTA";
+import Modal from "@/components/marketing/Modal";
+import Footer from "@/components/layout/Footer";
+import UkraineCallOut from "@/components/marketing/UkraineCallOut";
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 

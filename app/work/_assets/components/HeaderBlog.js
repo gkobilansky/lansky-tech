@@ -8,7 +8,7 @@ import Image from "next/image";
 import logo from "@/public/lansky-logo.png";
 import config from "@/config";
 import { categories } from "../content";
-import ButtonGradient from "@/components/ButtonGradient";
+import ButtonGradient from "@/components/ui/ButtonGradient";
 
 const links = [
   {
