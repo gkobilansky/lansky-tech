@@ -16,13 +16,19 @@ import Footer from "@/components/layout/Footer";
 import UkraineCallOut from "@/components/marketing/UkraineCallOut";
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
+  const [modalTitle, setModalTitle] = useState("");
 
-  const openModal = () => {
+  const openModal = (content, title) => {
+    setModalContent(content);
+    setModalTitle(title);
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
+    setModalContent(null);
+    setModalTitle("");
   };
 
   return (
@@ -41,7 +47,13 @@ export default function Home() {
         <FAQ />
         <UkraineCallOut />
         <CTA openModal={openModal} />
-        <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+        <Modal 
+          isModalOpen={isModalOpen} 
+          setIsModalOpen={setIsModalOpen}
+          title={modalTitle}
+        >
+          {modalContent}
+        </Modal>
       </main>
       <Footer />
     </>

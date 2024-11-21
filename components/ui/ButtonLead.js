@@ -17,7 +17,9 @@ const ButtonLead = ({ extraStyle }) => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
-    e?.preventDefault();
+    if (e) {
+      e.preventDefault();
+    }
 
     setIsLoading(true);
     try {
@@ -26,13 +28,14 @@ const ButtonLead = ({ extraStyle }) => {
       toast.success("Thanks for reaching out!");
 
       // just remove the focus on the input
-      inputRef.current.blur();
+      inputRef.current?.blur();
       setEmail("");
       setMessage("");
       setIsDisabled(true);
       setIsSuccess(true);
     } catch (error) {
       console.log(error);
+      toast.error("Something went wrong!");
     } finally {
       setIsLoading(false);
     }
