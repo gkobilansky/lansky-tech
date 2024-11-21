@@ -14,8 +14,8 @@ const CTA = ({ openModal }) => {
           </p>
           <ButtonGradient 
             className="btn btn-primary btn-wide btn-lg" 
-            onClick={() => openModal(<Snake />, "Snake Game")} 
-            title="Play Snake!" 
+            onClick={() => openModal(<Snake />, "Snake!")} 
+            title="Have some fun!" 
           />
         </div>
       </div>
