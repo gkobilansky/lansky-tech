@@ -7,8 +7,43 @@ import { useRef, useState } from "react";
 
 const faqList = [
   {
+    question: "What types of web applications do you specialize in building?",
+    answer: (
+      <div className="space-y-2 leading-relaxed">
+        We specialize in three main areas:
+        <ul className="list-disc list-inside pl-4 space-y-1">
+          <li>High-performance web applications with real-time features, streaming video, authentication, and payment systems</li>
+          <li>Custom e-commerce solutions with optimized checkout flows, subscription management, and payment processing</li>
+          <li>Conversion-focused marketing sites with immersive product showcases and content management systems</li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    question: "Can you handle both front-end and back-end development?",
+    answer: (
+      <div className="space-y-2 leading-relaxed">
+        Yes, we provide full-stack development services. Our experience spans from creating engaging user interfaces to building robust server architectures. We handle everything from database design and API development to responsive front-end implementations and third-party integrations.
+      </div>
+    ),
+  },
+  {
+    question: "How do you measure success?",
+    answer: (
+      <div className="space-y-2 leading-relaxed">
+        Success is measured through concrete business outcomes:
+        <ul className="list-disc list-inside pl-4 space-y-1">
+          <li>For e-commerce: conversion rates, average order value, and checkout completion rates</li>
+          <li>For web applications: user engagement, retention metrics, and system performance</li>
+          <li>For marketing sites: lead generation, bounce rates, and conversion goals</li>
+        </ul>
+        We establish clear KPIs at the start of each project and continuously monitor these metrics to ensure we're delivering real business value.
+      </div>
+    ),
+  },
+  {
     question: "Can you build an app that does X?",
-    answer: <div className="space-y-2 leading-relaxed">Anything can be built. Our goals is to find the leanest version of your product. That's the hardest part. </div>,
+    answer: <div className="space-y-2 leading-relaxed">Anything can be built. Our goals is to find the leanest version of your product. That's the hard part.</div>,
   },
   {
     question: "I have another question",
