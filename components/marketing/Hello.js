@@ -3,12 +3,12 @@ import Image from "next/image";
 const Hello = () => {
   return (
     <>
-      <section className="mx-auto bg-neutral text-neutral-content flex flex-col lg:flex-row items-start justify-center gap-16 lg:gap-20 px-8 py-8 lg:py-20" id="hello">
+      <section className="mx-auto bg-neutral text-neutral-content flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-20 px-8 py-24 md:py-32" id="hello">
         <div className="lg:w-1/8 order-first lg:order-last relative">
           <Image
             src="/gene-and-fam.jpeg"
             alt="Gene Kobilansky"
-            className="w-full rounded-2xl"
+            className="rounded-2xl object-cover"
             priority={true}
             width={500}
             height={500}
@@ -23,20 +23,20 @@ const Hello = () => {
         </div>
       </section>
 
-      <section className="mx-auto bg-neutral text-neutral-content px-8 py-8 lg:py-20">
+      <section className="mx-auto bg-neutral text-neutral-content px-8 py-8 pb-24 md:pb-32">
         <div className="max-w-4xl mx-auto flex flex-col gap-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
             <div className="flex flex-col items-center md:items-start gap-4 p-6 rounded-lg bg-neutral-focus">
-              <div className="text-4xl">🏢</div>
-              <h3 className="text-xl font-bold">Enterprise Foundations</h3>
+              <div className="text-4xl flex justify-center w-full">🏢</div>
+              <h3 className="text-xl font-bold text-center w-full">Enterprise Foundations</h3>
               <p className="text-lg leading-relaxed">
                 My career began in enterprise environments, developing learning management systems, franchisee billing portals, and tackling Oracle ERP integrations. These experiences helped me develop a feel for aligning technology with business goals.
               </p>
             </div>
             
             <div className="flex flex-col items-center md:items-start gap-4 p-6 rounded-lg bg-neutral-focus">
-              <div className="text-4xl">🚀</div>
-              <h3 className="text-xl font-bold">Modern Solutions</h3>
+              <div className="text-4xl flex justify-center w-full">🚀</div>
+              <h3 className="text-xl font-bold text-center w-full">Modern Solutions</h3>
               <p className="text-lg leading-relaxed">
                 Today, we create custom experiences for top brands and growing startups. We setup innovative ecommerce and payment systems, driving growth. We build marketing sites optimized for your perfect customer's journey.   
               </p>
@@ -45,16 +45,16 @@ const Hello = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex flex-col items-center md:items-start gap-4 p-6 rounded-lg bg-neutral-focus">
-              <div className="text-4xl">🤝</div>
-              <h3 className="text-xl font-bold">Collaborative Approach</h3>
+              <div className="text-4xl flex justify-center w-full">🤝</div>
+              <h3 className="text-xl font-bold text-center w-full">Collaborative Approach</h3>
               <p className="text-lg leading-relaxed">
                 Let's work together to create tailored, high-impact experiences for your customers and users.
               </p>
             </div>
 
             <div className="flex flex-col items-center md:items-start gap-4 p-6 rounded-lg bg-neutral-focus">
-              <div className="text-4xl">📈</div>
-              <h3 className="text-xl font-bold">Results Driven</h3>
+              <div className="text-4xl flex justify-center w-full">📈</div>
+              <h3 className="text-xl font-bold text-center w-full">Results Driven</h3>
               <p className="text-lg leading-relaxed">
                 Every project combines technical expertise with business acumen, focusing on driving growth and building lasting value.
               </p>

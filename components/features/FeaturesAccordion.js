@@ -36,13 +36,14 @@ const features = [
       >
         <path
           strokeLinecap="round"
-          d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25"
+          strokeLinejoin="round"
+          d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12H3V5.25"
         />
       </svg>
     ),
   },
   {
-    title: "Ecommerce & Payments",
+    title: "Ecommerce",
     description:
       "Customize and optimize your checkout experience. Handle subscriptions, partial payments, trial periods, upsells, downsells and more.",
     type: "video",
@@ -221,7 +222,67 @@ const FeaturesAccordion = () => {
           </motion.span>
         </h2>
         <p className="text-base-content/80 text-lg mb-12 md:mb-24">
-          We specialize in three core areas: building powerful web applications, implementing secure e-commerce solutions, and creating conversion-focused marketing sites.
+          We specialize in three core areas: {" "}
+          <button 
+            onClick={() => setFeatureSelected(0)} 
+            className="inline-flex items-center gap-1.5 font-medium hover:text-primary transition-colors border border-base-content/20 rounded-lg px-0.5 py-0.1 hover:border-primary"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-4 h-4 relative top-[0.5px]"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12H3V5.25"
+              />
+            </svg>
+            powerful web applications
+          </button>, {" "}
+          <button 
+            onClick={() => setFeatureSelected(1)} 
+            className="inline-flex items-center gap-1.5 font-medium hover:text-primary transition-colors border border-base-content/20 rounded-lg px-0.5 py-0.1 hover:border-primary"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-4 h-4 relative top-[0.5px]"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"
+              />
+            </svg>
+            secure e-commerce solutions
+          </button>, and {" "}
+          <button 
+            onClick={() => setFeatureSelected(2)} 
+            className="inline-flex items-center gap-1.5 font-medium hover:text-primary transition-colors border border-base-content/20 rounded-lg px-0.5 py-0.1 hover:border-primary"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-4 h-4 relative top-[0.5px]"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"
+              />
+            </svg>
+            conversion-focused marketing sites
+          </button>
         </p>
         <div className=" flex flex-col md:flex-row gap-12 md:gap-24">
           <div className="grid grid-cols-1 items-stretch gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-20">

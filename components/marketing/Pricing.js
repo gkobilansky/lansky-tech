@@ -1,6 +1,6 @@
 import config from "@/config";
-import ButtonCheckout from "../ui/ButtonCheckout";
 import ButtonGradient from "../ui/ButtonGradient";
+import ButtonLead from "../ui/ButtonLead";
 
 // <Pricing/> displays the pricing plans for your app
 // It's your Stripe config in config.js.stripe.plans[] that will be used to display the plans
@@ -9,7 +9,7 @@ import ButtonGradient from "../ui/ButtonGradient";
 const Pricing = ({ openModal }) => {
   return (
     <section className="bg-base-200 overflow-hidden" id="intro">
-      <div className="py-24 px-8 max-w-5xl mx-auto">
+      <div className="py-24 md:py-32 px-8 max-w-5xl mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 mb-8 mx-auto">
             <svg 
@@ -92,8 +92,16 @@ const Pricing = ({ openModal }) => {
                   </ul>
                 )}
                 <div className="space-y-2 flex flex-col items-center">
-                  <ButtonGradient className="mx-auto" title="👩🏻‍💻 Send me a note" onClick={openModal} />
-
+                  <ButtonGradient 
+                    className="mx-auto" 
+                    title="👩🏻‍💻 Send me a note" 
+                    onClick={() => openModal(
+                      <div className="w-full max-w-md mx-auto">
+                        <ButtonLead />
+                      </div>, 
+                      "Get in Touch"
+                    )}
+                  />
                   <p className="flex items-center justify-center gap-2 text-sm text-center text-base-content/80 font-medium relative">
                     No commitment.
                   </p>

@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/lansky-logo.svg";
 import ButtonGradient from "../ui/ButtonGradient";
+import ButtonLead from "../ui/ButtonLead";
 import config from "@/config";
 
 const links = [
@@ -30,7 +31,18 @@ const Header = ({ openModal }) => {
   const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
 
-  const cta = <ButtonGradient title="👩🏻‍💻 Send me a note" extraStyle="btn-primary" onClick={openModal} />;
+  const cta = (
+    <ButtonGradient 
+      title="👩🏻‍💻 Send me a note" 
+      extraStyle="btn-primary" 
+      onClick={() => openModal(
+        <div className="w-full max-w-md mx-auto">
+          <ButtonLead />
+        </div>,
+        "Get in Touch"
+      )} 
+    />
+  );
 
   // setIsOpen(false) when the route changes (i.e: when the user clicks on a link on mobile)
   useEffect(() => {

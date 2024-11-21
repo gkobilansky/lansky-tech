@@ -1,5 +1,5 @@
-import Image from "next/image";
 import ButtonGradient from "../ui/ButtonGradient";
+import Snake from "../ui/Snake";
 
 const CTA = ({ openModal }) => {
   return (
@@ -12,9 +12,11 @@ const CTA = ({ openModal }) => {
           <p className="text-lg opacity-80 mb-12 md:mb-16">
             And now for something completely different...
           </p>
-          <ButtonGradient className="btn btn-primary btn-wide btn-lg" onClick={() => {
-            window.open("https://neal.fun/infinite-craft/", "_blank");
-          }} title="Something random and fun" />
+          <ButtonGradient 
+            className="btn btn-primary btn-wide btn-lg" 
+            onClick={() => openModal(<Snake />, "Snake!")} 
+            title="Have some fun!" 
+          />
         </div>
       </div>
     </section>

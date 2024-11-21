@@ -42,7 +42,7 @@ const Step = ({ emoji, text }) => {
 const Problem = () => {
   return (
     <section className="bg-neutral text-neutral-content">
-      <div className="max-w-7xl mx-auto px-8 py-16 md:py-32 text-center">
+      <div className="max-w-7xl mx-auto px-8 py-24 md:py-32 text-center">
         <h2 className="max-w-3xl mx-auto font-extrabold text-4xl md:text-5xl tracking-tight mb-6 md:mb-8">
           70% of technology projects fail because they solve the wrong problem
         </h2>

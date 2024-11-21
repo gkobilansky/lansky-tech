@@ -17,7 +17,9 @@ const ButtonLead = ({ extraStyle }) => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
-    e?.preventDefault();
+    if (e) {
+      e.preventDefault();
+    }
 
     setIsLoading(true);
     try {
@@ -26,13 +28,14 @@ const ButtonLead = ({ extraStyle }) => {
       toast.success("Thanks for reaching out!");
 
       // just remove the focus on the input
-      inputRef.current.blur();
+      inputRef.current?.blur();
       setEmail("");
       setMessage("");
       setIsDisabled(true);
       setIsSuccess(true);
     } catch (error) {
       console.log(error);
+      toast.error("Something went wrong!");
     } finally {
       setIsLoading(false);
     }
@@ -48,7 +51,7 @@ const ButtonLead = ({ extraStyle }) => {
 
   return (
     <form
-      className={`w-full max-w-xs space-y-3 ${extraStyle ? extraStyle : ""}`}
+      className={`w-full max-w-xs space-y-3 flex flex-col items-center mx-auto ${extraStyle ? extraStyle : ""}`}
       onSubmit={handleSubmit}
     >
       <input
@@ -58,11 +61,16 @@ const ButtonLead = ({ extraStyle }) => {
         ref={inputRef}
         autoComplete="email"
         placeholder="tom@cruise.com"
-        className="input input-bordered w-full placeholder:opacity-60"
+        className="input input-bordered w-full max-w-xs placeholder:opacity-60"
         onChange={(e) => setEmail(e.target.value)}
       />
       
-      <textarea value={message} placeholder="Message" className="textarea textarea-bordered w-full placeholder:opacity-60" onChange={(e) => setMessage(e.target.value)} />
+      <textarea 
+        value={message} 
+        placeholder="Message" 
+        className="textarea textarea-bordered w-full max-w-xs placeholder:opacity-60" 
+        onChange={(e) => setMessage(e.target.value)} 
+      />
 
       <button
         className="btn btn-gradient btn-block"
