@@ -9,7 +9,7 @@ import ButtonLead from "../ui/ButtonLead";
 const Pricing = ({ openModal }) => {
   return (
     <section className="bg-base-200 overflow-hidden" id="intro">
-      <div className="py-24 px-8 max-w-5xl mx-auto">
+      <div className="py-24 md:py-32 px-8 max-w-5xl mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 mb-8 mx-auto">
             <svg 

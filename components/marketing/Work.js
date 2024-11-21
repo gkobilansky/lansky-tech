@@ -8,7 +8,7 @@ export default function Work() {
     .slice(0, 3);
 
   return (
-    <section className="py-24 px-4 max-w-6xl mx-auto" id="work">
+    <section className="py-24 md:py-32 px-4 max-w-6xl mx-auto" id="work">
       <div className="text-center mb-16">
         <h2 className="font-extrabold text-3xl lg:text-4xl tracking-tight mb-6">
           Recent Work
@@ -18,7 +18,7 @@ export default function Work() {
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 px-12 lg:px-0">
+      <div className="grid lg:grid-cols-3 gap-20 lg:gap-34 px-12 lg:px-0">
         {latestArticles.map((article) => (
           <CardArticle
             key={article.slug}

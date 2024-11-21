@@ -1,6 +1,6 @@
 const UkraineCallOut = () => {
   return (
-    <section className="mx-auto bg-neutral text-neutral-content px-8 py-8 lg:py-20">
+    <section className="mx-auto bg-neutral text-neutral-content px-8 py-24 md:py-32">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
           <span className="text-2xl">🇺🇦</span>

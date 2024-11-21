@@ -3,7 +3,7 @@ import Image from "next/image";
 const Hello = () => {
   return (
     <>
-      <section className="mx-auto bg-neutral text-neutral-content flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-20 px-8 py-8 pt-40" id="hello">
+      <section className="mx-auto bg-neutral text-neutral-content flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-20 px-8 py-24 md:py-32" id="hello">
         <div className="lg:w-1/8 order-first lg:order-last relative">
           <Image
             src="/gene-and-fam.jpeg"
@@ -23,7 +23,7 @@ const Hello = () => {
         </div>
       </section>
 
-      <section className="mx-auto bg-neutral text-neutral-content px-8 py-8 lg:py-20">
+      <section className="mx-auto bg-neutral text-neutral-content px-8 py-8 pb-24 md:pb-32">
         <div className="max-w-4xl mx-auto flex flex-col gap-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
             <div className="flex flex-col items-center md:items-start gap-4 p-6 rounded-lg bg-neutral-focus">
