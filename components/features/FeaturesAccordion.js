@@ -25,6 +25,22 @@ const features = [
       width: 800,
       height: 600,
     },
+    buttonSvg: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-4 h-4 relative top-[0.5px]"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12H3V5.25"
+        />
+      </svg>
+    ),
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -54,6 +70,22 @@ const features = [
       width: 800,
       height: 600,
     },
+    buttonSvg: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-4 h-4 relative top-[0.5px]"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"
+        />
+      </svg>
+    ),
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -83,6 +115,22 @@ const features = [
       height: 800,
       width: 600,
     },
+    buttonSvg: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-4 h-4 relative top-[0.5px]"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"
+        />
+      </svg>
+    ),
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -186,6 +234,11 @@ const Media = ({ feature }) => {
 const FeaturesAccordion = () => {
   const [featureSelected, setFeatureSelected] = useState(0);
 
+  const handleFeatureClick = (index) => {
+    setFeatureSelected(index);
+    document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section
       className="py-24 md:py-32 space-y-24 md:space-y-32 max-w-7xl mx-auto bg-base-100 bg-opacity-80"
@@ -203,7 +256,7 @@ const FeaturesAccordion = () => {
           </svg>
           <p className="font-medium text-primary text-sm">Solutions</p>
         </div>    
-        <h2 className="font-extrabold text-4xl lg:text-6xl tracking-tight mb-4 md:mb-8">
+        <h2 className="font-extrabold text-4xl lg:text-6xl tracking-tight mb-4 md:mb-8" id="features">
           We like to start small & iteratively<br/>
           <motion.span 
             initial={{ 
@@ -224,63 +277,24 @@ const FeaturesAccordion = () => {
         <p className="text-base-content/80 text-lg mb-12 md:mb-24">
           We specialize in three core areas: {" "}
           <button 
-            onClick={() => setFeatureSelected(0)} 
+            onClick={() => handleFeatureClick(0)} 
             className="inline-flex items-center gap-1.5 font-medium hover:text-primary transition-colors border border-base-content/20 rounded-lg px-0.5 py-0.1 hover:border-primary"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-4 h-4 relative top-[0.5px]"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12H3V5.25"
-              />
-            </svg>
+            {features[0].buttonSvg}
             powerful web applications
           </button>, {" "}
           <button 
-            onClick={() => setFeatureSelected(1)} 
+            onClick={() => handleFeatureClick(1)} 
             className="inline-flex items-center gap-1.5 font-medium hover:text-primary transition-colors border border-base-content/20 rounded-lg px-0.5 py-0.1 hover:border-primary"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-4 h-4 relative top-[0.5px]"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"
-              />
-            </svg>
+            {features[1].buttonSvg}
             secure e-commerce solutions
           </button>, and {" "}
           <button 
-            onClick={() => setFeatureSelected(2)} 
+            onClick={() => handleFeatureClick(2)} 
             className="inline-flex items-center gap-1.5 font-medium hover:text-primary transition-colors border border-base-content/20 rounded-lg px-0.5 py-0.1 hover:border-primary"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-4 h-4 relative top-[0.5px]"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"
-              />
-            </svg>
+            {features[2].buttonSvg}
             conversion-focused marketing sites
           </button>
         </p>

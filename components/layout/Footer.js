@@ -9,7 +9,7 @@ import logo from "@/public/lansky-logo.png";
 const Footer = () => {
   return (
     <footer className="bg-base-200 border-t border-base-content/10">
-      <div className="max-w-7xl mx-auto px-8 py-24">
+      <div className="max-w-7xl mx-auto px-8 pt-24">
         <div className="flex lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div className="lg:w-1/3 md:mx-0 mx-auto text-center md:text-left">
             <Link
@@ -120,6 +120,15 @@ const Footer = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="flex justify-center relative w-fit mx-auto">
+          <img 
+            src="/makin-magic.svg" 
+            alt="Lansky Tech - Making Magic"
+            className="h-60 w-auto opacity-50"
+          />
         </div>
       </div>
     </footer>

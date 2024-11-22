@@ -16,10 +16,11 @@ const Hello = () => {
         </div>
         <div className="flex flex-col gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start max-w-lg">
           <h1 className="font-extrabold text-4xl lg:text-6xl tracking-tight md:-mb-4">
-            Hello. <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0066CC] to-[#FFCC00]">I'm Gene.</span>
+            Hello. <span className="bg-clip-text whitespace-nowrap text-transparent bg-gradient-to-r from-[#0066CC] to-[#FFCC00]">I'm Gene.</span>
           </h1>
           <p className="text-lg leading-relaxed">
-            👋 Gene Kobi<span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0066CC] to-[#FFCC00]">lansky</span>. From online learning sysems to interactive nail-color pickers; over a career of nearly two decades, I've helped businesses implement technology successfully in many different ways. Two things I've learned: iterative improvements add up faster than you think, and collaboration is the true driver of business value. I started Lansky Technology with these learnings in mind — not just to offer expert development, but to be a trusted advisor.</p>
+            👋 Gene Kobi<span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0066CC] to-[#FFCC00]">lansky</span>, a technology leader with proven success at Fortune 100 companies and startups alike. From creating a custom Amazon experience for Samsung to scaling a fitness and training platforms to 120,000+ users, I specialize in creating high-impact digital solutions that drive measurable business growth.
+          </p>
         </div>
       </section>
 
@@ -27,36 +28,34 @@ const Hello = () => {
         <div className="max-w-4xl mx-auto flex flex-col gap-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
             <div className="flex flex-col items-center md:items-start gap-4 p-6 rounded-lg bg-neutral-focus">
-              <div className="text-4xl flex justify-center w-full">🏢</div>
-              <h3 className="text-xl font-bold text-center w-full">Enterprise Foundations</h3>
-              <p className="text-lg leading-relaxed">
-                My career began in enterprise environments, developing learning management systems, franchisee billing portals, and tackling Oracle ERP integrations. These experiences helped me develop a feel for aligning technology with business goals.
+              <div className="text-4xl flex justify-center w-full">🚀</div>
+              <h3 className="text-xl font-bold text-center w-full">Enterprise-Grade Solutions</h3>
+              <p className="text-lg leading-relaxed text-justify">
+                Whether it's an Oracle ERP implementation or a custom e-commerce platform, we deliver scalable solutions that delight users. One recently launched video streaming upgrate achieved a 93% improvement in user experience.
               </p>
             </div>
             
             <div className="flex flex-col items-center md:items-start gap-4 p-6 rounded-lg bg-neutral-focus">
-              <div className="text-4xl flex justify-center w-full">🚀</div>
-              <h3 className="text-xl font-bold text-center w-full">Modern Solutions</h3>
-              <p className="text-lg leading-relaxed">
-                Today, we create custom experiences for top brands and growing startups. We setup innovative ecommerce and payment systems, driving growth. We build marketing sites optimized for your perfect customer's journey.   
+              <div className="text-4xl flex justify-center w-full">📈</div>
+              <h3 className="text-xl font-bold text-center w-full">Growth-Driven Development</h3>
+              <p className="text-lg leading-relaxed text-justify">
+                From helping a charity improve their donation conversion rate by 7% to generating $30,000+ in savings through a franchise billing system, we deliver measurable results. Our solutions combine technical excellence with proven business impact.
               </p>
             </div>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex flex-col items-center md:items-start gap-4 p-6 rounded-lg bg-neutral-focus">
               <div className="text-4xl flex justify-center w-full">🤝</div>
-              <h3 className="text-xl font-bold text-center w-full">Collaborative Approach</h3>
-              <p className="text-lg leading-relaxed">
-                Let's work together to create tailored, high-impact experiences for your customers and users.
+              <h3 className="text-xl font-bold text-center w-full">Full-Stack Expertise</h3>
+              <p className="text-lg leading-relaxed text-justify">
+                With deep experience in React, Node.js, AWS, and modern web technologies, we build end-to-end solutions that directly address your business needs.
               </p>
             </div>
 
             <div className="flex flex-col items-center md:items-start gap-4 p-6 rounded-lg bg-neutral-focus">
-              <div className="text-4xl flex justify-center w-full">📈</div>
-              <h3 className="text-xl font-bold text-center w-full">Results Driven</h3>
-              <p className="text-lg leading-relaxed">
-                Every project combines technical expertise with business acumen, focusing on driving growth and building lasting value.
+              <div className="text-4xl flex justify-center w-full">🎯</div>
+              <h3 className="text-xl font-bold text-center w-full">Product Leadership</h3>
+              <p className="text-lg leading-relaxed text-justify">
+                From leading development teams to managing multi-million dollar projects, we bring proven experience in product strategy and technical execution to every engagement.
               </p>
             </div>
           </div>
