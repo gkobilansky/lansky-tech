@@ -61,6 +61,29 @@ progress::-webkit-progress-value {
 }
 
 @layer utilities {
+  .animate-shimmer {
+    animation: shimmer 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  .animate-hue {
+    animation: hue 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes hue {
+    0% {
+      filter: hue-rotate(0deg);
+      background-position: 0% 50%;
+    }
+    50% {
+      filter: hue-rotate(-180deg);
+      background-position: 200% 50%;
+    }
+    100% {
+      filter: hue-rotate(0deg);
+      background-position: 0% 50%;
+    }
+  }
+
   @keyframes shimmer {
     0% { background-position: 200% 50%; }
     15% { background-position: 150% 45%; }
@@ -69,10 +92,6 @@ progress::-webkit-progress-value {
     65% { background-position: 50% 45%; }
     85% { background-position: 150% 55%; }
     100% { background-position: 200% 50%; }
-  }
-
-  .animate-shimmer {
-    animation: shimmer 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   }
 }
 
