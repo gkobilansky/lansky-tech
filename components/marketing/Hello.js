@@ -1,10 +1,20 @@
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Hello = () => {
+  const imageRef = useRef(null);
+  const isInView = useInView(imageRef, { once: false });
+
   return (
     <>
       <section className="mx-auto bg-neutral text-neutral-content flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-20 px-8 py-24 md:py-32" id="hello">
-        <div className="lg:w-1/8 order-first lg:order-last relative">
+        <motion.div 
+          ref={imageRef}
+          className="lg:w-1/8 order-first lg:order-last relative"
+          animate={{ rotate: isInView ? 7 : 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <Image
             src="/gene-and-fam.jpeg"
             alt="Gene Kobilansky"
@@ -13,7 +23,7 @@ const Hello = () => {
             width={500}
             height={500}
           />
-        </div>
+        </motion.div>
         <div className="flex flex-col gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start max-w-lg">
           <h1 className="font-extrabold text-4xl lg:text-6xl tracking-tight md:-mb-4">
             Hello. <span className="bg-clip-text whitespace-nowrap text-transparent bg-gradient-to-r from-[#0066CC] to-[#FFCC00]">I'm Gene.</span>
