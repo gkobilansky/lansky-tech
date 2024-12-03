@@ -41,7 +41,7 @@ const Hello = () => {
               <div className="text-4xl flex justify-center w-full">🚀</div>
               <h3 className="text-xl font-bold text-center w-full">Enterprise-Grade Solutions</h3>
               <p className="text-lg leading-relaxed text-justify">
-                Whether it's an Oracle ERP implementation or a custom e-commerce platform, we deliver scalable solutions that delight users. One recently launched video streaming upgrate achieved a 93% improvement in user experience.
+                Whether it's an Oracle ERP implementation or a custom e-commerce platform, we deliver scalable solutions that delight users. One recently launched video streaming upgrade achieved a 93% improvement in user experience.
               </p>
             </div>
             
