@@ -195,7 +195,7 @@ const Item = ({ feature, isOpen, setFeatureSelected }) => {
 // A component to display the media (video or image) of the feature. If the type is not specified, it will display an empty div.
 // Video are set to autoplay for best UX.
 const Media = ({ feature }) => {
-  const { type, path, playbackId, alt, size = { width: 500, height: 500 } } = feature;
+  const { title, type, path, playbackId, alt, size = { width: 500, height: 500 } } = feature;
   const style = "rounded-2xl max-h-[400px]";
 
 
@@ -203,15 +203,13 @@ const Media = ({ feature }) => {
     return (
       <MuxPlayer
         playbackId={playbackId}
-        lazyLoad="viewport"
         theme="minimal"
-        style={{ aspectRatio: 4/3, '--controls': 'none', display: 'block', borderRadius: '1rem', overflow: 'hidden' }}
+        style={{ aspectRatio: 4/3, display: 'block', borderRadius: '1rem', overflow: 'hidden' }}
+        title={title}
         thumbnailTime={0}
-        autoPlay
         muted
         loop
         playsInline
-        controls="none"
       />
     );
   } else if (type === "image") {
