@@ -1,4 +1,4 @@
-import { articles } from "@/app/work/_assets/content";
+import { articles } from "@/app/work/articles";
 import CardArticle from "@/app/work/_assets/components/CardArticle";
 
 export default function Work() {

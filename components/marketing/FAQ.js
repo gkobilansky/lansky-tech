@@ -20,12 +20,38 @@ const faqList = [
     ),
   },
   {
-    question: "Can you handle both front-end and back-end development?",
+    question: "What's the difference between a web application and a website?",
     answer: (
       <div className="space-y-2 leading-relaxed">
-        Yes, we provide full-stack development services. Our experience spans from creating engaging user interfaces to building robust server architectures. We handle everything from database design and API development to responsive front-end implementations and third-party integrations.
+        While both are accessed through browsers, they serve different purposes:
+        <ul className="list-disc list-inside pl-4 space-y-1">
+          <li>A website primarily delivers information to visitors - like a digital brochure. Even with a CMS, it mainly focuses on content presentation and basic user interactions.</li>
+          <li>A web application is interactive software that runs in the browser, allowing users to perform complex tasks, manipulate data, and create content. Examples include email clients, project management tools, or online banking platforms.</li>
+        </ul>
+        The key difference is in user interaction - websites are mostly read-only, while web applications enable users to create, modify, and process data in real-time.
       </div>
     ),
+  },
+  {
+    question: "How can I sell more online?",
+    answer: (
+      <div className="space-y-2 leading-relaxed">
+        Increasing online sales requires a well-optimized e-commerce infrastructure:
+        <ul className="list-disc list-inside pl-4 space-y-1">
+          <li>High-converting checkout pages with multiple payment options (credit cards, digital wallets, buy-now-pay-later)</li>
+          <li>Mobile-first design ensuring seamless shopping on all devices</li>
+          <li>Smart upsell systems that suggest relevant products during checkout</li>
+          <li>Flexible subscription options for recurring revenue</li>
+          <li>Performance optimization for fast page loads and reduced cart abandonment</li>
+          <li>Analytics integration to track and improve conversion rates</li>
+        </ul>
+        We can help implement these features while maintaining a smooth, user-friendly experience that builds trust and encourages repeat purchases.
+      </div>
+    ),
+  },
+  {
+    question: "Can you build an app that does X?",
+    answer: <div className="space-y-2 leading-relaxed">Anything can be built. Our goals is to find the leanest version of your product. That's the hard part.</div>,
   },
   {
     question: "How do you measure success?",
@@ -40,10 +66,6 @@ const faqList = [
         We establish clear KPIs at the start of each project and continuously monitor these metrics to ensure we're delivering real business value.
       </div>
     ),
-  },
-  {
-    question: "Can you build an app that does X?",
-    answer: <div className="space-y-2 leading-relaxed">Anything can be built. Our goals is to find the leanest version of your product. That's the hard part.</div>,
   },
   {
     question: "I have another question",

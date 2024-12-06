@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Script from "next/script";
-import { articles } from "../_assets/content";
 import BadgeCategory from "../_assets/components/BadgeCategory";
 import Avatar from "../_assets/components/Avatar";
 import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
+import { articles } from "@/app/work/articles";
 
 export async function generateMetadata({ params }) {
   const article = articles.find((article) => article.slug === params.articleId);
@@ -67,7 +67,7 @@ export default async function Article({ params }) {
             dateModified: article.publishedAt,
             author: {
               "@type": "Person",
-              name: article.author.name,
+              name: article.author,
             },
           }),
         }}

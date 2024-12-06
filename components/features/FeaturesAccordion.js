@@ -2,8 +2,7 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
-import MuxPlayer from "@mux/mux-player-react/lazy";
-import "@mux/mux-player/themes/minimal";
+import MuxVideoPlayer from "@/app/work/_assets/components/MuxVideoPlayer";
 import { motion } from "framer-motion";
 // The features array is a list of features that will be displayed in the accordion.
 // - title: The title of the feature
@@ -195,21 +194,20 @@ const Item = ({ feature, isOpen, setFeatureSelected }) => {
 // A component to display the media (video or image) of the feature. If the type is not specified, it will display an empty div.
 // Video are set to autoplay for best UX.
 const Media = ({ feature }) => {
-  const { title, type, path, playbackId, alt, size = { width: 500, height: 500 } } = feature;
+  const { title, type, path, playbackId, description, alt, size = { width: 500, height: 500 } } = feature;
   const style = "rounded-2xl max-h-[400px]";
 
 
   if (type === "video") {
     return (
-      <MuxPlayer
+      <MuxVideoPlayer
         playbackId={playbackId}
-        theme="minimal"
-        style={{ aspectRatio: 4/3, display: 'block', borderRadius: '1rem', overflow: 'hidden' }}
-        title={title}
-        thumbnailTime={0}
-        muted
-        loop
-        playsInline
+        controls={true}
+        metadata={{
+          video_id: playbackId,
+          video_title: title,
+          video_description: description,
+        }}
       />
     );
   } else if (type === "image") {
