@@ -3,6 +3,7 @@ import Image from "next/image";
 
 // This is the author avatar that appears in the article page and in <CardArticle /> component
 const Avatar = ({ article }) => {
+  console.log(article);
   return (
     <Link
       href={`/work/author/${article.author.slug}`}

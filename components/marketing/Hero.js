@@ -1,6 +1,5 @@
 import TestimonialsAvatars from "./testimonials/TestimonialsAvatars";
-import MuxPlayer from "@mux/mux-player-react"; 
-import "@mux/mux-player/themes/minimal";
+import MuxVideoPlayer from "@/app/work/_assets/components/MuxVideoPlayer"; 
 
 
 const Hero = () => {
@@ -41,22 +40,13 @@ const Hero = () => {
         </a>
       </div>
       <div className="lg:w-full">
-        <MuxPlayer
+        <MuxVideoPlayer
           playbackId="ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg"
           metadata={{
             video_id: "ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg",
             video_title: "Lansky Tech Hero Video",
             video_description: "Try-on feature that leads to checkout",
           }}
-          accentColor="#FFCC00"
-          theme="minimal"
-          style={{ aspectRatio: 4/3, '--controls': 'none', display: 'block', borderRadius: '1rem', overflow: 'hidden' }}
-          thumbnailTime={0}
-          autoPlay
-          muted 
-          loop
-          playsInline
-          controls="none"
          />
          </div>
     </section>
