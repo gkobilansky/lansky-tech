@@ -8,10 +8,10 @@ import { getSEOTags } from "@/libs/seo";
 import { articles } from "./articles";
 
 export const metadata = getSEOTags({
-  title: `${config.appName} Blog | Stripe Chargeback Protection`,
+  title: `${config.appName} Blog | Case studies and musings on tech`,
   description:
-    "Learn how to prevent chargebacks, how to accept payments online, and keep your Stripe account in good standing",
-  canonicalUrlRelative: "/blog",
+    "Some of our work",
+  canonicalUrlRelative: "/work",
 });
 
 export default async function Blog() {

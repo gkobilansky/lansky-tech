@@ -30,11 +30,22 @@ const links = [
 const Header = ({ openModal }) => {
   const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Handle scroll events
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const cta = (
     <ButtonGradient 
       title="👩🏻‍💻 Send me a note" 
-      extraStyle="btn-primary" 
+      extraStyle={`btn-primary transition-all duration-300 ${isScrolled ? 'scale-90' : ''}`}
       onClick={() => openModal(
         <div className="w-full max-w-md mx-auto">
           <ButtonLead />
@@ -50,27 +61,37 @@ const Header = ({ openModal }) => {
   }, [searchParams]);
 
   return (
-    <header className="fixed top-5 left-10 right-10 z-50 bg-base-200/80 backdrop-blur-lg rounded-xl">
+    <header className={`fixed z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'top-2 left-[17%] right-[17%]' 
+        : 'top-5 left-10 right-10'
+    } bg-base-200/80 backdrop-blur-lg rounded-xl`}>
       <nav
-        className="container flex items-center justify-between px-8 py-4 mx-auto"
+        className={`container flex items-center justify-between mx-auto transition-all duration-300 ${
+          isScrolled ? 'px-4 py-2' : 'px-8 py-4'
+        }`}
         aria-label="Global"
       >
         {/* Your logo/name on large screens */}
         <div className="flex lg:flex-1">
           <Link
-            className="flex items-center gap-3 shrink-0 "
+            className="flex items-center gap-3 shrink-0 transition-all duration-300"
             href="/"
             title={`${config.appName} hompage`}
           >
             <Image
               src={logo}
               alt={`${config.appName} logo`}
-              className="w-8 h-8 lg:w-20 lg:h-20 rounded-md"
+              className={`transition-all duration-300 rounded-md ${
+                isScrolled ? 'w-6 h-6 lg:w-12 lg:h-12' : 'w-8 h-8 lg:w-20 lg:h-20'
+              }`}
               priority
               width={56}
               height={56}
             />
-            <span className="hidden lg:inline font-extrabold brightness-150 contrast-150 text-3xl uppercase tracking-wide">{config.appName}</span>
+            <span className={`hidden lg:inline font-extrabold brightness-150 contrast-150 uppercase tracking-wide transition-all duration-300 ${
+              isScrolled ? 'text-xl' : 'text-3xl'
+            }`}>{config.appName}</span>
           </Link>
         </div>
         {/* Burger button to open menu on mobile */}

@@ -1,8 +1,31 @@
 import TestimonialsAvatars from "./testimonials/TestimonialsAvatars";
-import MuxVideoPlayer from "@/app/work/_assets/components/MuxVideoPlayer"; 
+import MuxVideoSlider from "@/app/work/_assets/components/MuxVideoSlider";
+
+const goToIntro = (e) => {
+  e.preventDefault();
+  document.getElementById('intro').scrollIntoView({ behavior: 'smooth' });
+}
 
 
 const Hero = () => {
+  const videos = [
+    {
+      playbackId: "ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg",
+      metadata: {
+        video_id: "ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg",
+        video_title: "Lansky Tech Hero Video",
+        video_description: "Try-on feature that leads to checkout",
+      }
+    },
+    {
+      playbackId: "t4SpPCiyHKVEo2u4mg7jKNgAmPv5FclAW1U02V011Xx1g",
+      metadata: {
+        video_id: "t4SpPCiyHKVEo2u4mg7jKNgAmPv5FclAW1U02V011Xx1g",
+        video_title: "GMB Praxis",
+        video_description: "Video driven web app",
+      }
+    }
+  ];
 
   return (
     <section className="max-w-7xl mx-auto bg-base-100 bg-opacity-80 flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-20 px-8 py-24 md:py-32 lg:pt-52">
@@ -12,7 +35,9 @@ const Hero = () => {
           <span className="bg-clip-text whitespace-nowrap text-transparent bg-[length:100%_100%] bg-gradient-to-tr from-[#0066CC] to-[#FFCC00] animate-hue">Done Right.</span>
         </h1>
         <p className="text-lg opacity-80 leading-relaxed">
-          Listen. Build. Test. Repeat. A simple process with powerful results. 
+          Home of the <span className="bg-warning/25 px-1.5">1 week prototype.</span> <a href="#intro" className="link link-hover" onClick={(e) => {
+            goToIntro(e);
+          }}>↓ Send me a note</a> to get started. 
         </p>
 
         <TestimonialsAvatars priority={true} />
@@ -20,8 +45,7 @@ const Hero = () => {
           href="#intro"
           className="group flex items-center gap-2 text-lg font-semibold hover:underline lg:hidden"
           onClick={(e) => {
-            e.preventDefault();
-            document.getElementById('intro').scrollIntoView({ behavior: 'smooth' });
+            goToIntro(e);
           }}
         >
           Get in Touch
@@ -40,15 +64,8 @@ const Hero = () => {
         </a>
       </div>
       <div className="lg:w-full">
-        <MuxVideoPlayer
-          playbackId="ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg"
-          metadata={{
-            video_id: "ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg",
-            video_title: "Lansky Tech Hero Video",
-            video_description: "Try-on feature that leads to checkout",
-          }}
-         />
-         </div>
+        <MuxVideoSlider videos={videos} />
+      </div>
     </section>
   );
 };

@@ -1,27 +1,32 @@
 import Image from "next/image";
+import samsung from "@/public/client-logos/samsung.svg";
+import amazon from "@/public/client-logos/amazon.svg";
+import ge from "@/public/client-logos/ge.svg";
+import gmb from "@/public/client-logos/gmb.svg";
+import touchtunes from "@/public/client-logos/touchtunes.png";
 
 const avatars = [
-  {
-    alt: "User",
-    // Ideally, load from a statically generated image for better SEO performance (import userImage from "@/public/userImage.png")
-    src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3276&q=80",
+  { 
+    alt: "Touchtunes",
+    src: touchtunes,
   },
   {
-    alt: "User",
-    src: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    alt: "GE",
+    src: ge,
   },
   {
-    alt: "User",
-    src: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    alt: "GMB",
+    src: gmb,
   },
   {
-    alt: "User",
-    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    alt: "Amazon",
+    src: amazon,
   },
   {
-    alt: "User",
-    src: "https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3376&q=80",
+    alt: "Samsung",
+    src: samsung,
   },
+
 ];
 
 const TestimonialsAvatars = ({ priority = false }) => {
@@ -35,8 +40,9 @@ const TestimonialsAvatars = ({ priority = false }) => {
               src={image.src}
               alt={image.alt}
               priority={priority}
-              width={50}
-              height={50}
+              width={48}
+              height={48}
+              className="bg-white"
             />
           </div>
         ))}
@@ -63,7 +69,7 @@ const TestimonialsAvatars = ({ priority = false }) => {
         </div>
 
         <div className="text-base text-base-content/80">
-          <span className="font-semibold text-base-content">27</span> companies grew faster with Lansky Tech
+built better with lansky.tech
         </div>
       </div>
     </div>
