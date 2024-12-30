@@ -25,9 +25,9 @@ const config = {
             ? ""
             : "",
         //  REQUIRED - Name of the plan, displayed on the pricing page
-        name: "Intro call",
+        name: "Kick off a 1 week project",
         // A friendly description of the plan, displayed on the pricing page. Tip: explain why this plan and not others
-        description: "Perfect for get to know you projects",
+        description: "We use AI-augmented development to ship a working prototype in a week.",
         features: [
           {
             name: "A call with me to define your business problem.",

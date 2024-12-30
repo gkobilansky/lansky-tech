@@ -14,6 +14,28 @@ import CTA from "@/components/marketing/CTA";
 import Modal from "@/components/marketing/Modal";
 import Footer from "@/components/layout/Footer";
 import UkraineCallOut from "@/components/marketing/UkraineCallOut";
+import TestimonialSlider from "@/components/marketing/testimonials/TestimonialSlider";
+
+const testimonials = [
+  {
+    rating: 5,
+    text: "Your UX is great! Best onboarding I've seen in any course period.",
+    author: "Omar Z",
+    authorImage: "/testimonials/omar-zenhom.jpeg"  },
+  {
+    rating: 5,
+    text: "Since the new site went live, we've received nothing but positive feedback from the teachers and coaches who use it",
+    author: "Katy W",
+    authorImage: "/testimonials/katy-wells.jpeg"
+  },
+  {
+    rating: 5,
+    text: "Gene worked tirelessly to deliver the work I wanted within the agreed upon time period.",
+    author: "Shawn S",
+    authorImage: "/testimonials/shawn-swift.jpeg"
+  },
+]
+
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
@@ -23,12 +45,6 @@ export default function Home() {
     setModalContent(content);
     setModalTitle(title);
     setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setModalContent(null);
-    setModalTitle("");
   };
 
   return (
@@ -41,6 +57,7 @@ export default function Home() {
         <Hero />
         <Problem />
         <FeaturesAccordion />
+        <TestimonialSlider testimonials={testimonials} />
         <Hello />
         <Work />
         <Pricing openModal={openModal} />
