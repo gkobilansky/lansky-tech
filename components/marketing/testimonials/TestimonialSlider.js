@@ -50,7 +50,8 @@ export default function TestimonialSlider({ testimonials }) {
 
   return (
     <div className="relative max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 py-8">
-      {testimonials.length > 3 && (
+      <h2 className="text-2xl font-bold mb-4 text-center">What people say about working with us</h2>
+      {testimonials.length > 4 && (
         <div className="flex items-center justify-between mb-8">
           <div className="flex space-x-4">
             <button
@@ -68,9 +69,9 @@ export default function TestimonialSlider({ testimonials }) {
           </div>
         </div>
       )}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {testimonials
-          .slice(currentTestimonialIndex, currentTestimonialIndex + 3)
+          .slice(currentTestimonialIndex, currentTestimonialIndex + 4)
           .map((testimonial, index) => (
             <Testimonial1Small 
               key={`testimonial-${currentTestimonialIndex + index}`} 
