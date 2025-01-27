@@ -30,6 +30,12 @@ const testimonials = [
   },
   {
     rating: 5,
+    text: "I also have to mention the Praxis platform (build by Lansky) - it's the best in the business!.",
+    author: "Mark",
+    authorImage: "/testimonials/lion.jpeg"
+  },
+  {
+    rating: 5,
     text: "Gene worked tirelessly to deliver the work I wanted within the agreed upon time period.",
     author: "Shawn S",
     authorImage: "/testimonials/shawn-swift.jpeg"

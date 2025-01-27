@@ -3,15 +3,15 @@
 import MuxPlayer from "@mux/mux-player-react";
 import "@mux/mux-player/themes/minimal";
 
-export default function MuxVideoPlayer({ playbackId, metadata, autoPlay = true, loop = true, controls = false, onEnded, onTimeUpdate, videoRef }) {
-    const controlsStyle = controls ? '' : 'none';
+export default function MuxVideoPlayer({ playbackId, theme = "minimal", metadata, autoPlay = false, loop = true, controls = false, onEnded, onTimeUpdate, videoRef }) {
+    const controlsStyle = controls ? '' : {"--bottom-controls": "none", "--top-controls": "none"}
     return (
-        <div className="w-full">
+        <div className="w-full aspect-auto rounded-lg overflow-hidden">
             <MuxPlayer
                 playbackId={playbackId}
-                theme="minimal"
+                theme={theme}
                 metadata={metadata}
-                style={{ aspectRatio: 4 / 3, display: 'block', borderRadius: '1rem', overflow: 'hidden', '--controls': controlsStyle }}
+                style={{ aspectRatio: 4 / 3, display: 'block', ...controlsStyle }}
                 thumbnailTime={0}
                 muted
                 loop={loop}
