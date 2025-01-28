@@ -31,7 +31,7 @@ const Hero = () => {
     <section className="max-w-7xl mx-auto bg-base-100 bg-opacity-80 flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-20 px-8 py-24 md:py-32 lg:pt-52">
       <div className="flex flex-col gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start">
         <h1 className="font-extrabold text-5xl lg:text-6xl tracking-tight md:-mb-4 brightness-150 contrast-150">
-        <span className="bg-clip-text whitespace-nowrap text-transparent bg-[length:100%_100%] bg-gradient-to-tr from-[#0066CC] to-[#FFCC00] animate-hue">Tech made for growth.</span><br/>
+        <span className="bg-clip-text text-transparent bg-[length:100%_100%] bg-gradient-to-tr from-[#0066CC] to-[#FFCC00] animate-hue">Tech for growth.</span><br/>
           Not Bloat.
         </h1>
         <p className="text-lg opacity-80 leading-relaxed">
