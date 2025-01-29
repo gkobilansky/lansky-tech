@@ -19,6 +19,7 @@ export default function MuxVideoPlayer({ playbackId, theme = "minimal", metadata
                 autoPlay={autoPlay}
                 controls={controls}
                 onEnded={onEnded}
+                accentColor="#FFCC00"
                 onTimeUpdate={onTimeUpdate}
                 ref={videoRef}
             />
