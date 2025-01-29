@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import MuxVideoPlayer from "./MuxVideoPlayer";
 
-export default function MuxVideoSlider({ videos, autoPlay = "muted", theme = false }) {
+export default function MuxVideoSlider({ videos }) {
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
     const [progress, setProgress] = useState(0);
     const videoRef = useRef(null);
@@ -27,8 +27,8 @@ export default function MuxVideoSlider({ videos, autoPlay = "muted", theme = fal
                 <MuxVideoPlayer
                     playbackId={videos[currentVideoIndex].playbackId}
                     metadata={videos[currentVideoIndex].metadata}
-                    autoPlay={autoPlay}
-                    theme={theme}
+                    autoPlay={false}
+                    theme={false}
                     controls={false}
                     loop={false}
                     onEnded={handleEnded}
