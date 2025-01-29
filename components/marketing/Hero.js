@@ -1,5 +1,5 @@
 import TestimonialsAvatars from "./testimonials/TestimonialsAvatars";
-import MuxVideoSlider from "@/app/work/_assets/components/MuxVideoSlider";
+import Image from "next/image";
 
 const goToIntro = (e) => {
   e.preventDefault();
@@ -8,36 +8,20 @@ const goToIntro = (e) => {
 
 
 const Hero = () => {
-  const videos = [
-    {
-      playbackId: "ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg",
-      metadata: {
-        video_id: "ftLbBsVGtx02Y01juxLlqucVn3Bnu014rxhvrwU9A00T7Bg",
-        video_title: "Lansky Tech Hero Video",
-        video_description: "Try-on feature that leads to checkout",
-      }
-    },
-    {
-      playbackId: "t4SpPCiyHKVEo2u4mg7jKNgAmPv5FclAW1U02V011Xx1g",
-      metadata: {
-        video_id: "t4SpPCiyHKVEo2u4mg7jKNgAmPv5FclAW1U02V011Xx1g",
-        video_title: "GMB Praxis",
-        video_description: "Video driven web app",
-      }
-    }
-  ];
+
 
   return (
-    <section className="max-w-7xl mx-auto bg-base-100 bg-opacity-80 flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-20 px-8 py-24 md:py-32 lg:pt-52">
+    <section className="max-w-7xl mx-auto bg-base-100 bg-opacity-90 flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-20 px-8 py-24 md:py-32 lg:pt-52">
       <div className="flex flex-col gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start">
         <h1 className="font-extrabold text-5xl lg:text-6xl tracking-tight md:-mb-4 brightness-150 contrast-150">
         <span className="bg-clip-text text-transparent bg-[length:100%_100%] bg-gradient-to-tr from-[#0066CC] to-[#FFCC00] animate-hue">TECH MADE FOR GROWTH.</span><br/>
           <span className="leading-relaxed">NOT BLOAT.</span>
         </h1>
         <p className="text-lg opacity-80 leading-relaxed">
-          Home of the <a href="#intro" className="link link-hover" onClick={(e) => {
+        You're small but <strong>mighty, and ready to grow</strong> — you just need the right tech to do it. You've come to the right place.<br/>
+        <a href="#intro" className="link link-hover" onClick={(e) => {
             goToIntro(e);
-          }}>↓ <span className="bg-warning/25 px-1.5"> 1 week prototype.</span>.</a>
+          }}><span className="bg-warning/25 px-1.5 leading-10">↓ Let's chat</span></a>
         </p>
 
         <TestimonialsAvatars priority={true} />
@@ -64,7 +48,9 @@ const Hero = () => {
         </a>
       </div>
       <div className="lg:w-full">
-        <MuxVideoSlider videos={videos} />
+      <Image src="/lansky-solutions.png" alt="Lansky Solutions" width={7041} height={5788} className="mx-auto max-w-full m-10" />
+
+        {/* <MuxVideoSlider videos={videos} /> */}
       </div>
     </section>
   );

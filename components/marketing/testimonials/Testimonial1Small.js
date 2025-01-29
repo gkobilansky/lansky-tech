@@ -4,7 +4,7 @@ import Image from "next/image";
 // Highlight the outcome for your customer (how did your product changed her/his life?) or the pain it's removing — Use <span className="bg-warning/25 px-1.5"> to highlight a part of the sentence
 const Testimonial1Small = ({ rating, text, author, authorImage }) => {
   return (
-    <section className="bg-base-100">
+    <section className="bg-base-200">
       <div className="space-y-6 md:space-y-8 max-w-lg mx-auto px-8 py-16 md:py-32 ">
         <div className="rating !flex justify-center">
           {[...Array(rating)].map((_, i) => (

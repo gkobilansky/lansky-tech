@@ -49,10 +49,10 @@ export default function TestimonialSlider({ testimonials }) {
   };
 
   return (
-    <div className="relative max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 py-8">
-      <h2 className="text-2xl font-bold mb-4 text-center">What people say about working with us</h2>
+    <div className="relative max-w-full mx-auto px-2 sm:px-3 lg:px-4 pt-28 bg-base-200">
+      <h2 className="text-4xl uppercase font-bold mb-4 text-center">What people say about working with us</h2>
       {testimonials.length > 4 && (
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-4">
           <div className="flex space-x-4">
             <button
               onClick={previousTestimonial}

@@ -60,14 +60,14 @@ const ButtonLead = ({ extraStyle }) => {
         value={email}
         ref={inputRef}
         autoComplete="email"
-        placeholder="tom@cruise.com"
+        placeholder="jensen@nvidia.com"
         className="input input-bordered w-full max-w-xs placeholder:opacity-60"
         onChange={(e) => setEmail(e.target.value)}
       />
       
       <textarea 
         value={message} 
-        placeholder="Message" 
+        placeholder="I'm interested in..." 
         className="textarea textarea-bordered w-full max-w-xs placeholder:opacity-60" 
         onChange={(e) => setMessage(e.target.value)} 
       />
