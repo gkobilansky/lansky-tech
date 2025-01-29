@@ -9,13 +9,13 @@ const Hello = () => {
 
   return (
     <>
-      <section className="mx-auto bg-base-100 bg-opacity-80 text-neutral-content px-24 pt-24 md:pt-32 md:pb-12" id="hello">
-        <div className="px-28">
+      <section className="mx-auto bg-base-100 bg-opacity-80 text-neutral-content px-10 lg:px-24 pt-24 md:pt-32 md:pb-12" id="hello">
+        <div className="px-10 lg:px-28">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 mb-8">
             👋
             <p className="font-medium text-primary text-sm">Hello</p>
           </div>
-          <h2 className="font-extrabold text-4xl text-center lg:text-6xl tracking-tight mb-4 md:mb-8">
+          <h2 className="font-extrabold text-3xl lg:text-6xl text-center tracking-tight mb-4 md:mb-8">
             What if web development could be <br /><span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0066CC] to-[#FFCC00]">faster, easier, and simpler?</span>
           </h2>
         </div>
@@ -35,7 +35,7 @@ const Hello = () => {
               />
             </motion.div>
 
-            <p className="text-base-content md:text-lg font-medium">Hi, I'm Gene Kobilansky, founder of Lansky Tech, and that is <strong>exactly my specialty</strong>.</p>
+            <p className="text-base-content text-lg font-medium">Hi, I'm Gene Kobilansky, founder of Lansky Tech, and that is <strong>exactly my specialty</strong>.</p>
           </div>
           <p className="text-lg max-w-4xl">I've worked with companies of all sizes — from small charity organizations just getting off the ground, to some of the biggest companies in the world, like Amazon and Samsung.
             You know what they've all had in common?
