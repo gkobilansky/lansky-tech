@@ -82,9 +82,7 @@ export default function Work() {
           </div>
         </div>
       </div>
-
       <h2 className="text-center uppercase text-3xl font-bold lg:mt-28 mt-32 mb-10">Case studies</h2>
-
       <div className="grid lg:grid-cols-3 gap-20 px-10 lg:gap-34 lg:px-32 mt-20">
         {latestArticles.map((article) => (
           <CardArticle

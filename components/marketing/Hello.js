@@ -11,6 +11,7 @@ const Hello = () => {
     <>
       <section className="mx-auto bg-base-100 bg-opacity-80 text-neutral-content px-10 lg:px-24 pt-24 md:pt-32 md:pb-12" id="hello">
         <div className="px-10 lg:px-28">
+
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 mb-8">
             👋
             <p className="font-medium text-primary text-sm">Hello</p>
@@ -34,7 +35,6 @@ const Hello = () => {
                 className="rounded-full"
               />
             </motion.div>
-
             <p className="text-base-content text-lg font-medium">Hi, I'm Gene Kobilansky, founder of Lansky Tech, and that is <strong>exactly my specialty</strong>.</p>
           </div>
           <p className="text-lg max-w-4xl">I've worked with companies of all sizes — from small charity organizations just getting off the ground, to some of the biggest companies in the world, like Amazon and Samsung.
