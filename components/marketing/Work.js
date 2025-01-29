@@ -37,12 +37,53 @@ export default function Work() {
           Check out some of our latest projects and case studies
         </p>
       </div>
-      <div className="flex justify-center items-center max-w-2xl mx-auto my-15">
-        <MuxVideoSlider videos={videos} />
+      <div className="relative mb-10">
+        <div className="flex justify-center items-center max-w-2xl px-10 mx-auto my-15">
+          <MuxVideoSlider videos={videos} />
+        </div>
+        {/* Mobile arrow (vertical) */}
+        <div className="absolute right-10 top-full -translate-y-6 lg:hidden">
+          <div className="flex flex-col items-end gap-2">
+            <svg width="60" height="120" viewBox="0 0 60 120">
+              <path
+                d="M30,95 Q40,60 30,5 M15,30 L30,5 L45,30"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="stroke-primary"
+                style={{ strokeDasharray: "5,5" }}
+              />
+            </svg>
+            <span className="font-handwriting text-lg text-primary -translate-y-8 rotate-2">
+              Some videos of our latest work
+            </span>
+          </div>
+        </div>
+        {/* Desktop arrow (horizontal) */}
+        <div className="absolute right-0 top-full -translate-y-6 hidden lg:block">
+          <div className="flex items-end gap-2">
+            <svg width="120" height="80" viewBox="0 0 120 80" className="transform -scale-x-100 -translate-x-8">
+              <path
+                d="M5,60 Q40,60 60,30 T115,10 M90,0 L115,10 L90,20"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="stroke-primary"
+                style={{ strokeDasharray: "5,5" }}
+              />
+            </svg>
+            <span className="font-handwriting text-lg text-primary rotate-2 -translate-x-8">
+              Some videos of our latest work
+            </span>
+          </div>
+        </div>
       </div>
-
-
-      <div className="grid lg:grid-cols-3 gap-20 lg:gap-34 px-32 mt-20">
+      <h2 className="text-center uppercase text-3xl font-bold lg:mt-28 mt-32 mb-10">Case studies</h2>
+      <div className="grid lg:grid-cols-3 gap-20 px-10 lg:gap-34 lg:px-32 mt-20">
         {latestArticles.map((article) => (
           <CardArticle
             key={article.slug}
