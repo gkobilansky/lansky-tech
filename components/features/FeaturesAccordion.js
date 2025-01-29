@@ -15,7 +15,7 @@ const features = [
   {
     title: "Web Apps",
     description:
-      "High-performance, real-time web applications. Streaming video, auth, payments, and seamless UX across all devices",
+      "Get a custom-built, high-performance web application that's lean, profitable, and designed to grow with you.",
     type: "video",
     path: "/gmb-praxis.mp4",
     playbackId: "t4SpPCiyHKVEo2u4mg7jKNgAmPv5FclAW1U02V011Xx1g",
@@ -60,7 +60,7 @@ const features = [
   {
     title: "Ecommerce",
     description:
-      "Customize and optimize your checkout experience. Handle subscriptions, partial payments, trial periods, upsells, downsells and more.",
+      "Create seamless and effective e-commerce flows that take users from discovery to checkout in a fully integrated funnel.",
     type: "video",
     path: "/praxis-checkout.mp4",
     playbackId: "II9mWO3uKi49PP00q700lNSaN8gjIAy81lIGohwUymDj00",
@@ -242,18 +242,11 @@ const FeaturesAccordion = () => {
     >
       <div className="px-8">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 mb-8">
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            viewBox="0 0 24 24" 
-            fill="currentColor" 
-            className="w-4 h-4 text-primary"
-          >
-            <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clipRule="evenodd" />
-          </svg>
-          <p className="font-medium text-primary text-sm">Solutions</p>
+         💪
+          <p className="font-medium text-primary text-sm">What we do</p>
         </div>    
         <h2 className="font-extrabold text-4xl lg:text-6xl tracking-tight mb-4 md:mb-8" id="features">
-          We like to start small & iteratively<br/>
+          We like to start small & iterate<br/>
           <motion.span 
             initial={{ 
               backgroundSize: "0% 100%",
@@ -267,7 +260,7 @@ const FeaturesAccordion = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-neutral-content px-2 md:px-4 ml-1 md:ml-1.5 leading-relaxed"
           >
-            build a lean, profitable product
+            to build a lean, profitable product
           </motion.span>
         </h2>
         <p className="text-base-content/80 text-lg mb-12 md:mb-24">

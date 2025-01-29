@@ -27,14 +27,14 @@ const config = {
         //  REQUIRED - Name of the plan, displayed on the pricing page
         name: "Kick off a 1 week project",
         // A friendly description of the plan, displayed on the pricing page. Tip: explain why this plan and not others
-        description: "We use AI-augmented development to ship a working prototype in a week.",
+        description: "We use AI-augmented development to ship a working and testable prototype in just one week.",
         features: [
           {
-            name: "A call with me to define your business problem.",
+            name: "Let's hop on a call to define your business problem",
           },
-          { name: "Establish goals and expectations" },
-          { name: "Outline a solution to explore" },
-          { name: "Start with one simple project we can launch in a week" },
+          { name: "Then, we'll establish actionable goals and realistic expectations" },
+          { name: "I'll outline the best solution to meet your needs" },
+          { name: "You'll get a working prototype in a week" },
         ],
       },
     ],

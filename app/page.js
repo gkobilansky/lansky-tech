@@ -62,9 +62,9 @@ export default function Home() {
       <main>
         <Hero />
         <Problem />
-        <FeaturesAccordion />
-        <TestimonialSlider testimonials={testimonials} />
         <Hello />
+        <TestimonialSlider testimonials={testimonials} />
+        <FeaturesAccordion />
         <Work />
         <Pricing openModal={openModal} />
         <FAQ />
