@@ -65,6 +65,47 @@ const Problem = () => {
 
           <Step emoji="😤" text="Project fails" />
         </div>
+
+        <div className="mt-20 max-w-3xl mx-auto bg-base-300 p-8 rounded-lg text-left">
+          <p className="text-lg mb-6">
+            Here's where most businesses run into trouble when hiring developers:
+          </p>
+          <ul className="list-none space-y-3 mb-8">
+            <li className="flex items-start gap-2">
+              <span className="text-primary">→</span>
+              <span>The developers focus on the task in front of them, without looking at the full picture.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary">→</span>
+              <span>They don't understand the overall business goals (and how the tech they're developing enables that).</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary">→</span>
+              <span>They don't mind making things overly complicated because that means more billable hours.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary">→</span>
+              <span>They fail to account for user experience and how the end user will actually engage with this product.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary">→</span>
+              <span>They're techies who just don't get how to break down complex ideas into terms non-techies can understand and appreciate.</span>
+            </li>
+          </ul>
+
+          <p className="font-bold text-lg mb-4">The result?</p>
+          
+          <p className="mb-4">
+            Projects that run over budget, over schedule, are prone to breaking, or worst case scenario: they never see the light of day.
+          </p>
+          <p className="mb-4">
+            No matter the size of your business, you can't afford the headache of wasting time and money on tech that isn't designed to solve the specific challenges you're facing.
+          </p>
+          <p>
+            <strong>You need development designed for growth.</strong>
+          </p>
+        </div>
+        
       </div>
     </section>
   );
