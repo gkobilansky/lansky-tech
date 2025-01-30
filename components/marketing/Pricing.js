@@ -12,15 +12,7 @@ const Pricing = ({ openModal }) => {
       <div className="py-24 md:py-32 px-8 max-w-5xl mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 mb-8 mx-auto">
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              viewBox="0 0 24 24" 
-              fill="currentColor" 
-              className="w-4 h-4 text-primary"
-            >
-              <path fillRule="evenodd" d="M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" clipRule="evenodd" />
-            </svg>
-            <p className="font-medium text-primary text-sm">Schedule a call</p>
+            <p className="font-medium text-primary text-sm">📊 Our Latest Offer</p>
           </div>
           <h2 className="font-bold text-3xl uppercase lg:text-5xl tracking-tight">
           Get your MVP in just 3 weeks!
