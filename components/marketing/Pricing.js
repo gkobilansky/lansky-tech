@@ -104,7 +104,7 @@ const Pricing = ({ openModal }) => {
         </div>
         <div className="flex flex-col justify-center items-center my-12">
         <h3 className="font-bold text-2xl mb-4">Why the Three-Week MVP?</h3>
-        <p className="text-base-content/80">The faster we ship, the quicker your prototype can be tested by your actual end-users. Those real-time tests allow us to iterate and improve quickly, efficiently, and in the most cost-effective way possible. </p>
+        <p className="text-base-content/80 mx-w-xl">The faster we ship, the quicker your prototype can be tested by your actual end-users. Those real-time tests allow us to iterate and improve quickly, efficiently, and in the most cost-effective way possible. </p>
         </div>
       </div>
     </section>
