@@ -37,7 +37,7 @@ const Hello = () => {
             </motion.div>
             <p className="text-base-content text-lg font-medium">Hi, I'm Gene Kobilansky, founder of Lansky Tech, and that is <strong>exactly my specialty</strong>.</p>
           </div>
-          <p className="text-lg max-w-4xl">I've worked with companies of all sizes — from small charity organizations just getting off the ground, to some of the biggest companies in the world, like Amazon and Samsung.
+          <p className="text-lg max-w-4xl">I've worked with companies of all sizes — from small charity organizations just getting off the ground, to some of the biggest companies in the world, like McDonald's, Amazon, GE, and Samsung.
             You know what they've all had in common?
             They needed the right tech solutions to help them grow, with as little tech bloat as possible (yes, even the Amazons of the world want high-quality tech as quickly and simply as possible).
           </p>
