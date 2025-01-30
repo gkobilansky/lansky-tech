@@ -23,7 +23,7 @@ const Pricing = ({ openModal }) => {
             <p className="font-medium text-primary text-sm">Schedule a call</p>
           </div>
           <h2 className="font-bold text-3xl uppercase lg:text-5xl tracking-tight">
-          Get your MVP in just one week!
+          Get your MVP in just 3 weeks!
           </h2>
         </div>
 
@@ -111,7 +111,7 @@ const Pricing = ({ openModal }) => {
           ))}
         </div>
         <div className="flex flex-col justify-center items-center my-12">
-        <h3 className="font-bold text-2xl mb-4">Why the One-Week MVP?</h3>
+        <h3 className="font-bold text-2xl mb-4">Why the Three-Week MVP?</h3>
         <p className="text-base-content/80">The faster we ship, the quicker your prototype can be tested by your actual end-users. Those real-time tests allow us to iterate and improve quickly, efficiently, and in the most cost-effective way possible. </p>
         </div>
       </div>
