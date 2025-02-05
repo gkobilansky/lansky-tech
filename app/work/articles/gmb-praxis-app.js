@@ -6,6 +6,7 @@ import { categories, authors } from '../_assets/content';
 import { styles } from '../_assets/styles';
 import ButtonGradient from "@/components/ui/ButtonGradient";
 import ButtonLead from "@/components/ui/ButtonLead";
+import MuxVideoPlayer from "../_assets/components/MuxVideoPlayer";
 
 export const gmbPraxisApp = {
   slug: "gmb-praxis-app",
@@ -21,7 +22,7 @@ export const gmbPraxisApp = {
     urlRelative: "/work/praxis/praxis.jpeg",
     alt: "GMB Praxis web app interface",
   },
-  content: ({ openModal }) => (
+  content: (
     <>
       <Image
         src={praxis}
@@ -55,19 +56,15 @@ export const gmbPraxisApp = {
           </ul>
         </div>
       </section>
-
-      <h2 className={styles.h2}>Highlights</h2>
       <section className="mb-12">
+      <h2 className={styles.h2}>Highlights</h2>
         <div className="grid grid-cols-1 gap-16 md:gap-24">
           {/* First highlight - Image on left */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex items-center justify-center">
-              <Image
-                src={praxis}
-                alt="Daily customization options"
-                width={400}
-                height={300}
-                className="rounded-box"
+             <MuxVideoPlayer
+                playbackId={"t4SpPCiyHKVEo2u4mg7jKNgAmPv5FclAW1U02V011Xx1g"}
+                controls={true}
               />
             </div>
             <div className="flex items-center">
@@ -81,16 +78,7 @@ export const gmbPraxisApp = {
           </div>
 
           {/* Second highlight - Image on right */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="flex items-center md:order-last">
-              <Image
-                src={praxis}
-                alt="Adaptive video streaming"
-                width={400}
-                height={300}
-                className="rounded-box"
-              />
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
             <div className="flex items-center">
               <div>
                 <h4 className="text-xl font-semibold mb-2">Adaptive Video Quality</h4>
@@ -104,12 +92,9 @@ export const gmbPraxisApp = {
           {/* Third highlight - Image on left */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex items-center justify-center">
-              <Image
-                src={praxis}
-                alt="Simplified app interface"
-                width={400}
-                height={300}
-                className="rounded-box"
+              <MuxVideoPlayer
+                playbackId={"II9mWO3uKi49PP00q700lNSaN8gjIAy81lIGohwUymDj00"}
+                controls={true}
               />
             </div>
             <div className="flex items-center">
@@ -123,6 +108,7 @@ export const gmbPraxisApp = {
           </div>
         </div>
       </section>
+      <section className="mb-12">
       <h2 className={styles.h2}>Challenges and Solutions</h2>
       <Image
         src={praxisSuccess}
@@ -132,7 +118,6 @@ export const gmbPraxisApp = {
         className="mb-12 !mt-0"
         priority={true}
       />
-      <section className="mb-12">
         <p className={styles.p}>The two biggest challenges we faced with this project were <strong>scalability</strong> and <strong>simplicity</strong>.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
           <div>
@@ -149,18 +134,11 @@ export const gmbPraxisApp = {
           </div>
         </div>
       </section>
+      <section className="mb-12">
       <h2 className={styles.h2}>Ready to build an adaptive, scalable app?</h2>
-      <section>
         <p className={styles.p}>
-          GMB Praxis is a good representation of my commitment to building scalable, flexible solutions tailored to the needs of both the client and the end-user.
+        GMB Praxis is a good representation of my commitment to building scalable, flexible solutions tailored to the needs of both the client and the end-user. Ready to build yours? Let's chat. 
         </p>
-        <div className="mt-6">
-          <ButtonGradient
-            title="Let's Chat"
-            extraStyle="btn-primary md:btn-sm"
-            onClick={() => document.dispatchEvent(new CustomEvent('openContactModal'))}
-          />
-        </div>
       </section>
     </>
   ),

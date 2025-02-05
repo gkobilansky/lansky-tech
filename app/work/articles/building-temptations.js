@@ -2,11 +2,8 @@ import Image from "next/image";
 import introducingTemptations from "@/public/work/temptations/temptations-banner.jpeg";
 import catQuiz from "@/public/work/temptations/cat-quiz-2.jpeg";
 import lickablesLive from "@/public/work/temptations/lickables-live.jpeg";
-import productDisplay from "@/public/work/temptations/product-display.jpeg";
 import { categories, authors } from '../_assets/content';
 import { styles } from '../_assets/styles';
-import ButtonGradient from "@/components/ui/ButtonGradient";
-import ButtonLead from "@/components/ui/ButtonLead";
 
 export const buildingTemptations = {
   slug: "building-temptations",
@@ -34,29 +31,32 @@ export const buildingTemptations = {
         className="rounded-box mb-8"
         placeholder="blur"
       />
-      <section className="grid grid-cols-1 md:grid-cols-1 gap-8 mb-12">
-        <h3 className={styles.h3}>Objectives</h3>
-        <div>
-          <ul className={styles.ul} style={{ listStyleType: 'none' }}>
-            <li className={styles.li}>🙋🏻‍♀️ Boost user engagement</li>
-            <li className={styles.li}>🙋🏻‍♀️ Increase product awareness</li>
-            <li className={styles.li}>🙋🏻‍♀️ Integration with broader marketing campaign through interactive quiz and live content</li>
-          </ul>
-        </div>
-      </section>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <section className="mb-12">
+          <h2 className={styles.h2}>Objectives</h2>
+          <div>
+            <ul className={styles.ul} style={{ listStyleType: 'none' }}>
+              <li className={styles.li}>🙋🏻‍♀️ Boost user engagement</li>
+              <li className={styles.li}>🙋🏻‍♀️ Increase product awareness</li>
+              <li className={styles.li}>🙋🏻‍♀️ Integration with broader marketing campaign through interactive quiz and live content</li>
+            </ul>
+          </div>
+        </section>
 
-      <section className="mb-12">
-        <h3 className={styles.h3}>Results</h3>
-        <div>
-          <ul className={styles.ul} style={{ listStyleType: 'none' }}>
-            <li className={styles.li}>✅ High user engagement with personality quiz and Lickables Live</li>
-            <li className={styles.li}>✅ Increased conversions through personalized recommendations</li>
-            <li className={styles.li}>✅ Improved brand awareness with memorable live content integration</li>
-          </ul>
-        </div>
-      </section>
+        <section className="mb-12">
+          <h2 className={styles.h2}>Results</h2>
+          <div>
+            <ul className={styles.ul} style={{ listStyleType: 'none' }}>
+              <li className={styles.li}>✅ High user engagement with personality quiz and Lickables Live</li>
+              <li className={styles.li}>✅ Increased conversions through personalized recommendations</li>
+              <li className={styles.li}>✅ Improved brand awareness with memorable live content integration</li>
+            </ul>
+          </div>
+        </section>
+      </div>
 
-      <h2 className={styles.h3}>Highlights</h2>
+
+      <h2 className={styles.h2}>Highlights</h2>
       <section className="mb-12">
         <div className="grid grid-cols-1 gap-16 md:gap-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -101,7 +101,7 @@ export const buildingTemptations = {
         </div>
       </section>
 
-      <h2 className={styles.h3}>Challenges and Solutions</h2>
+      <h2 className={styles.h2}>Challenges and Solutions</h2>
       <section className="mb-12">
         <p className={styles.p}>The two biggest challenges we faced with this project were <strong>Amazon Store restrictions</strong> and <strong>real-time integration</strong>.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
@@ -120,18 +120,11 @@ export const buildingTemptations = {
         </div>
       </section>
 
-      <h3 className={styles.h3}>Ready for a Super Engaging Marketing Campaign?</h3>
+      <h2 className={styles.h2}>Ready for a Super Engaging Marketing Campaign?</h2>
       <section>
         <p className={styles.p}>
           This project demonstrated how combining interactive, personalized content with live entertainment can elevate a brand's presence on e-commerce platforms like Amazon. The playful design, quiz-driven personalization, and real-time integration created a unique and engaging shopping experience for both cats and their owners.
         </p>
-        <div className="mt-6">
-          <ButtonGradient
-            title="Let's Chat"
-            extraStyle="btn-primary md:btn-sm"
-            onClick={() => document.dispatchEvent(new CustomEvent('openContactModal'))}
-          />
-        </div>
       </section>
     </>
   ),

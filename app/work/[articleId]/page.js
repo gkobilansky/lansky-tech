@@ -5,6 +5,8 @@ import Avatar from "../_assets/components/Avatar";
 import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
 import { articles } from "@/app/work/articles";
+import ButtonGradient from "@/components/ui/ButtonGradient";
+import ButtonLead from "@/components/ui/ButtonLead";
 
 export async function generateMetadata(props) {
   const params = await props.params;
@@ -164,12 +166,16 @@ export default async function Article({ params }) {
           </section>
 
           {/* ARTICLE CONTENT */}
-          <section className="w-full max-md:pt-4 md:pr-20 space-y-12 md:space-y-20">
-            {typeof article.content === 'function' 
+          <section className="w-full max-md:pt-4 md:pr-20 space-y-12 md:space-t-20">
+            {typeof article.content === 'function'
               ? article.content({ openModal: true })
               : article.content
             }
+            <section className="text-center py-16 mb-32 border border-gray-800 rounded-2xl bg-gray-900">
+              <ButtonLead extraStyle="mx-auto" />
+            </section>
           </section>
+
         </div>
       </article>
     </>

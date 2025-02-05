@@ -1,6 +1,6 @@
 // These styles are used in the content of the articles. When you update them, all articles will be updated.
 export const styles = {
-    h2: "text-2xl lg:text-4xl font-bold tracking-tight mt-24 mb-12 text-base-content",
+    h2: "text-2xl lg:text-4xl font-bold mt-24 mb-12 text-base-content",
     h3: "text-xl lg:text-2xl font-bold tracking-tight mb-1 text-base-content",
     p: "text-base-content/90 leading-relaxed",
     ul: "list-inside list-disc text-base-content/90 leading-relaxed pl-4", // Added pl-4 for left padding

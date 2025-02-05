@@ -1,11 +1,8 @@
 import Image from "next/image";
 import MuxVideoPlayer from "../_assets/components/MuxVideoPlayer";
 import samsungExperience from "@/public/work/samsung/samsung-galaxy.png";
-import goBig from "@/public/work/samsung/galaxy-go-big.png";
 import { categories, authors } from '../_assets/content';
 import { styles } from '../_assets/styles';
-import ButtonGradient from "@/components/ui/ButtonGradient";
-import ButtonLead from "@/components/ui/ButtonLead";
 
 export const samsungAmazonExperience = {
     slug: "samsung-amazon-experience",
@@ -22,7 +19,7 @@ export const samsungAmazonExperience = {
         urlRelative: "/work/samsung/samsung-banner.jpeg",
         alt: "Samsung Galaxy Unpacked",
     },
-    content: ({ openModal }) => (
+    content: (
         <>
             <div className="flex items-center justify-center">
                 <MuxVideoPlayer
@@ -30,43 +27,46 @@ export const samsungAmazonExperience = {
                     title={'360 Viewer'}
                 />
             </div>
-            <section className="grid grid-cols-1 md:grid-cols-1 gap-8 mb-12">
-                <h3 className={styles.h3}>Objectives</h3>
-                <div>
-                    <ul className={styles.ul} style={{ listStyleType: 'none' }}>
-                        <li className={styles.li}>🙋🏻‍♀️ Showcase the Galaxy S24 Ultra and other flagship products while engaging users through high-quality visuals and an immersive interface</li>
-                        <li className={styles.li}>🙋🏻‍♀️ Provide a showstopping user experience with a 360° product view using HTML canvas and Three.js</li>
-                        <li className={styles.li}>🙋🏻‍♀️ Engage users with a narrative-driven design to feature product highlights</li>
-                        <li className={styles.li}>🙋🏻‍♀️ Ensure consistency across Amazon's web store, mobile app, and Amazon Fire platforms</li>
-                    </ul>
-                </div>
-            </section>
-            <section className="mb-12">
-                <h3 className={styles.h3}>Results</h3>
-                <div>
-                    <ul className={styles.ul} style={{ listStyleType: 'none' }}>
-                        <li className={styles.li}>✅ High user engagement (as evidenced by higher time-on-page and increased conversions)</li>
-                        <li className={styles.li}>✅ Seamless Samsung experience across Amazon platforms, creating a consistent brand presence</li>
-                        <li className={styles.li}>✅ Scalable design using reusable components to allow for quick adaptation to future Samsung product pages on Amazon</li>
-                    </ul>
-                </div>
-            </section>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <section className="mb-12">
+                    <h2 className={styles.h2}>Objectives</h2>
+                    <div>
+                        <ul className={styles.ul} style={{ listStyleType: 'none' }}>
+                            <li className={styles.li}>🙋🏻‍♀️ Showcase the Galaxy S24 Ultra and other flagship products while engaging users through high-quality visuals and an immersive interface</li>
+                            <li className={styles.li}>🙋🏻‍♀️ Provide a showstopping user experience with a 360° product view using HTML canvas and Three.js</li>
+                            <li className={styles.li}>🙋🏻‍♀️ Engage users with a narrative-driven design to feature product highlights</li>
+                            <li className={styles.li}>🙋🏻‍♀️ Ensure consistency across Amazon's web store, mobile app, and Amazon Fire platforms</li>
+                        </ul>
+                    </div>
+                </section>
+                <section className="mb-12">
+                    <h2 className={styles.h2}>Results</h2>
+                    <div>
+                        <ul className={styles.ul} style={{ listStyleType: 'none' }}>
+                            <li className={styles.li}>✅ High user engagement (as evidenced by higher time-on-page and increased conversions)</li>
+                            <li className={styles.li}>✅ Seamless Samsung experience across Amazon platforms, creating a consistent brand presence</li>
+                            <li className={styles.li}>✅ Scalable design using reusable components to allow for quick adaptation to future Samsung product pages on Amazon</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
 
-            <h2 className={styles.h3}>Highlights</h2>
+            <h2 className={styles.h2}>Highlights</h2>
             <section className="mb-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <h4 className="text-xl font-semibold mb-2">360° Product View</h4>
-                        <p className={styles.p}>
-                            A 360-degree product view, developed with HTML canvas and Three.js, allowed users to explore the Galaxy S24 Ultra from all angles, offering an immersive, hands-on feel for the device's design.
-                        </p>
-                    </div>
                     <div className="flex items-center justify-center">
                         <MuxVideoPlayer
                             playbackId={"udKnSFaWpxmqlruqWXtGMCxNWVJlQpFhubWKs0202EVYw"}
                             title={'360 Viewer'}
                         />
                     </div>
+                    <div>
+                        <h4 className="text-xl font-semibold mb-2">360° Product View</h4>
+                        <p className={styles.p}>
+                            A 360-degree product view, developed with HTML canvas and Three.js, allowed users to explore the Galaxy S24 Ultra from all angles, offering an immersive, hands-on feel for the device's design.
+                        </p>
+                    </div>
+
                 </div>
             </section>
 
@@ -96,7 +96,7 @@ export const samsungAmazonExperience = {
                 </div>
             </section>
 
-            <h3 className={styles.h3}>Challenges and Solutions</h3>
+            <h2 className={styles.h2}>Challenges and Solutions</h2>
             <section className="mb-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
@@ -113,20 +113,12 @@ export const samsungAmazonExperience = {
                     </div>
                 </div>
             </section>
-
-            <h3 className={styles.h3}>Ready for an Interactive E-commerce Experience?</h3>
-            <section>
-                <p className={styles.p}>
-                    This project highlighted how advanced interactive features like 360° views can elevate an e-commerce experience, if executed properly. Ready to take your e-commerce experience to the next level with interactive features like this?
-                </p>
-                <div className="mt-6">
-                    <ButtonGradient
-                        title="Let's Chat"
-                        extraStyle="btn-primary md:btn-sm"
-                        onClick={() => document.dispatchEvent(new CustomEvent('openContactModal'))}
-                    />
-                </div>
+            <h2 className={styles.h2}>Ready for an interactive e-commerce experience?</h2>
+            <section className="mb-12">
+                <p className={styles.p}>This project highlighted how advanced interactive features like 360° views can elevate an e-commerce experience, if executed properly. Ready to take your e-commerce experience to the next level with interactive features like this? Let’s chat.</p>
             </section>
+
+
         </>
     ),
 }; 
