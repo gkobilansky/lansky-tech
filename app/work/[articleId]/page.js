@@ -33,11 +33,12 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Article({ params }) {
-  const article = articles.find((article) => article.slug === params.articleId);
+  const { articleId } = await params;
+  const article = articles.find((article) => article.slug === articleId);
   const articlesRelated = articles
     .filter(
       (a) =>
-        a.slug !== params.articleId &&
+        a.slug !== articleId &&
         a.categories.some((c) =>
           article.categories.map((c) => c.slug).includes(c.slug)
         )

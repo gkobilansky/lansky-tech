@@ -4,12 +4,13 @@ import samsungExperience from "@/public/work/samsung/samsung-galaxy.png";
 import goBig from "@/public/work/samsung/galaxy-go-big.png";
 import { categories, authors } from '../_assets/content';
 import { styles } from '../_assets/styles';
+// import { ButtonLead } from "@/app/components/ui/ButtonLead";
 
 export const samsungAmazonExperience = {
     slug: "samsung-amazon-experience",
-    title: "Samsung x Amazon Store Interactive Experience",
+    title: "Samsung Galaxy: interactive Amazon store experience",
     description:
-        "A React-based interactive Amazon Store experience for Samsung's Galaxy lineup, integrating 360° views, immersive storytelling, and platform consistency across web and Amazon Fire.",
+        "Samsung wanted a sleek, interactive Amazon Store experience to highlight their Galaxy product lineup, integrating 360° views, immersive storytelling, and platform consistency across web and Amazon Fire.",
     categories: [
         categories.find((category) => category.slug === "feature"),
     ],
@@ -22,25 +23,34 @@ export const samsungAmazonExperience = {
     },
     content: (
         <>
-          <div className="flex items-center justify-center">
-                    <MuxVideoPlayer
-                        playbackId={"udKnSFaWpxmqlruqWXtGMCxNWVJlQpFhubWKs0202EVYw"}
-                        title={'360 Viewer'}
-                    />
+            <div className="flex items-center justify-center">
+                <MuxVideoPlayer
+                    playbackId={"udKnSFaWpxmqlruqWXtGMCxNWVJlQpFhubWKs0202EVYw"}
+                    title={'360 Viewer'}
+                />
             </div>
             <section className="grid grid-cols-1 md:grid-cols-1 gap-8 mb-12">
-            <h3 className={styles.h3}>Objectives</h3>
+                <h3 className={styles.h3}>Objectives</h3>
                 <div>
-                    <p className={styles.p}>
-                        Samsung wanted a sleek, interactive Amazon Store experience to highlight their Galaxy product lineup. The goal was to showcase the Galaxy S24 Ultra and other flagship products while engaging users through high-quality visuals and an immersive interface. The project included:
-                    </p>
-                    <ul className={styles.ul}>
-                        <li className={styles.li}>A 360° product view using HTML canvas and Three.js</li>
-                        <li className={styles.li}>An engaging, narrative-driven design to feature product highlights</li>
-                        <li className={styles.li}>Consistency across Amazon's web store and Amazon Fire platforms</li>
+                    <ul className={styles.ul} style={{ listStyleType: 'none' }}>
+                        <li className={styles.li}>🙋🏻‍♀️ Showcase the Galaxy S24 Ultra and other flagship products while engaging users through high-quality visuals and an immersive interface</li>
+                        <li className={styles.li}>🙋🏻‍♀️ Provide a showstopping user experience with a 360° product view using HTML canvas and Three.js</li>
+                        <li className={styles.li}>🙋🏻‍♀️ Engage users with a narrative-driven design to feature product highlights</li>
+                        <li className={styles.li}>🙋🏻‍♀️ Ensure consistency across Amazon's web store, mobile app, and Amazon Fire platforms</li>
                     </ul>
                 </div>
             </section>
+            <section className="mb-12">
+                <h3 className={styles.h3}>Results</h3>
+                <div>
+                    <ul className={styles.ul} style={{ listStyleType: 'none' }}>
+                        <li className={styles.li}>✅ High user engagement (as evidenced by higher time-on-page and increased conversions)</li>
+                        <li className={styles.li}>✅ Seamless Samsung experience across Amazon platforms, creating a consistent brand presence</li>
+                        <li className={styles.li}>✅ Scalable design using reusable components to allow for quick adaptation to future Samsung product pages on Amazon</li>
+                    </ul>
+                </div>
+            </section>
+
             <h2 className={styles.h3}>Highlights</h2>
             <section className="mb-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -51,10 +61,10 @@ export const samsungAmazonExperience = {
                         </p>
                     </div>
                     <div className="flex items-center justify-center">
-                    <MuxVideoPlayer
-                        playbackId={"udKnSFaWpxmqlruqWXtGMCxNWVJlQpFhubWKs0202EVYw"}
-                        title={'360 Viewer'}
-                    />
+                        <MuxVideoPlayer
+                            playbackId={"udKnSFaWpxmqlruqWXtGMCxNWVJlQpFhubWKs0202EVYw"}
+                            title={'360 Viewer'}
+                        />
                     </div>
                 </div>
             </section>
@@ -68,11 +78,20 @@ export const samsungAmazonExperience = {
                         </p>
                     </div>
                     <div className="flex items-center justify-center order-2 md:order-1">
-                    <MuxVideoPlayer
-                        playbackId={"QET100NcFATspDr8FhSXQon4wUEcg4V7IGArj1kSaeJs"}
-                        title={'Color Switcher'}
-                    />
+                        <MuxVideoPlayer
+                            playbackId={"QET100NcFATspDr8FhSXQon4wUEcg4V7IGArj1kSaeJs"}
+                            title={'Color Switcher'}
+                        />
                     </div>
+                </div>
+            </section>
+
+            <section className="mb-12">
+                <div>
+                    <h4 className="text-xl font-semibold mb-2">Pixel Perfect Design Implementation</h4>
+                    <p className={styles.p}>
+                        With millions of users engaging in this experience, it was essential that the design implementation was pixel perfect across all devices and screens.
+                    </p>
                 </div>
             </section>
 
@@ -94,34 +113,10 @@ export const samsungAmazonExperience = {
                 </div>
             </section>
 
-            <h3 className={styles.h3}>Results</h3>
-            <section className="mb-12">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div className="bg-base-200 p-6 rounded-box">
-                        <h4 className="text-xl font-semibold mb-2">High Engagement</h4>
-                        <p className={styles.p}>
-                            Users engaged extensively with the interactive product views, leading to higher time-on-page and increased conversions.
-                        </p>
-                    </div>
-                    <div className="bg-base-200 p-6 rounded-box">
-                        <h4 className="text-xl font-semibold mb-2">Consistent Brand Presence</h4>
-                        <p className={styles.p}>
-                            Achieved a seamless Samsung experience across Amazon platforms, reinforcing brand identity.
-                        </p>
-                    </div>
-                    <div className="bg-base-200 p-6 rounded-box">
-                        <h4 className="text-xl font-semibold mb-2">Scalable Design</h4>
-                        <p className={styles.p}>
-                            Created reusable components, allowing for quick adaptation to future Samsung product pages on Amazon.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <h3 className={styles.h3}>Wrap Up</h3>
+            <h3 className={styles.h3}>Ready for an Interactive E-commerce Experience?</h3>
             <section>
                 <p className={styles.p}>
-                    This project highlighted how advanced interactive features like 360° views can elevate an e-commerce experience. By leveraging Three.js and an Amazon-friendly framework, I delivered an engaging, consistent experience that aligns Samsung's brand with Amazon's platform.
+                    This project highlighted how advanced interactive features like 360° views can elevate an e-commerce experience, if executed properly. Ready to take your e-commerce experience to the next level with interactive features like this? Let's chat.
                 </p>
             </section>
         </>
