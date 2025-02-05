@@ -18,7 +18,7 @@ export async function POST(req) {
 
   const body = await req.text();
 
-  const signature = headers().get("stripe-signature");
+  const signature = (await headers()).get("stripe-signature");
 
   let data;
   let eventType;

@@ -6,7 +6,8 @@ import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
 import { articles } from "@/app/work/articles";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const article = articles.find((article) => article.slug === params.articleId);
 
   return getSEOTags({
