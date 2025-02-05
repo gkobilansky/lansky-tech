@@ -5,8 +5,11 @@ import Avatar from "../_assets/components/Avatar";
 import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
 import { articles } from "@/app/work/articles";
+import ButtonGradient from "@/components/ui/ButtonGradient";
+import ButtonLead from "@/components/ui/ButtonLead";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const article = articles.find((article) => article.slug === params.articleId);
 
   return getSEOTags({
@@ -33,11 +36,12 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Article({ params }) {
-  const article = articles.find((article) => article.slug === params.articleId);
+  const { articleId } = await params;
+  const article = articles.find((article) => article.slug === articleId);
   const articlesRelated = articles
     .filter(
       (a) =>
-        a.slug !== params.articleId &&
+        a.slug !== articleId &&
         a.categories.some((c) =>
           article.categories.map((c) => c.slug).includes(c.slug)
         )
@@ -162,9 +166,16 @@ export default async function Article({ params }) {
           </section>
 
           {/* ARTICLE CONTENT */}
-          <section className="w-full max-md:pt-4 md:pr-20 space-y-12 md:space-y-20">
-            {article.content}
+          <section className="w-full max-md:pt-4 md:pr-20 space-y-12 md:space-t-20">
+            {typeof article.content === 'function'
+              ? article.content({ openModal: true })
+              : article.content
+            }
+            <section className="text-center py-16 mb-32 border border-gray-800 rounded-2xl bg-gray-900">
+              <ButtonLead extraStyle="mx-auto" />
+            </section>
           </section>
+
         </div>
       </article>
     </>

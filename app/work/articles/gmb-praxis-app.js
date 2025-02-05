@@ -1,14 +1,17 @@
 import Image from "next/image";
 import MuxPlayer from "@mux/mux-player-react";
 import praxis from "@/public/work/praxis/elements_macbook_iphone.webp";
+import praxisSuccess from "@/public/work/praxis/praxis-success.png";
 import { categories, authors } from '../_assets/content';
 import { styles } from '../_assets/styles';
+import ButtonGradient from "@/components/ui/ButtonGradient";
+import ButtonLead from "@/components/ui/ButtonLead";
+import MuxVideoPlayer from "../_assets/components/MuxVideoPlayer";
 
 export const gmbPraxisApp = {
   slug: "gmb-praxis-app",
-  title: "GMB Praxis: Adaptive Fitness App for Physical Autonomy",
-  description:
-    "GMB Praxis empowers users to improve strength, flexibility, and control with custom adaptive sessions, flexible durations, and seamless video streaming.",
+  title: "GMB Praxis: adaptive fitness app for physical autonomy",
+  description: "GMB is a tech-enabled fitness company that helps its clients achieve the foundations of physical autonomy: strength, flexibility, and control. We built and optimized GMB Praxis, a web app with custom adaptive sessions, flexible scheduling and durations, and seamless video streaming.",
   categories: [
     categories.find((category) => category.slug === "feature"),
   ],
@@ -30,71 +33,93 @@ export const gmbPraxisApp = {
         className="rounded-box mb-8"
         placeholder="blur"
       />
-      <h3 className={styles.h3}>Objectives</h3>
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
         <div>
-          <p className={styles.p}>
-            GMB Praxis was designed to deliver a seamless, adaptive fitness experience. The goal was to provide users with customizable workout durations, high-quality video streaming, and real-time progress tracking. The project involved:
-          </p>
-          <ul className={styles.ul}>
-            <li className={styles.li}>Custom video controls for personalized sessions</li>
-            <li className={styles.li}>Dynamic scheduling and session adaptability</li>
-            <li className={styles.li}>Scalable architecture to support high traffic</li>
+          <h2 className={styles.h2}>Objectives</h2>
+          <ul className={styles.ul} style={{ listStyleType: 'none' }}>
+            <li className={styles.li}>🙋🏻‍♀️ Create a delightful experience for users</li>
+            <li className={styles.li}>🙋🏻‍♀️ Increase client engagement in GMB's fitness programs</li>
+            <li className={styles.li}>🙋🏻‍♀️ Seamlessly integrate all of GMB's programs to allow for full user customization</li>
+            <li className={styles.li}>🙋🏻‍♀️ Allow for dynamic scheduling and session adaptability</li>
+            <li className={styles.li}>🙋🏻‍♀️ Support high traffic with a scalable architecture</li>
           </ul>
         </div>
-        <div className="flex items-center justify-center">
-          <Image
-            src={praxis}
-            alt="GMB Praxis session management"
-            width={400}
-            height={400}
-            className="rounded-box"
-          />
+        <div>
+          <h2 className={styles.h2}>Results</h2>
+          <ul className={styles.ul} style={{ listStyleType: 'none' }}>
+            <li className={styles.li}>✅ App supports over 10k active monthly users</li>
+            <li className={styles.li}>✅ Designed for growth and scalability</li>
+            <li className={styles.li}>✅ Increased user engagement</li>
+            <li className={styles.li}>✅ Improved video streaming experience by 35%</li>
+            <li className={styles.li}>✅ 47% improvement in page experience score</li>
+            <li className={styles.li}>✅ 4.9 star rating from users</li>
+          </ul>
         </div>
       </section>
-      <h2 className={styles.h3}>Highlights</h2>
       <section className="mb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex items-center justify-center">
-            <Image
-              src={praxis}
-              alt="Custom video controls"
-              width={400}
-              height={300}
-              className="rounded-box"
-            />
+      <h2 className={styles.h2}>Highlights</h2>
+        <div className="grid grid-cols-1 gap-16 md:gap-24">
+          {/* First highlight - Image on left */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="flex items-center justify-center">
+             <MuxVideoPlayer
+                playbackId={"t4SpPCiyHKVEo2u4mg7jKNgAmPv5FclAW1U02V011Xx1g"}
+                controls={true}
+              />
+            </div>
+            <div className="flex items-center">
+              <div>
+                <h4 className="text-xl font-semibold mb-2">Daily User Customization</h4>
+                <p className={styles.p}>
+                  Users can adjust the intensity level, workout schedule, and session duration each day, depending on how they are feeling that day. This flexible design is unlike any other fitness apps on the market.
+                </p>
+              </div>
+            </div>
           </div>
-          <div>
-            <h4 className="text-xl font-semibold mb-2">Custom Video Controls</h4>
-            <p className={styles.p}>
-              Our custom video controls allow users to set session duration and adjust exercise intensity. This flexible design helps users tailor workouts to their schedules and fitness levels.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      <section className="mb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h4 className="text-xl font-semibold mb-2">Adaptive Video Quality</h4>
-            <p className={styles.p}>
-              Using Mux for video streaming, the app automatically adjusts video quality based on the user's bandwidth, delivering uninterrupted sessions across all devices.
-            </p>
+          {/* Second highlight - Image on right */}
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
+            <div className="flex items-center">
+              <div>
+                <h4 className="text-xl font-semibold mb-2">Adaptive Video Quality</h4>
+                <p className={styles.p}>
+                  Using Mux for video streaming, the app automatically adjusts video quality based on the user's bandwidth, delivering uninterrupted sessions across all devices.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="flex items-center justify-center order-2 md:order-1">
-            <Image
-              src={praxis}
-              alt="Adaptive video streaming with Mux"
-              width={400}
-              height={300}
-              className="rounded-box"
-            />
+
+          {/* Third highlight - Image on left */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="flex items-center justify-center">
+              <MuxVideoPlayer
+                playbackId={"II9mWO3uKi49PP00q700lNSaN8gjIAy81lIGohwUymDj00"}
+                controls={true}
+              />
+            </div>
+            <div className="flex items-center">
+              <div>
+                <h4 className="text-xl font-semibold mb-2">Simplified App</h4>
+                <p className={styles.p}>
+                  We took the initial app from buggy and complex to simple and seamless by simplifying the tech and prioritizing ease of use — for both the end user and admins.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <h3 className={styles.h3}>Challenges and Solutions</h3>
       <section className="mb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <h2 className={styles.h2}>Challenges and Solutions</h2>
+      <Image
+        src={praxisSuccess}
+        alt="GMB Praxis success story"
+        width={700}
+        height={500}
+        className="mb-12 !mt-0"
+        priority={true}
+      />
+        <p className={styles.p}>The two biggest challenges we faced with this project were <strong>scalability</strong> and <strong>simplicity</strong>.</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
           <div>
             <h4 className="text-xl font-semibold mb-2">Scalability</h4>
             <p className={styles.p}>
@@ -109,33 +134,10 @@ export const gmbPraxisApp = {
           </div>
         </div>
       </section>
-      <h3 className={styles.h3}>Results</h3>
       <section className="mb-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-base-200 p-6 rounded-box">
-            <h4 className="text-xl font-semibold mb-2">User Engagement</h4>
-            <p className={styles.p}>
-              Users have reported greater consistency and motivation, thanks to the adaptable session lengths and personalized controls.
-            </p>
-          </div>
-          <div className="bg-base-200 p-6 rounded-box">
-            <h4 className="text-xl font-semibold mb-2">Positive Feedback</h4>
-            <p className={styles.p}>
-              GMB Praxis users frequently praise the app's flexibility and seamless streaming, which contribute to a smooth training experience.
-            </p>
-          </div>
-          <div className="bg-base-200 p-6 rounded-box">
-            <h4 className="text-xl font-semibold mb-2">Scalable Design</h4>
-            <p className={styles.p}>
-              The backend architecture supports future growth, ensuring long-term stability and easy feature integration.
-            </p>
-          </div>
-        </div>
-      </section>
-      <h3 className={styles.h3}>Wrap Up</h3>
-      <section>
+      <h2 className={styles.h2}>Ready to build an adaptive, scalable app?</h2>
         <p className={styles.p}>
-          Developing GMB Praxis was a rewarding experience that highlighted the importance of user-focused adaptive design in fitness applications. This project reflects my commitment to building scalable, flexible solutions tailored to user needs, aligning technology with GMB's mission to promote Physical Autonomy.
+        GMB Praxis is a good representation of my commitment to building scalable, flexible solutions tailored to the needs of both the client and the end-user. Ready to build yours? Let's chat. 
         </p>
       </section>
     </>

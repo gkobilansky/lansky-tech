@@ -1,6 +1,6 @@
 const UkraineCallOut = () => {
   return (
-    <section className="mx-auto bg-neutral text-neutral-content px-8 py-24 md:py-32">
+    <section className="mx-auto bg-neutral text-neutral-content px-8 py-24 md:py-32 mb-10 rounded-2xl">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
           <span className="text-2xl">🇺🇦</span>
@@ -31,6 +31,10 @@ const UkraineCallOut = () => {
                 <a href="https://ua24.gov.ua/" className="underline hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">United24</a>
                 <p className="text-sm mt-1">The official Ukrainian Government fundraising initiative.</p>
               </li>
+              <li>
+                <a href="https://www.spendwithukraine.com/" className="underline hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">Spend With Ukraine</a>
+                <p className="text-sm mt-1">Support Ukrainian businesses and economy by purchasing products from Ukrainian companies.</p>
+              </li>
             </ul>
           </div>
 
@@ -44,6 +48,26 @@ const UkraineCallOut = () => {
               <li>
                 <a href="https://www.youtube.com/@DenysDavydov" className="underline hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">Denys Davydov</a>
                 <p className="text-sm mt-1">A Ukrainian pilot providing daily situation updates from the ground.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div className="border-l-4 border-primary pl-4">
+            <h3 className="font-semibold text-lg mb-2">Educational Resources</h3>
+            <ul className="space-y-4">
+              <li>
+                <a href="https://www.coursera.org/learn/ukraine-history-culture-and-identities" className="underline hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">Ukraine: History, Culture and Identities</a>
+                <p className="text-sm mt-1">Free online course by the University of Washington and Ukrainian Institute exploring Ukraine's rich history and culture.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div className="border-l-4 border-primary pl-4">
+            <h3 className="font-semibold text-lg mb-2">Take Action</h3>
+            <ul className="space-y-4">
+              <li>
+                <a href="https://leave-russia.org/" className="underline hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">Leave Russia Project</a>
+                <p className="text-sm mt-1">Track and encourage companies to cease operations in Russia to help stop funding the war.</p>
               </li>
             </ul>
           </div>

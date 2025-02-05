@@ -48,6 +48,9 @@ const Footer = () => {
                 <Link href="/#hello" className="link link-hover">
                   Hello
                 </Link>
+                <Link href="/about" className="link link-hover">
+                  About
+                </Link>
                 <Link href="/work" className="link link-hover">
                   Writings
                 </Link>

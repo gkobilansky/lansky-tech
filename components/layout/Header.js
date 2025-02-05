@@ -22,6 +22,10 @@ const links = [
     href: "/#intro",
     label: "Intro call",
   },
+  {
+    href: "/about",
+    label: "About",
+  },
 ];
 
 

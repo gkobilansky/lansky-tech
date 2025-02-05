@@ -68,7 +68,6 @@ export default function Home() {
         <Work />
         <Pricing openModal={openModal} />
         <FAQ />
-        <UkraineCallOut />
         <CTA openModal={openModal} />
         <Modal 
           isModalOpen={isModalOpen} 
