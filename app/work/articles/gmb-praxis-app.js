@@ -4,6 +4,8 @@ import praxis from "@/public/work/praxis/elements_macbook_iphone.webp";
 import praxisSuccess from "@/public/work/praxis/praxis-success.png";
 import { categories, authors } from '../_assets/content';
 import { styles } from '../_assets/styles';
+import ButtonGradient from "@/components/ui/ButtonGradient";
+import ButtonLead from "@/components/ui/ButtonLead";
 
 export const gmbPraxisApp = {
   slug: "gmb-praxis-app",
@@ -19,7 +21,7 @@ export const gmbPraxisApp = {
     urlRelative: "/work/praxis/praxis.jpeg",
     alt: "GMB Praxis web app interface",
   },
-  content: (
+  content: ({ openModal }) => (
     <>
       <Image
         src={praxis}
@@ -150,8 +152,15 @@ export const gmbPraxisApp = {
       <h2 className={styles.h2}>Ready to build an adaptive, scalable app?</h2>
       <section>
         <p className={styles.p}>
-          GMB Praxis is a good representation of my commitment to building scalable, flexible solutions tailored to the needs of both the client and the end-user. Ready to build yours? Let's chat.
+          GMB Praxis is a good representation of my commitment to building scalable, flexible solutions tailored to the needs of both the client and the end-user.
         </p>
+        <div className="mt-6">
+          <ButtonGradient
+            title="Let's Chat"
+            extraStyle="btn-primary md:btn-sm"
+            onClick={() => document.dispatchEvent(new CustomEvent('openContactModal'))}
+          />
+        </div>
       </section>
     </>
   ),

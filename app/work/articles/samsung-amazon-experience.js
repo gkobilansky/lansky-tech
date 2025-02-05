@@ -4,7 +4,8 @@ import samsungExperience from "@/public/work/samsung/samsung-galaxy.png";
 import goBig from "@/public/work/samsung/galaxy-go-big.png";
 import { categories, authors } from '../_assets/content';
 import { styles } from '../_assets/styles';
-// import { ButtonLead } from "@/app/components/ui/ButtonLead";
+import ButtonGradient from "@/components/ui/ButtonGradient";
+import ButtonLead from "@/components/ui/ButtonLead";
 
 export const samsungAmazonExperience = {
     slug: "samsung-amazon-experience",
@@ -21,7 +22,7 @@ export const samsungAmazonExperience = {
         urlRelative: "/work/samsung/samsung-banner.jpeg",
         alt: "Samsung Galaxy Unpacked",
     },
-    content: (
+    content: ({ openModal }) => (
         <>
             <div className="flex items-center justify-center">
                 <MuxVideoPlayer
@@ -116,8 +117,15 @@ export const samsungAmazonExperience = {
             <h3 className={styles.h3}>Ready for an Interactive E-commerce Experience?</h3>
             <section>
                 <p className={styles.p}>
-                    This project highlighted how advanced interactive features like 360° views can elevate an e-commerce experience, if executed properly. Ready to take your e-commerce experience to the next level with interactive features like this? Let's chat.
+                    This project highlighted how advanced interactive features like 360° views can elevate an e-commerce experience, if executed properly. Ready to take your e-commerce experience to the next level with interactive features like this?
                 </p>
+                <div className="mt-6">
+                    <ButtonGradient
+                        title="Let's Chat"
+                        extraStyle="btn-primary md:btn-sm"
+                        onClick={() => document.dispatchEvent(new CustomEvent('openContactModal'))}
+                    />
+                </div>
             </section>
         </>
     ),

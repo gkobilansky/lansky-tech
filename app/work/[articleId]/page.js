@@ -165,7 +165,10 @@ export default async function Article({ params }) {
 
           {/* ARTICLE CONTENT */}
           <section className="w-full max-md:pt-4 md:pr-20 space-y-12 md:space-y-20">
-            {article.content}
+            {typeof article.content === 'function' 
+              ? article.content({ openModal: true })
+              : article.content
+            }
           </section>
         </div>
       </article>

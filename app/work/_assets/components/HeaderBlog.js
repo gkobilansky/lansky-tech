@@ -9,6 +9,7 @@ import logo from "@/public/lansky-logo.png";
 import config from "@/config";
 import { categories } from "../content";
 import ButtonGradient from "@/components/ui/ButtonGradient";
+import ButtonLead from "@/components/ui/ButtonLead";
 
 const links = [
   {
@@ -16,10 +17,6 @@ const links = [
     label: "All Posts",
   },
 ];
-
-const cta = (
-  <ButtonGradient title="👩🏻‍💻 Send me a note" extraStyle="btn-primary md:btn-sm" />
-);
 
 const ButtonPopoverCategories = () => {
   return (
@@ -139,7 +136,7 @@ const ButtonAccordionCategories = () => {
 // This is the header that appears on all pages in the /blog folder.
 // By default it shows the logo, the links, and the CTA.
 // In the links, there's a popover with the categories.
-const HeaderBlog = () => {
+const HeaderBlog = ({ openModal = () => {} }) => {
   const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -147,6 +144,34 @@ const HeaderBlog = () => {
   useEffect(() => {
     setIsOpen(false);
   }, [searchParams]);
+
+  useEffect(() => {
+    const handleOpenModal = () => {
+      openModal(
+        <div className="w-full max-w-md mx-auto">
+          <ButtonLead />
+        </div>,
+        "Get in Touch"
+      );
+    };
+
+    document.addEventListener('openContactModal', handleOpenModal);
+    return () => document.removeEventListener('openContactModal', handleOpenModal);
+  }, [openModal]);
+
+  // Move the cta definition here
+  const cta = (
+    <ButtonGradient 
+      title="👩🏻‍💻 Send me a note" 
+      extraStyle="btn-primary md:btn-sm"
+      onClick={() => openModal(
+        <div className="w-full max-w-md mx-auto">
+          <ButtonLead />
+        </div>,
+        "Get in Touch"
+      )} 
+    />
+  );
 
   return (
     <header className="bg-base-200">
