@@ -2,6 +2,7 @@ import Image from "next/image";
 import introducingTemptations from "@/public/work/temptations/temptations-banner.jpeg";
 import catQuiz from "@/public/work/temptations/cat-quiz-2.jpeg";
 import lickablesLive from "@/public/work/temptations/lickables-live.jpeg";
+import templationsMarketing from "@/public/work/temptations/temptations-marketing.png";
 import { categories, authors } from '../_assets/content';
 import { styles } from '../_assets/styles';
 
@@ -100,9 +101,10 @@ export const buildingTemptations = {
           </div>
         </div>
       </section>
-
-      <h2 className={styles.h2}>Challenges and Solutions</h2>
       <section className="mb-12">
+        <h2 className={styles.h2}>Challenges and Solutions</h2>
+        <Image src={templationsMarketing}
+          alt="Temptations Marketing" width={700} height={500} className="rounded-box mb-8" />
         <p className={styles.p}>The two biggest challenges we faced with this project were <strong>Amazon Store restrictions</strong> and <strong>real-time integration</strong>.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
           <div>
