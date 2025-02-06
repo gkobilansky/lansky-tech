@@ -1,6 +1,7 @@
 import Image from "next/image";
 import MuxVideoPlayer from "../_assets/components/MuxVideoPlayer";
 import samsungExperience from "@/public/work/samsung/samsung-galaxy.png";
+import enhancedEcommerce from "@/public/work/samsung/enhanced-ecommerce.png";
 import { categories, authors } from '../_assets/content';
 import { styles } from '../_assets/styles';
 
@@ -50,7 +51,6 @@ export const samsungAmazonExperience = {
                     </div>
                 </section>
             </div>
-
             <h2 className={styles.h2}>Highlights</h2>
             <section className="mb-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -69,7 +69,6 @@ export const samsungAmazonExperience = {
 
                 </div>
             </section>
-
             <section className="mb-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
@@ -95,20 +94,27 @@ export const samsungAmazonExperience = {
                     </p>
                 </div>
             </section>
-
-            <h2 className={styles.h2}>Challenges and Solutions</h2>
             <section className="mb-12">
+                <h2 className={styles.h2}>Challenges and Solutions</h2>
+                <Image
+                    src={enhancedEcommerce}
+                    alt="Enhanced Ecommerce"
+                    width={700}
+                    height={500}
+                    className="mb-12 !mt-0"
+                    priority={true}
+                />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <h4 className="text-xl font-semibold mb-2">Amazon Framework Adaptation</h4>
-                        <p className={styles.p}>
-                            Adapting Samsung's design within Amazon's in-house framework required balancing brand visuals with platform constraints. I optimized React components for smooth performance within Amazon's ecosystem.
-                        </p>
-                    </div>
                     <div>
                         <h4 className="text-xl font-semibold mb-2">360° View Integration</h4>
                         <p className={styles.p}>
                             Implementing the 360° view was technically complex. Using Three.js with HTML canvas, I ensured the feature was performant and visually engaging, allowing users to inspect every product angle.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 className="text-xl font-semibold mb-2">Amazon Framework Adaptation</h4>
+                        <p className={styles.p}>
+                            Adapting Samsung's design within Amazon's in-house framework required balancing brand visuals with platform constraints. I optimized React components for smooth performance within Amazon's ecosystem.
                         </p>
                     </div>
                 </div>

@@ -1,6 +1,8 @@
 import config from "@/config";
 import ButtonGradient from "../ui/ButtonGradient";
 import ButtonLead from "../ui/ButtonLead";
+import ButtonCheckout from "../ui/ButtonCheckout";
+
 
 // <Pricing/> displays the pricing plans for your app
 // It's your Stripe config in config.js.stripe.plans[] that will be used to display the plans
@@ -38,12 +40,12 @@ const Pricing = ({ openModal }) => {
                 ></div>
               )}
 
-              <div className="relative flex flex-col h-full gap-5 lg:gap-8 z-10 bg-base-100 p-8 rounded-lg">
+              <div className="relative flex flex-col h-full gap-5 z-10 bg-base-100 p-8 rounded-lg">
                 <div className="flex justify-between items-center gap-4">
                   <div>
                     <p className="text-lg lg:text-xl font-bold">{plan.name}</p>
                     {plan.description && (
-                      <p className="text-base-content/80 mt-2">
+                      <p className="text-base-content/80 my-2">
                         {plan.description}
                       </p>
                     )}
@@ -84,18 +86,10 @@ const Pricing = ({ openModal }) => {
                   </ul>
                 )}
                 <div className="space-y-2 flex flex-col items-center">
-                  <ButtonGradient 
-                    className="mx-auto" 
-                    title="👩🏻‍💻 Send me a note" 
-                    onClick={() => openModal(
-                      <div className="w-full max-w-md mx-auto">
-                        <ButtonLead />
-                      </div>, 
-                      "Get in Touch"
-                    )}
-                  />
+                  <p>Secure your spot in line</p>
+                  <ButtonCheckout priceId={plan.priceId} />
                   <p className="flex items-center justify-center gap-2 text-sm text-center text-base-content/80 font-medium relative">
-                    No commitment.
+                    Deposit is refundable if not the right fit.
                   </p>
                 </div>
               </div>
@@ -105,6 +99,19 @@ const Pricing = ({ openModal }) => {
         <div className="flex flex-col justify-center items-center my-12">
         <h3 className="font-bold text-2xl mb-4">Why the Three-Week MVP?</h3>
         <p className="text-base-content/80 mx-w-xl">The faster we ship, the quicker your prototype can be tested by your actual end-users. Those real-time tests allow us to iterate and improve quickly, efficiently, and in the most cost-effective way possible. </p>
+        </div>
+        <div className="flex flex-col justify-center items-center my-12">
+        <h3 className="font-bold text-2xl mb-4">Not the right fit?</h3>
+          <p className="text-base-content/80 mx-w-xl">Need something more custom, or just want to talk strategy? <span className="bg-warning/25 px-1.5 leading-10">
+          <a 
+          className="link link-hover group"
+          onClick={() => openModal(
+            <div className="w-full max-w-md mx-auto">
+              <ButtonLead />
+            </div>
+          )}
+          >Send me a note<span className="group-hover:translate-x-1 transition-transform duration-200"> →</span></a></span> No commitment.
+          </p>
         </div>
       </div>
     </section>

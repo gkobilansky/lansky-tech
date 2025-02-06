@@ -22,10 +22,10 @@ const config = {
         // REQUIRED — we use this to find the plan in the webhook (for instance if you want to update the user's credits based on the plan)
         priceId:
           process.env.NODE_ENV === "development"
-            ? ""
-            : "",
+            ? "price_1QpKehBA9X37Uo66ezhxOARY"
+            : "price_1QpKdZBA9X37Uo660WG5BeaC",
         //  REQUIRED - Name of the plan, displayed on the pricing page
-        name: "Kick off a 3 week project",
+        name: "Kick off a 3 week project with a $300 deposit",
         // A friendly description of the plan, displayed on the pricing page. Tip: explain why this plan and not others
         description: "We use AI-augmented development to ship a working and testable prototype in just three weeks.",
         features: [

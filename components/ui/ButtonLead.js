@@ -73,11 +73,11 @@ const ButtonLead = ({ extraStyle }) => {
       />
 
       <button
-        className="btn btn-gradient btn-block"
+        className="btn btn-gradient btn-block group"
         type="submit"
         disabled={isDisabled}
       >
-        Say hi 👋🏻
+        <span className="group-hover:rotate-12 group-hover:scale-125 transition-all duration-200 ease-in-out">👋🏽</span> Say hi 
         {isLoading ? (
           <span className="loading loading-spinner loading-xs"></span>
         ) : (
@@ -85,7 +85,7 @@ const ButtonLead = ({ extraStyle }) => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            className="w-5 h-5"
+            className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200 ease-in-out"
           >
             <path
               fillRule="evenodd"
