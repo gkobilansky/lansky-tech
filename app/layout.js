@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import PlausibleProvider from "next-plausible";
+import Analytics from "@vercel/analytics/react";
 import { getSEOTags } from "@/libs/seo";
 import ClientLayout from "@/components/layout/LayoutClient";
 import config from "@/config";
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
     <html lang="en" data-theme={config.colors.theme} className={font.className}>
       {config.domainName && (
         <head>
-          <PlausibleProvider domain={config.domainName} />
+          <Analytics />
           <link rel="manifest" href="/site.webmanifest" />
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
