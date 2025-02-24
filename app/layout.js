@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import Analytics from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/react";
 import { getSEOTags } from "@/libs/seo";
 import ClientLayout from "@/components/layout/LayoutClient";
 import config from "@/config";
