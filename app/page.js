@@ -13,31 +13,42 @@ import FAQ from "@/components/marketing/FAQ";
 import CTA from "@/components/marketing/CTA";
 import Modal from "@/components/marketing/Modal";
 import Footer from "@/components/layout/Footer";
-import UkraineCallOut from "@/components/marketing/UkraineCallOut";
-import TestimonialSlider from "@/components/marketing/testimonials/TestimonialSlider";
+import TestimonialGrid from "@/components/marketing/testimonials/TestimonialGrid";
 
 const testimonials = [
   {
     rating: 5,
+    text: "Gene isn't just a coder - he understands that code has to ship and ultimately drive business results. He's creative, human, and has accommodated a lot of weird ideas for us over the years, usually making them better in the execution.",
+    author: "Andy F",
+    authorTitle: "GMB Fitness Founder",
+    authorImage: "/testimonials/andy.jpeg"
+  },
+  {
+    rating: 5,
     text: "Your UX is great! Best onboarding I've seen in any course period.",
     author: "Omar Z",
-    authorImage: "/testimonials/omar-zenhom.jpeg"  },
+    authorTitle: "Praxis User, Founder of $100 MBA podcast",
+    authorImage: "/testimonials/omar-zenhom.jpeg"  
+  },
   {
     rating: 5,
     text: "Since the new site went live, we've received nothing but positive feedback from the teachers and coaches who use it",
     author: "Katy W",
+    authorTitle: "Program Director, The Art of Learning Foundation",
     authorImage: "/testimonials/katy-wells.jpeg"
   },
   {
     rating: 5,
     text: "I also have to mention the Praxis platform (build by Lansky) - it's the best in the business!.",
     author: "Mark",
+    authorTitle: "Praxis User",
     authorImage: "/testimonials/lion.jpeg"
   },
   {
     rating: 5,
-    text: "Gene worked tirelessly to deliver the work I wanted within the agreed upon time period.",
+    text: "A consummate professional with exceptional patience Gene worked tirelessly to deliver the work I wanted.",
     author: "Shawn S",
+    authorTitle: "iLiveFit Founder, USAF Captain",
     authorImage: "/testimonials/shawn-swift.jpeg"
   },
 ]
@@ -63,7 +74,7 @@ export default function Home() {
         <Hero />
         <Problem />
         <Hello />
-        <TestimonialSlider testimonials={testimonials} />
+        <TestimonialGrid testimonials={testimonials} />
         <FeaturesAccordion />
         <Work />
         <Pricing openModal={openModal} />

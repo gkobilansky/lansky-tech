@@ -1,19 +1,37 @@
 import Image from "next/image";
+import { useState } from "react";
 
 // A one or two sentences testimonial from a customer.
 // Highlight the outcome for your customer (how did your product changed her/his life?) or the pain it's removing — Use <span className="bg-warning/25 px-1.5"> to highlight a part of the sentence
-const Testimonial1Small = ({ rating, text, author, authorImage }) => {
+const Testimonial1Small = ({ rating, text, author, authorImage, authorTitle }) => {
+  const [expanded, setExpanded] = useState(false);
+  
+  // Determine if text needs to be truncated (more than 120 characters)
+  const needsTruncation = text.length > 120;
+  const truncatedText = needsTruncation && !expanded ? `${text.substring(0, 120)}...` : text;
+
   return (
-    <section className="bg-base-200">
-      <div className="space-y-6 md:space-y-8 max-w-lg mx-auto px-8 py-16 md:py-32 ">
-        <div className="rating !flex justify-center">
+    <div 
+      className="relative overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-lg h-full"
+      style={{
+        background: "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)",
+        backdropFilter: "blur(10px)",
+        border: "1px solid rgba(255,255,255,0.1)"
+      }}
+    >
+      {/* Gradient overlay for modern feel */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 pointer-events-none" />
+      
+      <div className="relative p-6 flex flex-col h-full">
+        {/* Rating stars */}
+        <div className="flex mb-3">
           {[...Array(rating)].map((_, i) => (
             <svg
+              key={i}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
-              className="w-5 h-5 text-warning"
-              key={i}
+              className="w-4 h-4 text-warning"
             >
               <path
                 fillRule="evenodd"
@@ -23,24 +41,47 @@ const Testimonial1Small = ({ rating, text, author, authorImage }) => {
             </svg>
           ))}
         </div>
-        <div className="text-base leading-relaxed space-y-2 max-w-md mx-auto text-center">
-          {text}
+        
+        {/* Testimonial text */}
+        <div className="text-sm leading-relaxed mb-4 flex-grow">
+          <p className="relative">
+            <span className="text-xl font-serif absolute -top-2 -left-1 text-primary/40">"</span>
+            <span className="pl-3">{truncatedText}</span>
+            <span className="text-xl font-serif absolute bottom-0 text-primary/40">"</span>
+          </p>
+          
+          {/* Expand/collapse button for long testimonials */}
+          {needsTruncation && (
+            <button 
+              onClick={() => setExpanded(!expanded)}
+              className="text-xs text-primary-focus mt-2 hover:underline focus:outline-none"
+            >
+              {expanded ? "Show less" : "Read more"}
+            </button>
+          )}
         </div>
-        <div className="flex justify-center items-center gap-3 md:gap-4">
+        
+        {/* Author info */}
+        <div className="flex items-center mt-auto pt-3 border-t border-base-300/30">
           <Image
-            className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover"
+            className="w-8 h-8 rounded-full object-cover ring-1 ring-base-300/30"
             src={authorImage}
-            alt={`XYZ feedback for Lansky`}
-            width={48}
-            height={48}
+            alt={`${author}'s testimonial`}
+            width={32}
+            height={32}
           />
-          <div>
-            <p className="font-semibold">{author}</p>
+          <div className="ml-3">
+            <p className="font-medium text-sm">{author}</p>
+            <p className="text-xs text-base-content/70">{authorTitle}</p>
           </div>
         </div>
       </div>
-    </section>
+      
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-base-200/80 to-transparent pointer-events-none"></div>
+    </div>
   );
 };
 
 export default Testimonial1Small;
+

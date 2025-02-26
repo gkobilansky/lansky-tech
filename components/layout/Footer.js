@@ -66,6 +66,20 @@ const Footer = () => {
                     className="mr-2 inline-block"
                   />
                   computeprices.com</Link>
+                  <Link href="https://praxis.lansky.tech" className="link link-hover" target="_blank">
+                  <Image
+                    src="/client-logos/gmb-icon.jpg"
+                    alt="Praxis"
+                    width={16}
+                    height={16}
+                    className="mr-2 inline-block"
+                  />
+                  Praxis by GMB Fitness
+                </Link>
+                <Link href="https://wealthbot.io" className="link link-hover" target="_blank">
+                  wealthbot.io
+                </Link>
+                <Link href="https://wt.ls/vidly" className="link link-hover" target="_blank">Vidly Waiting List</Link>
               </div>
             </div>
 
