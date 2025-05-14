@@ -22,7 +22,7 @@ const config = {
         priceId:
           process.env.NODE_ENV === "development"
             ? "price_1QpKehBA9X37Uo66ezhxOARY"
-            : "price_1QpKdZBA9X37Uo660WG5BeaC",
+            : "price_1ROUi8BA9X37Uo668gpgpGkS",
         // REQUIRED - Name of the plan, displayed on the pricing page
         name: "🛒 New Cart, Who This?",
         description: "Upgrade your e-commerce experience with a streamlined, conversion-focused shopping cart that integrates seamlessly with your existing setup.",
@@ -41,8 +41,8 @@ const config = {
         // REQUIRED — we use this to find the plan in the webhook (for instance if you want to update the user's credits based on the plan)
         priceId:
           process.env.NODE_ENV === "development"
-            ? "price_1QpKehBA9X37Uo66ezhxOARY"
-            : "price_1QpKdZBA9X37Uo660WG5BeaC",
+            ? "price_1ROUeSBA9X37Uo66ulgTOgTk"
+            : "price_1ROUcnBA9X37Uo66AsOrdr31",
         //  REQUIRED - Name of the plan, displayed on the pricing page
         name: "✨ Landing Page Glow Up",
         description: "Refine your landing page to convert more visitors by enhancing your CTAs, visuals, and performance—without a full redesign.",
@@ -59,10 +59,7 @@ const config = {
       },
       {
         isFeatured: false,
-        priceId:
-          process.env.NODE_ENV === "development"
-            ? "price_1QpKehBA9X37Uo66ezhxOARY"
-            : "price_1QpKdZBA9X37Uo660WG5BeaC",
+        priceId: "custom",
         // REQUIRED - Name of the plan, displayed on the pricing page
         name: "🚀 Web App Boosters",
         description: "Supercharge your web app with features that engage users and drive growth—focusing on gamified onboarding, performance improvements, and built-in growth engines.",

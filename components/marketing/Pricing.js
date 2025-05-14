@@ -87,7 +87,7 @@ const Pricing = ({ openModal }) => {
                   </ul>
                 )}
                 <div className="space-y-2 flex flex-col items-center">
-                  <ButtonCheckout priceId={plan.priceId} ctaButtonText={plan.ctaButtonText} />
+                  <ButtonCheckout priceId={plan.priceId} ctaButtonText={plan.ctaButtonText} openModal={openModal} />
                   <p className="flex items-center justify-center gap-2 text-sm text-center text-base-content/80 font-medium relative">
                     {plan.footerText}
                     { }                  </p>
