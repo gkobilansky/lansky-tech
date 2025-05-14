@@ -10,15 +10,16 @@ import ButtonCheckout from "../ui/ButtonCheckout";
 
 const Pricing = ({ openModal }) => {
   return (
-    <section className="bg-base-200 overflow-hidden" id="intro">
-      <div className="py-24 md:py-32 px-8 max-w-5xl mx-auto">
+    <section className="bg-base-200 overflow-hidden" id="prices">
+      <div className="py-24 md:py-32 px-8 max-w-6xl mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 mb-8 mx-auto">
-            <p className="font-medium text-primary text-sm">📊 Our Latest Offer</p>
+            <p className="font-medium text-primary text-sm">📊 Our Latest Offers</p>
           </div>
           <h2 className="font-bold text-3xl uppercase lg:text-5xl tracking-tight">
-          Get your MVP in just 3 weeks!
+            Simple Pricing to Get Started
           </h2>
+          <p className="text-base-content/80 mt-8 mx-w-xl">We're transparent about our pricing and we're not interested in overhead. Grab one of our services from the pricing table or reach out for a no strings attached chat, we love to talk shop. </p>
         </div>
 
         <div className="relative flex justify-center flex-col lg:flex-row items-center lg:items-stretch gap-8">
@@ -29,7 +30,7 @@ const Pricing = ({ openModal }) => {
                   <span
                     className={`badge text-xs text-primary-content font-semibold border-0 bg-[#0066CC]`}
                   >
-                    Free & Clear
+                    Most Popular
                   </span>
                 </div>
               )}
@@ -86,19 +87,18 @@ const Pricing = ({ openModal }) => {
                   </ul>
                 )}
                 <div className="space-y-2 flex flex-col items-center">
-                  <p>Secure your spot in line</p>
-                  <ButtonCheckout priceId={plan.priceId} />
+                  <ButtonCheckout priceId={plan.priceId} ctaButtonText={plan.ctaButtonText} />
                   <p className="flex items-center justify-center gap-2 text-sm text-center text-base-content/80 font-medium relative">
-                    Deposit is refundable if not the right fit.
-                  </p>
+                    {plan.footerText}
+                    { }                  </p>
                 </div>
               </div>
             </div>
           ))}
         </div>
         <div className="flex flex-col justify-center items-center my-12">
-        <h3 className="font-bold text-2xl mb-4">Why the Three-Week MVP?</h3>
-        <p className="text-base-content/80 mx-w-xl">The faster we ship, the quicker your prototype can be tested by your actual end-users. Those real-time tests allow us to iterate and improve quickly, efficiently, and in the most cost-effective way possible. </p>
+          <h3 className="font-bold text-2xl mb-4">Help Your Website Work Smarter, Not Harder</h3>
+          <p className="text-base-content/80 mx-w-xl">We don't do full overhauls—we build on what you've already created. With our any of our services, we fine-tune your digital presence so it naturally drives more sales.</p>
         </div>
         <div className="flex flex-col justify-center items-center my-12">
         <h3 className="font-bold text-2xl mb-4">Not the right fit?</h3>

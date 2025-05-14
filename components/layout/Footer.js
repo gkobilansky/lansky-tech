@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import config from "@/config";
 import logo from "@/public/lansky-logo.png";
-import BetterIcon from "../ui/BetterIcon";
 
 // Add the Footer to the bottom of your landing page and more.
 // The support link is connected to the config.js file. If there's no config.mailgun.supportEmail, the link won't be displayed.
@@ -52,7 +51,10 @@ const Footer = () => {
                   About
                 </Link>
                 <Link href="/work" className="link link-hover">
-                  Writings
+                  Portfolio
+                </Link>
+                <Link href="/services" className="link link-hover">
+                  Services
                 </Link>
                 <div className="footer-title font-semibold text-base-content tracking-widest text-sm md:text-left mb-1 mt-3">
                     TOOLS
