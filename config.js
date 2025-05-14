@@ -18,24 +18,58 @@ const config = {
     // Create multiple plans in your Stripe dashboard, then add them here. You can add as many plans as you want, just make sure to add the priceId
     plans: [
       {
+        isFeatured: false,
+        priceId:
+          process.env.NODE_ENV === "development"
+            ? "price_1QpKehBA9X37Uo66ezhxOARY"
+            : "price_1ROUi8BA9X37Uo668gpgpGkS",
+        // REQUIRED - Name of the plan, displayed on the pricing page
+        name: "🛒 New Cart, Who This?",
+        description: "Upgrade your e-commerce experience with a streamlined, conversion-focused shopping cart that integrates seamlessly with your existing setup.",
+        features: [
+          { name: "Effortless Stripe/SamCart integration" },
+          { name: "Custom shopping cart enhancements for a smooth checkout" },
+          { name: "Responsive design optimized for all devices" },
+          { name: "Enhanced load times & user-friendly UI/UX" },
+          { name: "Optional add-ons: Detailed analytics & extended support" }
+        ],
+        ctaButtonText: "$2,399 - Order Now",
+        footerText: "Let's boogie."
+      },
+      {
         isFeatured: true,
         // REQUIRED — we use this to find the plan in the webhook (for instance if you want to update the user's credits based on the plan)
         priceId:
           process.env.NODE_ENV === "development"
-            ? "price_1QpKehBA9X37Uo66ezhxOARY"
-            : "price_1QpKdZBA9X37Uo660WG5BeaC",
+            ? "price_1ROUeSBA9X37Uo66ulgTOgTk"
+            : "price_1ROUcnBA9X37Uo66AsOrdr31",
         //  REQUIRED - Name of the plan, displayed on the pricing page
-        name: "Kick off a 3 week project with a $300 deposit",
-        // A friendly description of the plan, displayed on the pricing page. Tip: explain why this plan and not others
-        description: "We use AI-augmented development to ship a working and testable prototype in just three weeks.",
+        name: "✨ Landing Page Glow Up",
+        description: "Refine your landing page to convert more visitors by enhancing your CTAs, visuals, and performance—without a full redesign.",
         features: [
-          {
-            name: "Let's hop on a call to define your business problem",
-          },
-          { name: "Then, we'll establish actionable goals and realistic expectations" },
-          { name: "I'll outline the best solution to meet your needs" },
-          { name: "You'll get a working MVP in just three weeks" },
+          { name: "Strategic CTA placement for every device" },
+          { name: "AI-powered image optimization & load speed boosts" },
+          { name: "Dynamic content variants & A/B testing setup" },
+          { name: "Optimized typography & white space for clear messaging" },
+          { name: "Multimedia conversion (GIFs/MP4s to HLS) with subtitles" },
+          { name: "Optional add-ons: Advanced testing, maintenance, interactive features" }
         ],
+        ctaButtonText: "$1500",
+        footerText: "Grab your spot in line."
+      },
+      {
+        isFeatured: false,
+        priceId: "custom",
+        // REQUIRED - Name of the plan, displayed on the pricing page
+        name: "🚀 Web App Boosters",
+        description: "Supercharge your web app with features that engage users and drive growth—focusing on gamified onboarding, performance improvements, and built-in growth engines.",
+        features: [
+          { name: "Onboarding gamification to make first impressions fun" },
+          { name: "Performance enhancements for lightning-fast interactions" },
+          { name: "Growth engine integration: in-app checkout, referrals, & social sharing" },
+        ],
+        ctaButtonText: "Contact Us",
+        footerText: "Let's boogie."
       },
     ],
   },

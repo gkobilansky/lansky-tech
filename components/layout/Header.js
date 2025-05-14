@@ -11,16 +11,16 @@ import config from "@/config";
 
 const links = [
   {
+    href: "/#problem",
+    label: "The Problem",
+  },
+  {
     href: "/#solutions",
-    label: "What we do",
+    label: "How we fix it",
   },
   {
-    href: "/#work",
-    label: "Work",
-  },
-  {
-    href: "/#intro",
-    label: "Intro call",
+    href: "/#prices",
+    label: "Prices",
   },
   {
     href: "/about",
@@ -77,7 +77,7 @@ const Header = ({ openModal }) => {
         aria-label="Global"
       >
         {/* Your logo/name on large screens */}
-        <div className="flex lg:flex-1">
+        <div className="flex xl:flex-1">
           <Link
             className="flex items-center gap-3 shrink-0 transition-all duration-300"
             href="/"
@@ -99,7 +99,7 @@ const Header = ({ openModal }) => {
           </Link>
         </div>
         {/* Burger button to open menu on mobile */}
-        <div className="flex lg:hidden">
+        <div className="flex xl:hidden">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
@@ -124,7 +124,7 @@ const Header = ({ openModal }) => {
         </div>
 
         {/* Your links on large screens */}
-        <div className="hidden lg:flex lg:justify-center lg:gap-12 lg:items-center">
+        <div className="hidden xl:flex xl:justify-center xl:gap-12 xl:items-center">
           {links.map((link) => (
             <Link
               href={link.href}
@@ -138,7 +138,7 @@ const Header = ({ openModal }) => {
         </div>
 
         {/* CTA on large screens */}
-        <div className="hidden lg:flex lg:justify-end lg:flex-1">{cta}</div>
+        <div className="hidden xl:flex xl:justify-end xl:flex-1">{cta}</div>
       </nav>
 
       {/* Mobile menu, show/hide based on menu state. */}
