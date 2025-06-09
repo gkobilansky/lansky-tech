@@ -58,7 +58,10 @@ const Footer = () => {
                 </Link>
                 <div className="footer-title font-semibold text-base-content tracking-widest text-sm md:text-left mb-1 mt-3">
                     TOOLS
-                  </div>
+                </div>
+                <Link href="https://landingpage.report" className="link link-hover" target="_blank">
+                  📝 The Landing Page Report
+                </Link>
                 <Link href="https://computeprices.com" className="link link-hover" target="_blank">
                   <Image
                     src="/cp-logo.svg"
@@ -68,7 +71,7 @@ const Footer = () => {
                     className="mr-2 inline-block"
                   />
                   computeprices.com</Link>
-                  <Link href="https://praxis.lansky.tech" className="link link-hover" target="_blank">
+                <Link href="https://app.gmb.io" className="link link-hover" target="_blank">
                   <Image
                     src="/client-logos/gmb-icon.jpg"
                     alt="Praxis"
