@@ -7,7 +7,14 @@ const LandingPageTest = () => {
 
   const handleTestPage = (e) => {
     e.preventDefault();
-    const testUrl = url.trim() || window.location.href;
+    let testUrl = url.trim();
+    if (!testUrl) return;
+
+    // Add https:// if no protocol is provided
+    if (!/^https?:\/\//i.test(testUrl)) {
+      testUrl = `https://${testUrl}`;
+    }
+
     const encodedUrl = encodeURIComponent(testUrl);
     window.open(`https://landingpage.report?url=${encodedUrl}`, "_blank", "noopener,noreferrer");
   };
@@ -30,11 +37,12 @@ const LandingPageTest = () => {
 
         <form onSubmit={handleTestPage} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
           <input
-            type="url"
+            type="text"
             placeholder="Enter your landing page URL"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
             className="input input-bordered flex-1 bg-base-100"
+            required
           />
           <button
             type="submit"
@@ -48,7 +56,7 @@ const LandingPageTest = () => {
         </form>
 
         <p className="text-base-content/60 text-sm mt-4">
-          Leave empty to test this page, or enter any URL to analyze
+          Test one of your landing pages for a free report
         </p>
       </div>
     </section>
