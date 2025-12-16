@@ -4,6 +4,7 @@ import { Suspense, useState } from 'react'
 import Constellation from '@/components/ui/Constellation';
 import Header from "@/components/layout/Header";
 import Hero from "@/components/marketing/Hero";
+import LandingPageTest from "@/components/marketing/LandingPageTest";
 import Hello from "@/components/marketing/Hello";
 import Problem from "@/components/marketing/Problem";
 import FeaturesAccordion from "@/components/features/FeaturesAccordion";
@@ -72,6 +73,7 @@ export default function Home() {
       <Constellation />
       <main>
         <Hero />
+        <LandingPageTest />
         <Problem />
         <Hello />
         <TestimonialGrid testimonials={testimonials} />
