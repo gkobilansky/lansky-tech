@@ -219,8 +219,8 @@ export default function Snake() {
   // D-Pad button - using onPointerDown to avoid double-firing on mobile
   const DPadButton = ({ label, onPress }) => (
     <button
-      className="w-14 h-14 bg-[#1a1a1a] border-2 border-[#333] active:bg-[#0f0] active:border-[#0f0]
-                 flex items-center justify-center text-[#0f0] text-2xl
+      className="w-14 h-14 bg-neutral-900 border-2 border-neutral-700 active:bg-[var(--primary)] active:border-[var(--primary)]
+                 flex items-center justify-center text-[var(--primary)] text-2xl
                  select-none font-mono"
       onPointerDown={(e) => {
         e.preventDefault();
@@ -234,14 +234,14 @@ export default function Snake() {
   return (
     <div className="flex flex-col gap-3 font-mono">
       {/* Score bar - retro style */}
-      <div className="flex justify-between items-center px-1 text-[#0f0]">
+      <div className="flex justify-between items-center px-1 text-[var(--primary)]">
         <div className="flex gap-4 text-sm">
           <span>SCORE: {String(score).padStart(4, '0')}</span>
           <span>HI: {String(highScore).padStart(4, '0')}</span>
         </div>
         {gameState === 'playing' && (
           <button
-            className="text-[#0f0]/60 hover:text-[#0f0] text-xs uppercase"
+            className="text-[var(--primary)]/60 hover:text-[var(--primary)] text-xs uppercase"
             onClick={togglePause}
           >
             [PAUSE]
@@ -252,7 +252,7 @@ export default function Snake() {
       {/* Game container */}
       <div className="w-full aspect-[3/2] max-h-[50vh]" ref={containerRef}>
         <div
-          className="relative w-full h-full bg-black border-2 border-[#0f0]/30 overflow-hidden"
+          className="relative w-full h-full bg-neutral-950 border-2 border-[var(--primary)]/30 overflow-hidden"
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
@@ -260,7 +260,7 @@ export default function Snake() {
           {snake.map((segment, index) => (
             <div
               key={index}
-              className="absolute bg-[#0f0]"
+              className="absolute bg-[var(--primary)]"
               style={{
                 left: segment.x * CELL_SIZE,
                 top: segment.y * CELL_SIZE,
@@ -272,7 +272,7 @@ export default function Snake() {
 
           {/* Render food */}
           <div
-            className="absolute bg-[#f00]"
+            className="absolute bg-[var(--secondary)]"
             style={{
               left: food.x * CELL_SIZE,
               top: food.y * CELL_SIZE,
@@ -283,17 +283,17 @@ export default function Snake() {
 
           {/* Start screen */}
           {gameState === 'start' && (
-            <div className="absolute inset-0 bg-black/90 flex flex-col justify-center items-center gap-4 p-4">
-              <div className="text-2xl md:text-3xl text-[#0f0] tracking-wider">
+            <div className="absolute inset-0 bg-neutral-950/90 flex flex-col justify-center items-center gap-4 p-4">
+              <div className="text-2xl md:text-3xl text-[var(--primary)] tracking-wider">
                 SNAKE
               </div>
-              <div className="text-[#0f0]/60 text-center text-xs md:text-sm">
+              <div className="text-[var(--primary)]/60 text-center text-xs md:text-sm">
                 <p className="hidden md:block">ARROW KEYS TO MOVE</p>
                 <p className="md:hidden">SWIPE OR USE D-PAD</p>
                 <p className="mt-1">SPACE TO PAUSE</p>
               </div>
               <button
-                className="mt-2 px-4 py-2 border border-[#0f0] text-[#0f0] hover:bg-[#0f0] hover:text-black text-sm"
+                className="mt-2 px-4 py-2 border border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-black text-sm"
                 onClick={startGame}
               >
                 START
@@ -303,10 +303,10 @@ export default function Snake() {
 
           {/* Pause overlay */}
           {gameState === 'paused' && (
-            <div className="absolute inset-0 bg-black/80 flex flex-col justify-center items-center gap-3">
-              <div className="text-xl text-[#0f0]">PAUSED</div>
+            <div className="absolute inset-0 bg-neutral-950/80 flex flex-col justify-center items-center gap-3">
+              <div className="text-xl text-[var(--primary)]">PAUSED</div>
               <button
-                className="px-4 py-2 border border-[#0f0] text-[#0f0] hover:bg-[#0f0] hover:text-black text-sm"
+                className="px-4 py-2 border border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-black text-sm"
                 onClick={togglePause}
               >
                 RESUME
@@ -316,21 +316,21 @@ export default function Snake() {
 
           {/* Game over overlay */}
           {gameState === 'gameOver' && (
-            <div className="absolute inset-0 bg-black/90 flex flex-col justify-center items-center gap-3 p-4">
-              <div className="text-xl md:text-2xl text-[#f00]">GAME OVER</div>
-              <div className="text-[#0f0] text-sm">
+            <div className="absolute inset-0 bg-neutral-950/90 flex flex-col justify-center items-center gap-3 p-4">
+              <div className="text-xl md:text-2xl text-[var(--secondary)]">GAME OVER</div>
+              <div className="text-[var(--primary)] text-sm">
                 SCORE: {score}
               </div>
               {score === highScore && score > 0 && (
-                <div className="text-[#ff0] text-xs">NEW HIGH SCORE!</div>
+                <div className="text-[var(--secondary)] text-xs">NEW HIGH SCORE!</div>
               )}
               <button
-                className="mt-2 px-4 py-2 border border-[#0f0] text-[#0f0] hover:bg-[#0f0] hover:text-black text-sm"
+                className="mt-2 px-4 py-2 border border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-black text-sm"
                 onClick={startGame}
               >
                 PLAY AGAIN
               </button>
-              <p className="text-[#0f0]/40 text-xs hidden md:block">OR PRESS ENTER</p>
+              <p className="text-[var(--primary)]/40 text-xs hidden md:block">OR PRESS ENTER</p>
             </div>
           )}
         </div>
