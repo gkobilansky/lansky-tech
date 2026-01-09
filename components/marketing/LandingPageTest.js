@@ -37,8 +37,8 @@ const LandingPageTest = () => {
 
         <form onSubmit={handleTestPage} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
           <input
-            type="text"
-            placeholder="Enter your landing page URL"
+            type="url"
+            placeholder="https://your-landing-page.com"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
             className="input input-bordered flex-1 bg-base-100"
