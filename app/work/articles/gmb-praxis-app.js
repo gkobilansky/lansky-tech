@@ -1,11 +1,8 @@
 import Image from "next/image";
-import MuxPlayer from "@mux/mux-player-react";
 import praxis from "@/public/work/praxis/elements_macbook_iphone.webp";
 import praxisSuccess from "@/public/work/praxis/praxis-success.png";
 import { categories, authors } from '../_assets/content';
 import { styles } from '../_assets/styles';
-import ButtonGradient from "@/components/ui/ButtonGradient";
-import ButtonLead from "@/components/ui/ButtonLead";
 import MuxVideoPlayer from "../_assets/components/MuxVideoPlayer";
 
 export const gmbPraxisApp = {
