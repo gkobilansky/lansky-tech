@@ -21,7 +21,7 @@ export const buildingTemptations = {
     urlRelative: "/work/temptations/temptations-banner.jpeg",
     alt: "Temptations cat treats",
   },
-  content: ({ openModal }) => (
+  content: () => (
     <>
       <Image
         src={introducingTemptations}

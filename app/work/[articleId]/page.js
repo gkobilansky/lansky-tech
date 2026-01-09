@@ -5,7 +5,6 @@ import Avatar from "../_assets/components/Avatar";
 import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
 import { articles } from "@/app/work/articles";
-import ButtonGradient from "@/components/ui/ButtonGradient";
 import ButtonLead from "@/components/ui/ButtonLead";
 
 export async function generateMetadata(props) {

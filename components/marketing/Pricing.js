@@ -1,5 +1,4 @@
 import config from "@/config";
-import ButtonGradient from "../ui/ButtonGradient";
 import ButtonLead from "../ui/ButtonLead";
 import ButtonCheckout from "../ui/ButtonCheckout";
 

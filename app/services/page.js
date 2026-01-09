@@ -6,7 +6,6 @@ import Footer from "@/components/layout/Footer";
 import Constellation from '@/components/ui/Constellation';
 import Modal from "@/components/marketing/Modal";
 import ButtonLead from "@/components/ui/ButtonLead";
-import UkraineCallOut from '@/components/marketing/UkraineCallOut';
 
 // Service cards component with detailed information about each service
 const ServiceCards = () => (

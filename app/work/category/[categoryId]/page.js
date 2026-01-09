@@ -1,4 +1,5 @@
-import { categories, articles } from "../../_assets/content";
+import { categories } from "../../_assets/content";
+import { articles } from "../../articles";
 import CardArticle from "../../_assets/components/CardArticle";
 import CardCategory from "../../_assets/components/CardCategory";
 import { getSEOTags } from "@/libs/seo";

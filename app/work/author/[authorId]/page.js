@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { authors, articles } from "../../_assets/content";
+import { authors } from "../../_assets/content";
+import { articles } from "../../articles";
 import CardArticle from "../../_assets/components/CardArticle";
 import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
