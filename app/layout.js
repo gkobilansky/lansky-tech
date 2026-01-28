@@ -29,6 +29,8 @@ export default function RootLayout({ children }) {
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
           <meta name="theme-color" content={config.colors.main} />
+          {/* Headline A/B Testing - https://github.com/gkobilansky/headline-goat */}
+          <script src="https://nan-finder.exe.xyz/hlg.js" defer></script>
         </head>
       )}
       <body>

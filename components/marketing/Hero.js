@@ -16,13 +16,16 @@ const Hero = () => {
         <h1 className="font-extrabold text-4xl lg:text-5xl md:-mb-4 brightness-150 contrast-150">
           <span className="bg-clip-text text-5xl lg:text-6xl uppercase text-transparent tracking-tight leading-relaxed bg-[length:100%_100%] bg-gradient-to-tr from-[#0066CC] to-[#FFCC00]">Web tech</span>
           <br />
-          <span>that moves the needle.</span>
+          <span
+            data-hlg-name="hero-tagline"
+            data-hlg-variants='["that moves the needle.", "that helps you ship faster.", "that scales with you."]'
+          >that moves the needle.</span>
         </h1>
         <p className="text-lg opacity-80 leading-relaxed">
         You're small but <strong>mighty, and ready to grow</strong> — you just need the right tech to do it. We can build that for you. <em>Fast.</em><br/>
         <a href="#intro" className="link link-hover" onClick={(e) => {
             goToIntro(e);
-          }}><span className="bg-warning/25 px-1.5 leading-10">↓ Let's get started</span></a>
+          }} data-hlg-convert="hero-tagline"><span className="bg-warning/25 px-1.5 leading-10">↓ Let's get started</span></a>
         </p>
 
         <div className="lg:hidden w-full">
