@@ -19,6 +19,7 @@ const Hero = () => {
           <span
             data-hlg-name="hero-tagline"
             data-hlg-variants='["that moves the needle.", "that helps you ship faster.", "that scales with you."]'
+            suppressHydrationWarning
           >that moves the needle.</span>
         </h1>
         <p className="text-lg opacity-80 leading-relaxed">
@@ -29,13 +30,13 @@ const Hero = () => {
         </p>
 
         <div className="lg:hidden w-full">
-          <Image src="/lansky-solutions.png" alt="Lansky Solutions" width={7041} height={5788} className="mx-auto max-w-full m-10" />
+          <Image src="/lansky-solutions.png" alt="Lansky Solutions" width={7041} height={5788} className="mx-auto max-w-full m-10" priority />
         </div>
 
         <TestimonialsAvatars priority={true} />
       </div>
       <div className="lg:w-full hidden lg:block">
-        <Image src="/lansky-solutions.png" alt="Lansky Solutions" width={7041} height={5788} className="mx-auto max-w-full m-10" />
+        <Image src="/lansky-solutions.png" alt="Lansky Solutions" width={7041} height={5788} className="mx-auto max-w-full m-10" priority />
       </div>
     </section>
   );

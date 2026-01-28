@@ -1,10 +1,31 @@
 'use client'
 
-import MuxPlayer from "@mux/mux-player-react";
+import { useState, useEffect } from "react";
 import "@mux/mux-player/themes/minimal";
 
+const Placeholder = () => (
+    <div className="w-full aspect-video bg-base-300 animate-pulse rounded-lg" />
+);
+
 export default function MuxVideoPlayer({ playbackId, theme = "minimal", metadata, autoPlay = false, loop = true, controls = false, onEnded, onTimeUpdate, videoRef }) {
-    const controlsStyle = controls ? '' : {"--bottom-controls": "none", "--top-controls": "none"}
+    const [MuxPlayer, setMuxPlayer] = useState(null);
+
+    useEffect(() => {
+        import("@mux/mux-player-react").then((mod) => {
+            setMuxPlayer(() => mod.default);
+        });
+    }, []);
+
+    const controlsStyle = controls ? '' : {"--bottom-controls": "none", "--top-controls": "none"};
+
+    if (!MuxPlayer) {
+        return (
+            <div className="w-full aspect-auto rounded-lg overflow-hidden">
+                <Placeholder />
+            </div>
+        );
+    }
+
     return (
         <div className="w-full aspect-auto rounded-lg overflow-hidden">
             <MuxPlayer
