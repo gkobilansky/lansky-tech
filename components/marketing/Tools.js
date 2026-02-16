@@ -39,7 +39,7 @@ const Tools = () => {
         </div>
 
         {/* Tools Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Landing Page Report Card */}
           <div className="card bg-base-100 shadow-xl border border-base-300 hover:shadow-2xl transition-shadow">
             <div className="card-body">
@@ -119,6 +119,47 @@ const Tools = () => {
 
               <p className="text-center text-sm text-base-content/60 mt-3">
                 Daily pricing updates from AWS, Lambda, RunPod, CoreWeave & more
+              </p>
+            </div>
+          </div>
+          {/* Headline Goat Card */}
+          <div className="card bg-base-100 shadow-xl border border-base-300 hover:shadow-2xl transition-shadow">
+            <div className="card-body">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center text-2xl">
+                  🐐
+                </div>
+                <div>
+                  <h3 className="card-title text-xl">Headline Goat</h3>
+                  <p className="text-sm text-base-content/60">A/B testing for text</p>
+                </div>
+              </div>
+
+              <p className="text-base-content/80 mb-6">
+                Test headlines, CTAs, and value props on any site. Self-hosted single Go binary with zero dependencies. Get statistically significant results with 95% confidence.
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="badge badge-outline">Self-Hosted</span>
+                <span className="badge badge-outline">Go Binary</span>
+                <span className="badge badge-outline">SQLite</span>
+                <span className="badge badge-outline">MIT License</span>
+              </div>
+
+              <a
+                href="https://github.com/gkobilansky/headline-goat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary w-full"
+              >
+                View on GitHub
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+
+              <p className="text-center text-sm text-base-content/60 mt-3">
+                Ultra flexible, minimalist A/B testing in a single binary
               </p>
             </div>
           </div>
