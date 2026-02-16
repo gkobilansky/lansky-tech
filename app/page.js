@@ -73,10 +73,10 @@ export default function Home() {
       <Constellation />
       <main>
         <Hero />
-        <Tools />
         <Problem />
         <Hello />
         <TestimonialGrid testimonials={testimonials} />
+        <Tools />
         <FeaturesAccordion />
         <Work />
         <Pricing openModal={openModal} />
