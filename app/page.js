@@ -75,12 +75,12 @@ export default function Home() {
       <main>
         <Hero />
         <DiagonalDivider variant="primary" direction="left" />
-        <Tools />
-        <DiagonalDivider variant="secondary" direction="right" />
         <Problem />
-        <DiagonalDivider variant="primary" direction="left" />
+        <DiagonalDivider variant="secondary" direction="right" />
         <Hello />
         <TestimonialGrid testimonials={testimonials} />
+        <DiagonalDivider variant="primary" direction="left" />
+        <Tools />
         <DiagonalDivider variant="secondary" direction="right" />
         <FeaturesAccordion />
         <DiagonalDivider variant="primary" direction="left" />
