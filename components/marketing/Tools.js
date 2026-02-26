@@ -1,9 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const Tools = () => {
   const [url, setUrl] = useState("");
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const handleTestPage = (e) => {
     e.preventDefault();
@@ -20,26 +23,36 @@ const Tools = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 px-8 bg-gradient-to-b from-base-200 to-base-100">
+    <section ref={ref} className="py-16 md:py-24 px-8 bg-gradient-to-b from-base-200 to-base-100">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 mb-6">
             <span>🛠️</span>
             <p className="font-medium text-primary text-sm">Free Tools</p>
           </div>
 
-          <h2 className="font-extrabold text-3xl lg:text-5xl tracking-tight mb-4">
+          <h2 className="font-serif font-bold text-3xl lg:text-5xl tracking-tight mb-4">
             Tools to Help Your Business Grow
           </h2>
 
           <p className="text-base-content/80 text-lg max-w-2xl mx-auto">
             We build tools that solve real problems. Try them free and see the difference.
           </p>
-        </div>
+        </motion.div>
 
         {/* Tools Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <motion.div
+          className="grid md:grid-cols-2 gap-8"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        >
           {/* Landing Page Report Card */}
           <div className="card bg-base-100 shadow-xl border border-base-300 hover:shadow-2xl transition-shadow">
             <div className="card-body">
@@ -122,7 +135,7 @@ const Tools = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

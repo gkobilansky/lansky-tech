@@ -16,7 +16,7 @@ const Hello = () => {
             👋
             <p className="font-medium text-primary text-sm">Hello</p>
           </div>
-          <h2 className="font-extrabold text-3xl lg:text-6xl text-center tracking-tight mb-4 md:mb-8">
+          <h2 className="font-serif font-bold text-3xl lg:text-6xl text-center tracking-tight mb-4 md:mb-8">
             What if web development could be <br /><span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0066CC] to-[#FFCC00]">faster, easier, and simpler?</span>
           </h2>
         </div>

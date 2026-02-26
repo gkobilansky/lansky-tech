@@ -2,6 +2,7 @@
 
 import { Suspense, useState } from 'react'
 import Constellation from '@/components/ui/Constellation';
+import DiagonalDivider from '@/components/ui/DiagonalDivider';
 import Header from "@/components/layout/Header";
 import Hero from "@/components/marketing/Hero";
 import Tools from "@/components/marketing/Tools";
@@ -73,14 +74,21 @@ export default function Home() {
       <Constellation />
       <main>
         <Hero />
+        <DiagonalDivider variant="primary" direction="left" />
         <Tools />
+        <DiagonalDivider variant="secondary" direction="right" />
         <Problem />
+        <DiagonalDivider variant="primary" direction="left" />
         <Hello />
         <TestimonialGrid testimonials={testimonials} />
+        <DiagonalDivider variant="secondary" direction="right" />
         <FeaturesAccordion />
+        <DiagonalDivider variant="primary" direction="left" />
         <Work />
+        <DiagonalDivider variant="secondary" direction="right" />
         <Pricing openModal={openModal} />
         <FAQ />
+        <DiagonalDivider variant="primary" direction="left" />
         <CTA openModal={openModal} />
         <Modal 
           isModalOpen={isModalOpen} 

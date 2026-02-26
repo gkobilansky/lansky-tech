@@ -26,7 +26,7 @@ const Constellation = () => {
         };
         window.addEventListener('scroll', handleScroll);
 
-        // Create initial points
+        // Create initial points with depth layers for parallax
         const createPoints = () => {
             points.current = [];
             const numberOfPoints = 100;
@@ -36,6 +36,7 @@ const Constellation = () => {
                     y: Math.random() * canvas.height,
                     vx: (Math.random() - 0.5) * 0.5,
                     vy: (Math.random() - 0.5) * 0.5,
+                    depth: 0.3 + Math.random() * 0.7, // Depth layer (0.3 to 1.0) for parallax
                 });
             }
         };
@@ -102,19 +103,25 @@ const Constellation = () => {
             const zoomScale = 1 + (scrollPosition.current * 0.0001); // Adjust the 0.001 to control zoom speed
             const centerX = canvas.width / 2;
             const centerY = canvas.height / 2;
-            
+
+            // Parallax offset based on scroll
+            const parallaxOffset = scrollPosition.current * 0.3;
+
             // Reset connections array
             connections.current = [];
-            
+
             // Update and draw points
             points.current.forEach(point => {
                 // Calculate position relative to center
                 const dx = point.x - centerX;
                 const dy = point.y - centerY;
-                
-                // Apply zoom scale
+
+                // Apply parallax effect based on depth (closer points move more)
+                const parallaxY = parallaxOffset * point.depth;
+
+                // Apply zoom scale and parallax
                 const scaledX = centerX + (dx * zoomScale);
-                const scaledY = centerY + (dy * zoomScale);
+                const scaledY = centerY + (dy * zoomScale) + parallaxY;
                 
                 // Move points with velocity
                 point.x += point.vx;
@@ -124,12 +131,15 @@ const Constellation = () => {
                 if (point.x < -canvas.width * (zoomScale - 1) || point.x > canvas.width * zoomScale) point.vx *= -1;
                 if (point.y < -canvas.height * (zoomScale - 1) || point.y > canvas.height * zoomScale) point.vy *= -1;
 
-                // Draw node with scaled position
+                // Draw node with scaled position and depth-based size/opacity
+                const pointSize = (3 + point.depth * 2) / zoomScale; // Closer points are larger
+                const pointOpacity = 0.4 + point.depth * 0.4; // Closer points are brighter
+
                 ctx.beginPath();
-                ctx.arc(scaledX, scaledY, 4 / zoomScale, 0, Math.PI * 2); // Scale down point size
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+                ctx.arc(scaledX, scaledY, pointSize, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 255, 255, ${pointOpacity})`;
                 ctx.fill();
-                ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+                ctx.strokeStyle = `rgba(255, 255, 255, ${pointOpacity * 0.5})`;
                 ctx.lineWidth = 1;
                 ctx.stroke();
 

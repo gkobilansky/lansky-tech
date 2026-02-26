@@ -15,7 +15,7 @@ const Pricing = ({ openModal }) => {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 mb-8 mx-auto">
             <p className="font-medium text-primary text-sm">📊 Our Latest Offers</p>
           </div>
-          <h2 className="font-bold text-3xl uppercase lg:text-5xl tracking-tight">
+          <h2 className="font-serif font-bold text-3xl uppercase lg:text-5xl tracking-tight">
             Simple Pricing to Get Started
           </h2>
           <p className="text-base-content/80 mt-8 mx-w-xl">We're transparent about our pricing and we're not interested in overhead. Grab one of our services from the pricing table or reach out for a no strings attached chat, we love to talk shop. </p>

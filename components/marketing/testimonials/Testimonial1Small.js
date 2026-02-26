@@ -11,16 +11,22 @@ const Testimonial1Small = ({ rating, text, author, authorImage, authorTitle }) =
   const truncatedText = needsTruncation && !expanded ? `${text.substring(0, 120)}...` : text;
 
   return (
-    <div 
-      className="relative overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-lg h-full"
+    <div
+      className="group relative overflow-hidden rounded-lg shadow-md transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 h-full"
       style={{
         background: "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)",
         backdropFilter: "blur(10px)",
-        border: "1px solid rgba(255,255,255,0.1)"
+        border: "1px solid rgba(255,255,255,0.1)",
+        transition: "all 0.5s cubic-bezier(0.16, 1, 0.3, 1)"
       }}
     >
-      {/* Gradient overlay for modern feel */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 pointer-events-none" />
+      {/* Gradient overlay for modern feel with hover enhancement */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 group-hover:from-primary/10 group-hover:to-secondary/10 transition-all duration-500 pointer-events-none" />
+
+      {/* Animated border glow on hover */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-secondary/20 blur-xl" />
+      </div>
       
       <div className="relative p-6 flex flex-col h-full">
         {/* Rating stars */}
@@ -45,9 +51,9 @@ const Testimonial1Small = ({ rating, text, author, authorImage, authorTitle }) =
         {/* Testimonial text */}
         <div className="text-sm leading-relaxed mb-4 flex-grow">
           <p className="relative">
-            <span className="text-xl font-serif absolute -top-2 -left-1 text-primary/40">"</span>
-            <span className="pl-3">{truncatedText}</span>
-            <span className="text-xl font-serif absolute bottom-0 text-primary/40">"</span>
+            <span className="text-xl font-serif absolute -top-2 -left-1 text-primary/40 group-hover:text-primary/70 transition-colors duration-500">"</span>
+            <span className="pl-3 group-hover:text-base-content/90 transition-colors duration-300">{truncatedText}</span>
+            <span className="text-xl font-serif absolute bottom-0 text-primary/40 group-hover:text-primary/70 transition-colors duration-500">"</span>
           </p>
           
           {/* Expand/collapse button for long testimonials */}
@@ -62,9 +68,9 @@ const Testimonial1Small = ({ rating, text, author, authorImage, authorTitle }) =
         </div>
         
         {/* Author info */}
-        <div className="flex items-center mt-auto pt-3 border-t border-base-300/30">
+        <div className="flex items-center mt-auto pt-3 border-t border-base-300/30 group-hover:border-base-300/50 transition-colors duration-300">
           <Image
-            className="w-8 h-8 rounded-full object-cover ring-1 ring-base-300/30"
+            className="w-8 h-8 rounded-full object-cover ring-1 ring-base-300/30 group-hover:ring-2 group-hover:ring-primary/30 group-hover:scale-110 transition-all duration-300"
             src={authorImage}
             alt={`${author}'s testimonial`}
             width={32}

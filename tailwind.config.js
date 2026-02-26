@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-dm-sans)', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['var(--font-dm-serif)', 'Georgia', 'serif'],
+      },
       backgroundImage: {
         gradient:
           "linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82)",
@@ -59,11 +63,17 @@ module.exports = {
   },
   plugins: [require("daisyui"), require("@tailwindcss/typography")],
   daisyui: {
-    // Light & dark themes are added by default (it switches automatically based on OS settings)
-    // You can add another theme among the list of 30+
-    // Add "data-theme='theme_name" to any HTML tag to enable the 'theme_name' theme.
-    // https://daisyui.com/
-
-    themes: ["dark", "cupcake", "garden"],
+    themes: [
+      {
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"],
+          // Override font-family to use our custom fonts
+          "font-family": "var(--font-dm-sans), system-ui, -apple-system, sans-serif",
+          // Optionally customize other theme colors here
+        },
+      },
+      "cupcake",
+      "garden"
+    ],
   },
 };

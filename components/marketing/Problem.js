@@ -1,3 +1,8 @@
+"use client";
+
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+
 const Arrow = ({ extraStyle }) => {
   return (
     <svg
@@ -40,17 +45,35 @@ const Step = ({ emoji, text }) => {
 // - Problem Agitation: "Developers spend too much time adding features, get overwhelmed, and quit." (not about ShipFast at all)
 // - Features: "ShipFast has user auth, Stripe, emails all set up for you"
 const Problem = () => {
-  return (
-    <section className="bg-neutral text-neutral-content" id="problem">
-      <div className="max-w-7xl mx-auto px-8 py-24 md:py-32 text-center">
-        <h2 className="max-w-3xl mx-auto font-extrabold text-4xl md:text-5xl tracking-tight mb-6 md:mb-8">
-          70% of technology projects fail because they solve the wrong problem
-        </h2>
-        <p className="max-w-xl mx-auto text-lg opacity-90 leading-relaxed mb-12 md:mb-20">
-          Not finding a <i>good enough</i> solution, too much complexity, ignoring users... There&apos;s so many ways good ideas can lose steam.
-        </p>
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-        <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-6">
+  return (
+    <section ref={ref} className="bg-neutral text-neutral-content" id="problem">
+      <div className="max-w-7xl mx-auto px-8 py-24 md:py-32 text-center">
+        <motion.h2
+          className="max-w-3xl mx-auto font-serif font-bold text-4xl md:text-5xl tracking-tight mb-6 md:mb-8"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
+          70% of technology projects fail because they solve the wrong problem
+        </motion.h2>
+        <motion.p
+          className="max-w-xl mx-auto text-lg opacity-90 leading-relaxed mb-12 md:mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 0.9, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        >
+          Not finding a <i>good enough</i> solution, too much complexity, ignoring users... There&apos;s so many ways good ideas can lose steam.
+        </motion.p>
+
+        <motion.div
+          className="flex flex-col md:flex-row justify-center items-center md:items-start gap-6"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        >
           <Step emoji="💡" text="Beautiful new idea" />
 
           <Arrow extraStyle="max-md:-scale-x-100 md:-rotate-90" />
@@ -64,9 +87,14 @@ const Problem = () => {
           <Arrow extraStyle="max-md:-scale-x-100 md:-rotate-90" />
 
           <Step emoji="😤" text="Project fails" />
-        </div>
+        </motion.div>
 
-        <div className="mt-20 max-w-3xl mx-auto bg-base-300 p-8 rounded-lg text-left">
+        <motion.div
+          className="mt-20 max-w-3xl mx-auto bg-base-300 p-8 rounded-lg text-left"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
           <p className="text-lg mb-6">
             Here's where most businesses run into trouble when hiring developers:
           </p>
@@ -104,8 +132,8 @@ const Problem = () => {
           <p>
             <strong>You need development designed for growth.</strong>
           </p>
-        </div>
-        
+        </motion.div>
+
       </div>
     </section>
   );

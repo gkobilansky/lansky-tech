@@ -1,11 +1,24 @@
-import { Inter } from "next/font/google";
+import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { getSEOTags } from "@/libs/seo";
 import ClientLayout from "@/components/layout/LayoutClient";
 import config from "@/config";
 import "./globals.css";
 
-const font = Inter({ subsets: ["latin"] });
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: '--font-dm-sans',
+  display: 'optional', // Faster paint, no layout shift
+  preload: true,
+});
+
+const dmSerif = DM_Serif_Display({
+  weight: ['400'],
+  subsets: ["latin"],
+  variable: '--font-dm-serif',
+  display: 'optional', // Faster paint, no layout shift
+  preload: true,
+});
 
 export const viewport = {
   // Will use the primary color of your theme to show a nice theme color in the URL bar of supported browsers
@@ -20,7 +33,7 @@ export const metadata = getSEOTags();
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme={config.colors.theme} className={font.className}>
+    <html lang="en" data-theme={config.colors.theme} className={`${dmSans.variable} ${dmSerif.variable}`}>
       {config.domainName && (
         <head>
           <Analytics />

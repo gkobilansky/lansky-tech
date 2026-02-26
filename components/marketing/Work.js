@@ -1,3 +1,7 @@
+"use client";
+
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { articles } from "@/app/work/articles";
 import CardArticle from "@/app/work/_assets/components/CardArticle";
 import MuxVideoSlider from "@/app/work/_assets/components/MuxVideoSlider";
@@ -22,22 +26,35 @@ const videos = [
 ];
 
 export default function Work() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   // Get the latest 3 articles sorted by date
   const latestArticles = articles
     .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
     .slice(0, 3);
 
   return (
-    <section className="pt-12 pb-24 bg-base-100 bg-opacity-80 px-4 max-w-full mx-auto" id="work">
-      <div className="text-center mb-16">
-        <h2 className="font-extrabold text-4xl lg:text-6xl uppercase tracking-tight mb-6">
+    <section ref={ref} className="pt-12 pb-24 bg-base-100 bg-opacity-80 px-4 max-w-full mx-auto" id="work">
+      <motion.div
+        className="text-center mb-16"
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <h2 className="font-serif font-bold text-4xl lg:text-6xl uppercase tracking-tight mb-6">
           Recent Work
         </h2>
         <p className="text-lg opacity-80 max-w-xl mx-auto">
           Check out some of our latest projects and case studies
         </p>
-      </div>
-      <div className="relative mb-10">
+      </motion.div>
+      <motion.div
+        className="relative mb-10"
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+      >
         <div className="flex justify-center items-center max-w-2xl px-10 mx-auto my-15">
           <MuxVideoSlider videos={videos} />
         </div>
@@ -81,9 +98,21 @@ export default function Work() {
             </span>
           </div>
         </div>
-      </div>
-      <h2 className="text-center uppercase text-3xl font-bold lg:mt-28 mt-32 mb-10">Case studies</h2>
-      <div className="grid lg:grid-cols-3 gap-20 px-10 lg:gap-34 lg:px-32 mt-20">
+      </motion.div>
+      <motion.h2
+        className="text-center uppercase text-3xl font-bold lg:mt-28 mt-32 mb-10"
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+      >
+        Case studies
+      </motion.h2>
+      <motion.div
+        className="grid lg:grid-cols-3 gap-20 px-10 lg:gap-34 lg:px-32 mt-20"
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.6, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      >
         {latestArticles.map((article) => (
           <CardArticle
             key={article.slug}
@@ -92,7 +121,7 @@ export default function Work() {
             isImagePriority={true}
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
