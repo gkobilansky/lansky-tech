@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
 const Tools = () => {
   const [url, setUrl] = useState("");
@@ -47,137 +48,163 @@ const Tools = () => {
         </motion.div>
 
         {/* Tools Grid */}
-        <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-        >
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Landing Page Report Card */}
-          <div className="card bg-base-100 shadow-xl border border-base-300 hover:shadow-2xl transition-shadow">
+          <motion.div
+            className="group card bg-base-100 shadow-xl border border-base-300/50 hover:shadow-2xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 flex flex-col"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          >
             <div className="card-body">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-2xl">
-                  🎯
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300">
+                  📝
                 </div>
-                <div>
-                  <h3 className="card-title text-xl">Landing Page Report</h3>
-                  <p className="text-sm text-base-content/60">Conversion optimization</p>
+                <div className="flex-1">
+                  <h3 className="font-serif text-2xl font-bold mb-1">Landing Page Report</h3>
+                  <p className="text-sm text-primary font-medium">Conversion optimization</p>
                 </div>
               </div>
 
-              <p className="text-base-content/80 mb-6">
+              <p className="text-base-content/80 mb-6 leading-relaxed">
                 Get instant AI-powered feedback on your landing page's effectiveness. Analyze copy, design, and conversion potential.
               </p>
 
-              <form onSubmit={handleTestPage} className="space-y-3">
+              <form onSubmit={handleTestPage} className="space-y-4 mt-auto">
                 <input
                   type="url"
                   placeholder="https://your-landing-page.com"
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
-                  className="input input-bordered w-full bg-base-200/50 focus:bg-base-100"
+                  className="input input-bordered w-full bg-base-200/30 focus:bg-base-100 focus:border-primary transition-colors"
                   required
                 />
                 <button
                   type="submit"
-                  className="btn btn-primary w-full"
+                  className="btn btn-gradient w-full group/btn"
                 >
                   Analyze Your Page
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover/btn:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
               </form>
             </div>
-          </div>
+          </motion.div>
 
           {/* Compute Prices Card */}
-          <div className="card bg-base-100 shadow-xl border border-base-300 hover:shadow-2xl transition-shadow">
+          <motion.div
+            className="group card bg-base-100 shadow-xl border border-base-300/50 hover:shadow-2xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 flex flex-col"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          >
             <div className="card-body">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-cyan-600 flex items-center justify-center text-2xl">
-                  🚀
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 p-2">
+                  <Image
+                    src="/cp-logo.svg"
+                    alt="Compute Prices"
+                    width={56}
+                    height={56}
+                    className="w-full h-full"
+                  />
                 </div>
-                <div>
-                  <h3 className="card-title text-xl">Compute Prices</h3>
-                  <p className="text-sm text-base-content/60">GPU cost comparison</p>
+                <div className="flex-1">
+                  <h3 className="font-serif text-2xl font-bold mb-1">Compute Prices</h3>
+                  <p className="text-sm text-primary font-medium">GPU cost comparison</p>
                 </div>
               </div>
 
-              <p className="text-base-content/80 mb-6">
+              <p className="text-base-content/80 mb-6 leading-relaxed">
                 Looking for cloud GPUs? Compare prices across 27+ providers instantly. Find the cheapest H100, A100, RTX 4090 and more.
               </p>
 
               {/* GPU Icons Preview */}
               <div className="flex flex-wrap gap-2 mb-6">
-                <span className="badge badge-outline">H100</span>
-                <span className="badge badge-outline">A100</span>
-                <span className="badge badge-outline">RTX 4090</span>
-                <span className="badge badge-outline">L40S</span>
-                <span className="badge badge-outline">+20 more</span>
+                <span className="badge badge-outline border-primary/30 text-primary/80 hover:bg-primary/10 transition-colors">H100</span>
+                <span className="badge badge-outline border-primary/30 text-primary/80 hover:bg-primary/10 transition-colors">A100</span>
+                <span className="badge badge-outline border-primary/30 text-primary/80 hover:bg-primary/10 transition-colors">RTX 4090</span>
+                <span className="badge badge-outline border-primary/30 text-primary/80 hover:bg-primary/10 transition-colors">L40S</span>
+                <span className="badge badge-outline border-primary/30 text-primary/80 hover:bg-primary/10 transition-colors">+20 more</span>
               </div>
 
-              <a
-                href="https://computeprices.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary w-full"
-              >
-                Compare GPU Prices
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
+              <div className="mt-auto space-y-3">
+                <a
+                  href="https://computeprices.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-gradient w-full group/btn"
+                >
+                  Compare GPU Prices
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
 
-              <p className="text-center text-sm text-base-content/60 mt-3">
-                Daily pricing updates from AWS, Lambda, RunPod, CoreWeave & more
-              </p>
+                <p className="text-center text-xs text-base-content/60">
+                  Daily pricing updates from AWS, Lambda, RunPod, CoreWeave & more
+                </p>
+              </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Headline Goat Card */}
-          <div className="card bg-base-100 shadow-xl border border-base-300 hover:shadow-2xl transition-shadow">
+          <motion.div
+            className="group card bg-base-100 shadow-xl border border-base-300/50 hover:shadow-2xl hover:border-secondary/30 transition-all duration-300 hover:-translate-y-1 flex flex-col"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          >
             <div className="card-body">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center text-2xl">
-                  🐐
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 p-2">
+                  <Image
+                    src="/headline-goat-logo.png"
+                    alt="Headline Goat"
+                    width={56}
+                    height={56}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
-                <div>
-                  <h3 className="card-title text-xl">Headline Goat</h3>
-                  <p className="text-sm text-base-content/60">A/B testing for text</p>
+                <div className="flex-1">
+                  <h3 className="font-serif text-2xl font-bold mb-1">Headline Goat</h3>
+                  <p className="text-sm text-secondary font-medium">A/B testing for text</p>
                 </div>
               </div>
 
-              <p className="text-base-content/80 mb-6">
+              <p className="text-base-content/80 mb-6 leading-relaxed">
                 Test headlines, CTAs, and value props on any site. Self-hosted single Go binary with zero dependencies. Get statistically significant results with 95% confidence.
               </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
-                <span className="badge badge-outline">Self-Hosted</span>
-                <span className="badge badge-outline">Go Binary</span>
-                <span className="badge badge-outline">SQLite</span>
-                <span className="badge badge-outline">MIT License</span>
+                <span className="badge badge-outline border-secondary/30 text-secondary/80 hover:bg-secondary/10 transition-colors">Self-Hosted</span>
+                <span className="badge badge-outline border-secondary/30 text-secondary/80 hover:bg-secondary/10 transition-colors">Go Binary</span>
+                <span className="badge badge-outline border-secondary/30 text-secondary/80 hover:bg-secondary/10 transition-colors">SQLite</span>
+                <span className="badge badge-outline border-secondary/30 text-secondary/80 hover:bg-secondary/10 transition-colors">MIT License</span>
               </div>
 
-              <a
-                href="https://github.com/gkobilansky/headline-goat"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary w-full"
-              >
-                View on GitHub
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
+              <div className="mt-auto space-y-3">
+                <a
+                  href="https://github.com/gkobilansky/headline-goat"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-gradient w-full group/btn"
+                >
+                  View on GitHub
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
 
-              <p className="text-center text-sm text-base-content/60 mt-3">
-                Ultra flexible, minimalist A/B testing in a single binary
-              </p>
+                <p className="text-center text-xs text-base-content/60">
+                  Ultra flexible, minimalist A/B testing in a single binary
+                </p>
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
