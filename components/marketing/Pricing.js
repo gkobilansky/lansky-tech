@@ -129,13 +129,13 @@ const Pricing = ({ openModal }) => {
         </div>
         <motion.div
           ref={bottomRef}
-          className="flex flex-col justify-center items-center my-16 text-center max-w-3xl mx-auto"
+          className="flex flex-col justify-center items-center my-16 text-center max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           animate={bottomInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h3 className="font-serif font-bold text-2xl md:text-3xl mb-4">Help Your Website Work Smarter, Not Harder</h3>
-          <p className="text-base-content/80 text-lg leading-relaxed">We don't do full overhauls—we build on what you've already created. With our any of our services, we fine-tune your digital presence so it naturally drives more sales.</p>
+          <h3 className="font-serif font-bold text-2xl md:text-3xl mb-4">Use AI to Work Smarter, Not Harder</h3>
+          <p className="text-base-content/80 text-lg leading-relaxed">It's rare we suggest full overhauls, but if you're starting from scratch, we love AI assisted building for greenfield projects.</p>
         </motion.div>
         <motion.div
           className="flex flex-col justify-center items-center my-16 text-center max-w-3xl mx-auto"

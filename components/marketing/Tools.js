@@ -68,7 +68,7 @@ const Tools = () => {
               </div>
 
               <p className="text-base-content/80 mb-6 leading-relaxed flex-1">
-                Get instant AI-powered feedback on your landing page's effectiveness. Analyze copy, design, and conversion potential.
+                Get instant feedback on your landing page's effectiveness. Analyze copy, design, and conversion potential.
               </p>
 
               <form onSubmit={handleTestPage} className="space-y-4">
@@ -84,11 +84,14 @@ const Tools = () => {
                   type="submit"
                   className="btn btn-outline btn-primary w-full group/btn"
                 >
-                  Analyze Your Page
+                  More Conversions Now
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover/btn:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
+                <p className="text-center text-xs text-base-content/60">
+                  Can you beat our top score of 92? 
+                </p>
               </form>
             </div>
           </motion.div>
@@ -113,22 +116,22 @@ const Tools = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-2xl font-bold mb-1">Compute Prices</h3>
-                  <p className="text-sm text-primary font-medium">GPU cost comparison</p>
+                  <p className="text-sm text-primary font-medium">GPUs & AI inference</p>
                 </div>
               </div>
 
               <div className="flex-1">
                 <p className="text-base-content/80 mb-6 leading-relaxed">
-                  Looking for cloud GPUs? Compare prices across 27+ providers instantly. Find the cheapest H100, A100, RTX 4090 and more.
+                  Looking for cloud GPUs or LLM APIs? Compare providers. Find the cheapest B200, H100, RTX 4090 and more.
                 </p>
 
                 {/* GPU Icons Preview */}
                 <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="badge badge-outline border-primary/30 text-primary/80 hover:bg-primary/10 transition-colors">H100</span>
+                  <span className="badge badge-outline border-primary/30 text-primary/80 hover:bg-primary/10 transition-colors">B200</span>
                   <span className="badge badge-outline border-primary/30 text-primary/80 hover:bg-primary/10 transition-colors">A100</span>
                   <span className="badge badge-outline border-primary/30 text-primary/80 hover:bg-primary/10 transition-colors">RTX 4090</span>
                   <span className="badge badge-outline border-primary/30 text-primary/80 hover:bg-primary/10 transition-colors">L40S</span>
-                  <span className="badge badge-outline border-primary/30 text-primary/80 hover:bg-primary/10 transition-colors">+20 more</span>
+                  <span className="badge badge-outline border-primary/30 text-primary/80 hover:bg-primary/10 transition-colors">& more</span>
                 </div>
               </div>
 
@@ -139,14 +142,14 @@ const Tools = () => {
                   rel="noopener noreferrer"
                   className="btn btn-outline btn-primary w-full group/btn"
                 >
-                  Compare GPU Prices
+                  Get Compute
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>
 
                 <p className="text-center text-xs text-base-content/60">
-                  Daily pricing updates from AWS, Lambda, RunPod, CoreWeave & more
+                  We run a new update every 2 hours 
                 </p>
               </div>
             </div>
@@ -182,9 +185,9 @@ const Tools = () => {
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="badge badge-outline border-secondary/30 text-secondary/80 hover:bg-secondary/10 transition-colors">Self-Hosted</span>
-                  <span className="badge badge-outline border-secondary/30 text-secondary/80 hover:bg-secondary/10 transition-colors">Go Binary</span>
-                  <span className="badge badge-outline border-secondary/30 text-secondary/80 hover:bg-secondary/10 transition-colors">SQLite</span>
+                  <span className="badge badge-outline border-secondary/30 text-secondary/80 hover:bg-secondary/10 transition-colors">Single File</span>
+                  <span className="badge badge-outline border-secondary/30 text-secondary/80 hover:bg-secondary/10 transition-colors">Run Anywhere</span>
+                  <span className="badge badge-outline border-secondary/30 text-secondary/80 hover:bg-secondary/10 transition-colors">Easy to Extend</span>
                   <span className="badge badge-outline border-secondary/30 text-secondary/80 hover:bg-secondary/10 transition-colors">MIT License</span>
                 </div>
               </div>
