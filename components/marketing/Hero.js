@@ -51,7 +51,7 @@ const Hero = () => {
         </div>
 
         {/* Image - Overlapping and breaking out */}
-        <div className="lg:col-span-6 lg:col-start-6 opacity-0 animate-fade-in delay-300 relative">
+        <div className="hidden lg:block lg:col-span-6 lg:col-start-6 opacity-0 animate-fade-in delay-300 relative">
           {/* Decorative gradient blob behind image */}
           <div className="absolute -right-10 -top-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10" />
           <div className="absolute -left-10 -bottom-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl -z-10" />
