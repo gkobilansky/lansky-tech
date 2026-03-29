@@ -7,23 +7,27 @@ import geneImg from "@/app/work/_assets/images/authors/gene.jpeg";
 // These slugs are used to generate pages in the /work/category/[categoryI].js. It's a way to group articles by category.
 const categorySlugs = {
   feature: "feature",
+  product: "product",
   tutorial: "tutorial",
 };
 
 // All the blog categories data display in the /work/category/[categoryI].js pages.
 export const categories = [
   {
-    // The slug to use in the URL, from the categorySlugs object above.
     slug: categorySlugs.feature,
-    // The title to display the category title (h1), the category badge, the category filter, and more. Less than 60 characters.
     title: "Recent Works",
-    // A short version of the title above, display in small components like badges. 1 or 2 words
     titleShort: "Work",
-    // The description of the category to display in the category page. Up to 160 characters.
     description:
       "Here are some of the recent projects I've worked on.",
-    // A short version of the description above, only displayed in the <Header /> on mobile. Up to 60 characters.
     descriptionShort: "Recent projects.",
+  },
+  {
+    slug: categorySlugs.product,
+    title: "Products",
+    titleShort: "Products",
+    description:
+      "Products I've built from scratch — from idea to revenue.",
+    descriptionShort: "My own products.",
   },
 ];
 

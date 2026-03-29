@@ -30,7 +30,7 @@ const ButtonCheckout = ({ priceId, ctaButtonText, mode = "payment", openModal })
     setIsLoading(false);
   };
 
-  if (priceId === "custom") {
+  if (priceId.startsWith("custom")) {
     return (
       <button className="btn btn-primary btn-block"
         onClick={() => {
@@ -38,7 +38,7 @@ const ButtonCheckout = ({ priceId, ctaButtonText, mode = "payment", openModal })
             <div className="w-full max-w-md mx-auto">
               <ButtonLead />
             </div>,
-            "Tell us about your dream app"
+            "Pricing is an estimate — let's discuss your project"
           )
         }}
       >

@@ -17,7 +17,7 @@ export const metadata = getSEOTags({
 export default async function Blog() {
   const articlesToDisplay = articles
     .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
-    .slice(0, 6);
+    .slice(0, 8);
   return (
     <>
       <section className="text-center max-w-xl mx-auto mt-12 mb-24 md:mb-32">
@@ -25,7 +25,7 @@ export default async function Blog() {
           Portfolio & Writings
         </h1>
         <p className="text-lg opacity-80 leading-relaxed">
-          Some of our work I'm especially proud of. We've worked with a variety of clients, from startups to Fortune 500 companies.
+          Client projects, products, and tools I&apos;ve built — from Fortune 500 e-commerce to AI-powered platforms to developer tools.
         </p>
       </section>
 

@@ -29,10 +29,10 @@ export default function Work() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  // Get the latest 3 articles sorted by date
+  // Get the latest 6 articles sorted by date
   const latestArticles = articles
     .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
-    .slice(0, 3);
+    .slice(0, 6);
 
   return (
     <section ref={ref} className="pt-12 pb-24 bg-base-100 bg-opacity-80 px-4 max-w-full mx-auto" id="work">
@@ -108,7 +108,7 @@ export default function Work() {
         Case studies
       </motion.h2>
       <motion.div
-        className="grid lg:grid-cols-3 gap-20 px-10 lg:gap-34 lg:px-32 mt-20"
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 px-10 lg:gap-16 lg:px-32 mt-20"
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.6, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}

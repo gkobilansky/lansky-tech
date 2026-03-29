@@ -17,19 +17,19 @@ const Hero = () => {
         <div className="lg:col-span-7 lg:col-start-1 z-10 flex flex-col gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start">
         <h1 className="opacity-0 animate-fade-in-up" style={{ fontFamily: 'var(--font-serif)' }}>
           <span className="block text-6xl lg:text-8xl font-normal mb-2 gradient-text bg-gradient-to-br from-[#0066CC] via-[#0088FF] to-[#FFCC00] tracking-tight leading-[1.1]">
-            Web tech
+            I build products
           </span>
           <span
             className="block text-4xl lg:text-6xl font-light tracking-tight leading-tight opacity-90"
             data-hlg-name="hero-tagline"
-            data-hlg-variants='["that moves the needle.", "that helps you ship faster.", "that scales with you."]'
+            data-hlg-variants='["that move the needle.", "from zero to revenue.", "you can count on."]'
             suppressHydrationWarning
           >
-            that moves the needle.
+            that move the needle.
           </span>
         </h1>
         <p className="text-lg lg:text-xl opacity-80 leading-relaxed max-w-xl opacity-0 animate-fade-in-up delay-200">
-          You're small but <strong className="font-semibold text-white">mighty, and ready to grow</strong> — you just need the right tech to do it. We can build that for you. <em className="font-serif italic">Fast.</em>
+          From <strong className="font-semibold text-white">AI-powered platforms to developer tools to scalable web apps</strong> — I take ideas from concept to production. Full-stack, end-to-end. <em className="font-serif italic">Fast.</em>
           <br/>
           <a
             href="#intro"

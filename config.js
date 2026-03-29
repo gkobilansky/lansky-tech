@@ -5,7 +5,7 @@ const config = {
   appName: "Lansky Tech",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
-    "Web development done right.",
+    "Full-stack products, AI platforms, and developer tools — built from zero to production.",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
   domainName: "lansky.tech",
   crisp: {
@@ -19,54 +19,43 @@ const config = {
     plans: [
       {
         isFeatured: false,
-        priceId:
-          process.env.NODE_ENV === "development"
-            ? "price_1QpKehBA9X37Uo66ezhxOARY"
-            : "price_1ROUi8BA9X37Uo668gpgpGkS",
-        // REQUIRED - Name of the plan, displayed on the pricing page
-        name: "🛒 New Cart, Who This?",
-        description: "Upgrade your e-commerce experience with a streamlined, conversion-focused shopping cart that integrates seamlessly with your existing setup.",
+        priceId: "custom-sprint",
+        name: "🎯 Product Sprint",
+        description: "Go from idea to working product in weeks, not months. I'll design, build, and deploy a production-ready MVP — full-stack, end-to-end.",
         features: [
-          { name: "Effortless Stripe/SamCart integration" },
-          { name: "Custom shopping cart enhancements for a smooth checkout" },
-          { name: "Responsive design optimized for all devices" },
-          { name: "Enhanced load times & user-friendly UI/UX" },
-          { name: "Optional add-ons: Detailed analytics & extended support" }
+          { name: "Full-stack MVP: frontend, backend, database, deployment" },
+          { name: "AI integration where it adds value (not for show)" },
+          { name: "Production-grade: auth, payments, analytics from day one" },
+          { name: "Delivered in 2-4 weeks with source code you own" },
         ],
-        ctaButtonText: "$2,399 - Order Now",
-        footerText: "Let's boogie."
+        ctaButtonText: "Starting at $12,000",
+        footerText: "Let's build."
       },
       {
         isFeatured: true,
-        // REQUIRED — we use this to find the plan in the webhook (for instance if you want to update the user's credits based on the plan)
-        priceId:
-          process.env.NODE_ENV === "development"
-            ? "price_1ROUeSBA9X37Uo66ulgTOgTk"
-            : "price_1ROUcnBA9X37Uo66AsOrdr31",
-        //  REQUIRED - Name of the plan, displayed on the pricing page
-        name: "✨ Landing Page Glow Up",
-        description: "Refine your landing page to convert more visitors by enhancing your CTAs, visuals, and performance—without a full redesign.",
+        priceId: "custom-cto",
+        name: "🧠 Fractional CTO",
+        description: "Technical leadership without the full-time hire. I'll own your architecture, ship features, manage your codebase, and make the hard calls — on a monthly retainer.",
         features: [
-          { name: "Strategic CTA placement for every device" },
-          { name: "AI-powered image optimization & load speed boosts" },
-          { name: "Dynamic content variants & A/B testing setup" },
-          { name: "Optimized typography & white space for clear messaging" },
-          { name: "Multimedia conversion (GIFs/MP4s to HLS) with subtitles" },
-          { name: "Optional add-ons: Advanced testing, maintenance, interactive features" }
+          { name: "Architecture decisions & code reviews" },
+          { name: "Hands-on development (I write code, not just docs)" },
+          { name: "Team mentorship & hiring guidance" },
+          { name: "Vendor evaluation & technical due diligence" },
+          { name: "Weekly syncs & async availability" },
         ],
-        ctaButtonText: "$1500",
+        ctaButtonText: "$3,000/mo",
         footerText: "Grab your spot in line."
       },
       {
         isFeatured: false,
-        priceId: "custom",
-        // REQUIRED - Name of the plan, displayed on the pricing page
-        name: "🚀 Web App Boosters",
-        description: "Supercharge your web app with features that engage users and drive growth—focusing on gamified onboarding, performance improvements, and built-in growth engines.",
+        priceId: "custom-ai",
+        name: "🚀 AI Integration",
+        description: "Add AI capabilities to your existing product — whether it's chat, document analysis, automation, or intelligent features that actually solve problems.",
         features: [
-          { name: "Onboarding gamification to make first impressions fun" },
-          { name: "Performance enhancements for lightning-fast interactions" },
-          { name: "Growth engine integration: in-app checkout, referrals, & social sharing" },
+          { name: "LLM integration (Claude, GPT, Gemini)" },
+          { name: "RAG pipelines, document parsing, structured extraction" },
+          { name: "AI agents & workflow automation" },
+          { name: "Custom models & fine-tuning when off-the-shelf isn't enough" },
         ],
         ctaButtonText: "Contact Us",
         footerText: "Let's boogie."

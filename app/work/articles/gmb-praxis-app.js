@@ -1,6 +1,7 @@
 import Image from "next/image";
 import praxis from "@/public/work/praxis/elements_macbook_iphone.webp";
 import praxisSuccess from "@/public/work/praxis/praxis-success.png";
+import gmb2025 from "@/public/work/praxis/gmb-2025.png";
 import { categories, authors } from '../_assets/content';
 import { styles } from '../_assets/styles';
 import MuxVideoPlayer from "../_assets/components/MuxVideoPlayer";
@@ -13,7 +14,7 @@ export const gmbPraxisApp = {
     categories.find((category) => category.slug === "feature"),
   ],
   author: authors.find((author) => author.slug === "gene"),
-  publishedAt: "2024-10-30",
+  publishedAt: "2025-01-15",
   image: {
     src: praxis,
     urlRelative: "/work/praxis/praxis.jpeg",
@@ -132,9 +133,35 @@ export const gmbPraxisApp = {
         </div>
       </section>
       <section className="mb-12">
+        <h2 className={styles.h2}>2025: Continued Evolution</h2>
+        <Image
+          src={gmb2025}
+          alt="GMB Praxis 2025 interface"
+          width={700}
+          height={500}
+          className="rounded-box mb-8"
+          placeholder="blur"
+        />
+        <p className={styles.p}>In 2025, I shipped 52+ releases to the GMB platform — a testament to continuous delivery and close collaboration with the team. Major improvements included:</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+          <div>
+            <h4 className="text-xl font-semibold mb-2">Achievement System</h4>
+            <p className={styles.p}>
+              Built a gamified achievements system to celebrate user milestones — workout streaks, program completions, and personal bests. This drove measurable increases in user retention and daily engagement.
+            </p>
+          </div>
+          <div>
+            <h4 className="text-xl font-semibold mb-2">Video Management Overhaul</h4>
+            <p className={styles.p}>
+              Rebuilt the video asset pipeline with improved subtitle extraction, better Mux API integration, and analysis tools. This gave the content team faster turnaround on new programs and exercises.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="mb-12">
       <h2 className={styles.h2}>Ready to build an adaptive, scalable app?</h2>
         <p className={styles.p}>
-        GMB Praxis is a good representation of my commitment to building scalable, flexible solutions tailored to the needs of both the client and the end-user. Ready to build yours? Let's chat. 
+        GMB Praxis is a good representation of my commitment to building scalable, flexible solutions tailored to the needs of both the client and the end-user. Ready to build yours? Let&apos;s chat.
         </p>
       </section>
     </>
