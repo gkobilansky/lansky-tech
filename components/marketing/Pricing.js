@@ -31,7 +31,7 @@ const Pricing = ({ openModal }) => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="font-medium text-primary text-sm">How I Can Help</p>
+            <p className="font-medium text-primary text-sm">📊 Our Latest Offers</p>
           </motion.div>
           <motion.h2
             className="font-serif font-bold text-3xl lg:text-5xl tracking-tight mb-6"
@@ -39,7 +39,7 @@ const Pricing = ({ openModal }) => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           >
-            What I Do
+            Simple Pricing to Get Started
           </motion.h2>
           <motion.p
             className="text-base-content/80 text-lg max-w-2xl mx-auto leading-relaxed"

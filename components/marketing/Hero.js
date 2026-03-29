@@ -29,7 +29,7 @@ const Hero = () => {
           </span>
         </h1>
         <p className="text-lg lg:text-xl opacity-80 leading-relaxed max-w-xl opacity-0 animate-fade-in-up delay-200">
-          From <strong className="font-semibold text-white">AI-powered platforms to developer tools to scalable web apps</strong> — I take ideas from concept to production. Full-stack, end-to-end. <em className="font-serif italic">Fast.</em>
+          You&apos;ve got the vision — <strong className="font-semibold text-white">AI features, scalable infrastructure, the whole stack</strong> — you just need someone who can build it end-to-end. From concept to production. <em className="font-serif italic">Fast.</em>
           <br/>
           <a
             href="#intro"
