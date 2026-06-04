@@ -12,6 +12,9 @@ const ButtonLead = ({ extraStyle }) => {
   const inputRef = useRef(null);
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  // Honeypot: must stay empty. Hidden from humans; bots fill it and get dropped.
+  // Deliberately non-semantic name so browser autofill won't populate it.
+  const [contactRef, setContactRef] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -23,7 +26,7 @@ const ButtonLead = ({ extraStyle }) => {
 
     setIsLoading(true);
     try {
-      await apiClient.post("/lead", { email, message });
+      await apiClient.post("/lead", { email, message, contact_ref: contactRef });
 
       toast.success("Thanks for reaching out!");
 
@@ -31,6 +34,7 @@ const ButtonLead = ({ extraStyle }) => {
       inputRef.current?.blur();
       setEmail("");
       setMessage("");
+      setContactRef("");
       setIsDisabled(true);
       setIsSuccess(true);
     } catch (error) {
@@ -64,8 +68,20 @@ const ButtonLead = ({ extraStyle }) => {
         className="input input-bordered w-full max-w-xs placeholder:opacity-60"
         onChange={(e) => setEmail(e.target.value)}
       />
-      
-      <textarea 
+
+      {/* Honeypot: positioned off-screen so humans never fill it; bots do. */}
+      <input
+        type="text"
+        name="contact_ref"
+        value={contactRef}
+        onChange={(e) => setContactRef(e.target.value)}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute left-[-9999px] h-0 w-0 opacity-0"
+      />
+
+      <textarea
         value={message} 
         placeholder="I'm interested in..." 
         className="textarea textarea-bordered w-full max-w-xs placeholder:opacity-60" 
